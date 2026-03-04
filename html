@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anchor Automations — AI Systems for Business</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#09172A;--ink2:#142038;--ink3:#1B2E52;--w:#fff;--off:#F5F4F1;--mu:rgba(9,23,42,.4);--bd:rgba(9,23,42,.08)}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--w);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+@media(pointer:fine){body{cursor:none}}
+
+/* CURSOR */
+#cur{position:fixed;z-index:9999;pointer-events:none;border-radius:50%;background:var(--ink);transform:translate(-50%,-50%);left:-300px;top:-300px;width:10px;height:10px;mix-blend-mode:multiply;transition:width .4s cubic-bezier(.25,.46,.45,.94),height .4s cubic-bezier(.25,.46,.45,.94)}
+#cur.big{width:56px;height:56px;opacity:.08}
+@media(pointer:coarse){#cur{display:none!important}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:28px 56px;border-bottom:1px solid transparent;transition:padding .45s,background .45s,border-color .45s}
+nav.stuck{padding:13px 56px;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-color:var(--bd)}
+
+/* LOGO — refined lockup */
+.logo{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--ink);flex-shrink:0}
+.lm{width:34px;height:34px;flex-shrink:0}
+.lm svg{width:100%;height:100%;display:block}
+.lt{line-height:1}
+.ln{display:block;font-family:'Instrument Serif',serif;font-size:16px;letter-spacing:-.005em}
+.ls{display:block;font-size:9px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--mu);margin-top:3px}
+
+.nav-r{display:flex;align-items:center;gap:32px}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:13px;font-weight:400;color:var(--ink);text-decoration:none;transition:opacity .18s}
+.nav-links a:hover{opacity:.35}
+.nbtn{font-size:11px!important;font-weight:500!important;letter-spacing:.08em!important;text-transform:uppercase;background:var(--ink)!important;color:var(--w)!important;padding:11px 24px;border-radius:2px;opacity:1!important;transition:background .2s!important}
+.nbtn:hover{background:var(--ink3)!important}
+
+/* HAMBURGER */
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:301;flex-shrink:0}
+.ham span{display:block;width:20px;height:1.5px;background:var(--ink);transition:transform .3s,opacity .3s}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* MOBILE MENU */
+.mob{display:none;position:fixed;inset:0;z-index:290;background:var(--w);flex-direction:column;justify-content:center;padding:0 40px;gap:6px}
+.mob.open{display:flex}
+.mob a{font-family:'Instrument Serif',serif;font-size:clamp(32px,8vw,52px);color:var(--ink);text-decoration:none;line-height:1.2;opacity:0;transform:translateY(20px);animation:mu .38s cubic-bezier(.16,1,.3,1) forwards}
+.mob a:nth-child(2){animation-delay:.07s}
+.mob a:nth-child(3){animation-delay:.13s}
+.mob a:nth-child(4){animation-delay:.19s}
+.mob a:nth-child(5){animation-delay:.25s}
+.mob a:hover{opacity:.4}
+.mob-line{position:absolute;bottom:48px;left:40px;right:40px;height:1px;background:var(--bd)}
+@keyframes mu{to{opacity:1;transform:none}}
+
+/* HERO */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 56px 68px;position:relative;overflow:hidden;background:var(--w)}
+
+/* BIG ghost anchor — full bleed behind type */
+.hg{position:absolute;right:-3vw;top:50%;width:min(54vw,680px);transform:translateY(-50%);opacity:0;pointer-events:none;z-index:0;animation:gf 2.2s 1s cubic-bezier(.16,1,.3,1) forwards;will-change:opacity}
+.hg svg{width:100%;height:100%;display:block}
+@keyframes gf{to{opacity:.045}}
+
+/* KINETIC TYPE — clip-path mask wipe up */
+.hhl{position:relative;z-index:1;line-height:1}
+.hl{display:block;font-family:'Instrument Serif',serif;font-size:clamp(56px,11vw,172px);line-height:.91;letter-spacing:-.032em;color:var(--ink);clip-path:inset(0 0 100% 0);animation:wipe .9s cubic-bezier(.16,1,.3,1) forwards;will-change:clip-path}
+.hl.d2{animation-delay:.15s}
+.hl.d3{animation-delay:.28s;font-style:italic;color:var(--ink3)}
+@keyframes wipe{to{clip-path:inset(0 0 0% 0)}}
+
+.hbot{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-top:48px;padding-top:26px;border-top:1px solid var(--bd);position:relative;z-index:1;opacity:0;animation:ff .75s .6s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes ff{to{opacity:1}}
+.hcopy{font-size:14px;font-weight:300;line-height:1.8;color:var(--mu);max-width:330px}
+.hbtns{display:flex;align-items:center;gap:16px;flex-shrink:0}
+.bf{display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:var(--w);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:13px 28px;border-radius:2px;text-decoration:none;transition:background .2s,gap .28s}
+.bf:hover{background:var(--ink3);gap:13px}
+.bt{font-size:13px;font-weight:400;color:var(--mu);text-decoration:none;border-bottom:1px solid var(--bd);padding-bottom:2px;transition:color .2s,border-color .2s}
+.bt:hover{color:var(--ink);border-color:var(--ink)}
+.sline{position:absolute;bottom:0;left:56px;width:1px;height:0;background:var(--bd);animation:sg 1s 1.6s ease forwards;z-index:1}
+@keyframes sg{to{height:56px}}
+
+/* MARQUEE */
+.mq{background:var(--ink);padding:16px 0;overflow:hidden;white-space:nowrap}
+.mq-t{display:inline-flex;animation:mq 28s linear infinite}
+.mq-i{display:inline-flex;align-items:center;gap:32px;padding:0 32px;font-size:10px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.mq-d{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.15);flex-shrink:0}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* STATS BAND */
+.band{background:var(--off);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.band-in{display:grid;grid-template-columns:repeat(3,1fr);max-width:1180px;margin:0 auto;padding:0 56px}
+.bc{padding:52px 0 52px 44px;border-right:1px solid var(--bd)}
+.bc:first-child{padding-left:0}
+.bc:last-child{border-right:none}
+.bn{font-family:'Instrument Serif',serif;font-size:clamp(46px,5.2vw,78px);line-height:1;letter-spacing:-.03em;color:var(--ink);margin-bottom:8px}
+.bla{font-size:13px;font-weight:300;color:var(--mu);line-height:1.55;max-width:190px}
+
+/* SECTIONS */
+.sec{padding:120px 56px}
+.wrap{max-width:1180px;margin:0 auto}
+.tag{font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--mu);display:block;margin-bottom:18px}
+.h2{font-family:'Instrument Serif',serif;font-size:clamp(32px,3.6vw,54px);font-weight:400;line-height:1.06;letter-spacing:-.024em;color:var(--ink);margin-bottom:16px}
+.h2 em{font-style:italic}
+.bod{font-size:14px;font-weight:300;line-height:1.8;color:var(--mu);max-width:360px}
+
+/* 2-col header */
+.tc{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;margin-bottom:56px}
+
+/* PROBLEM */
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:start}
+.plst{margin-top:44px}
+.pr{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:22px 0;border-top:1px solid var(--bd);transition:border-top-color .22s}
+.pr:last-child{border-bottom:1px solid var(--bd)}
+.pr:hover{border-top-color:var(--ink)}
+.pn{font-family:'Instrument Serif',serif;font-size:11px;letter-spacing:.14em;color:var(--mu);padding-top:3px}
+.pr h4{font-size:14px;font-weight:500;margin-bottom:5px;line-height:1.3}
+.pr p{font-size:13px;font-weight:300;color:var(--mu);line-height:1.68}
+
+/* stat box */
+.sbox{background:var(--ink);padding:48px 44px;position:sticky;top:100px}
+.sbig{font-family:'Instrument Serif',serif;font-size:clamp(64px,7vw,106px);line-height:1;letter-spacing:-.04em;color:var(--w);margin-bottom:8px}
+.sdsc{font-size:13px;font-weight:300;color:rgba(255,255,255,.38);line-height:1.65;margin-bottom:40px}
+.sdv{height:1px;background:rgba(255,255,255,.08);margin-bottom:28px}
+.sr{margin-bottom:24px}
+.sv{font-family:'Instrument Serif',serif;font-size:36px;color:var(--w);line-height:1;margin-bottom:5px}
+.sl{font-size:13px;font-weight:300;color:rgba(255,255,255,.33);line-height:1.6}
+
+/* HOW — steps */
+.how{background:var(--off)}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd)}
+.sc{background:var(--off);padding:44px 34px;position:relative;overflow:hidden;transition:background .28s}
+.sc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.25,.46,.45,.94)}
+.sc:hover{background:var(--w)}
+.sc:hover::after{transform:scaleX(1)}
+.scn{font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--mu);display:block;margin-bottom:26px}
+.sc h3{font-family:'Instrument Serif',serif;font-size:19px;font-weight:400;margin-bottom:11px;line-height:1.2}
+.sc p{font-size:13px;font-weight:300;color:var(--mu);line-height:1.75}
+
+/* SERVICES */
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd)}
+.sv2{background:var(--w);padding:38px 32px;position:relative;overflow:hidden;transition:background .24s}
+.sv2::before{content:attr(data-n);font-family:'Instrument Serif',serif;font-style:italic;font-size:110px;color:var(--ink);opacity:.03;position:absolute;right:-2px;bottom:-10px;line-height:1;pointer-events:none;transition:opacity .28s}
+.sv2::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.25,.46,.45,.94)}
+.sv2:hover{background:var(--off)}
+.sv2:hover::before{opacity:.065}
+.sv2:hover::after{transform:scaleX(1)}
+.stier{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--mu);display:block;margin-bottom:13px}
+.sv2 h3{font-size:14px;font-weight:500;margin-bottom:9px;line-height:1.3}
+.sv2 p{font-size:13px;font-weight:300;color:var(--mu);line-height:1.75}
+
+/* PACKAGES */
+.psec{background:var(--ink)}
+.psec .tag{color:rgba(255,255,255,.25)}
+.psec .h2{color:var(--w)}
+.psec .bod{color:rgba(255,255,255,.34)}
+.pg2{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07)}
+.pk{background:var(--ink);padding:44px 34px;position:relative;transition:background .18s}
+.pk:hover{background:var(--ink2)}
+.pk.ft{background:var(--w)}
+.pk.ft:hover{background:var(--off)}
+.pbdg{position:absolute;top:0;left:34px;background:rgba(255,255,255,.09);color:rgba(255,255,255,.48);font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:5px 11px}
+.pk.ft .pbdg{background:var(--ink);color:var(--w)}
+.pnm{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);display:block;margin-bottom:18px}
+.pk.ft .pnm{color:var(--mu)}
+.ppr{font-family:'Instrument Serif',serif;font-size:52px;line-height:1;letter-spacing:-.03em;color:var(--w);margin-bottom:3px}
+.pk.ft .ppr{color:var(--ink)}
+.ppr sup{font-size:20px;font-family:'DM Sans',sans-serif;font-weight:300;vertical-align:super}
+.pmo{font-size:12px;font-weight:300;color:rgba(255,255,255,.26);margin-bottom:18px}
+.pk.ft .pmo{color:var(--mu)}
+.pds{font-size:13px;font-weight:300;color:rgba(255,255,255,.34);line-height:1.68;margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.07)}
+.pk.ft .pds{color:var(--mu);border-color:var(--bd)}
+.pfl{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.pfl li{font-size:13px;font-weight:300;color:rgba(255,255,255,.48);display:flex;gap:10px;line-height:1.5}
+.pk.ft .pfl li{color:var(--ink)}
+.pfl li::before{content:'—';color:rgba(255,255,255,.15);flex-shrink:0}
+.pk.ft .pfl li::before{color:var(--mu)}
+.pbtn{display:block;text-align:center;padding:12px;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:2px;border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.55);transition:border-color .2s,color .2s}
+.pbtn:hover{border-color:var(--w);color:var(--w)}
+.pk.ft .pbtn{background:var(--ink);border-color:var(--ink);color:var(--w)}
+.pk.ft .pbtn:hover{background:var(--ink3)}
+
+/* WHY */
+.wg{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
+.wrws{margin-top:40px}
+.wr{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:22px 0;border-top:1px solid var(--bd);transition:border-top-color .22s}
+.wr:last-child{border-bottom:1px solid var(--bd)}
+.wr:hover{border-top-color:var(--ink)}
+.wn{font-family:'Instrument Serif',serif;font-size:12px;color:var(--mu);padding-top:2px}
+.wr h4{font-size:14px;font-weight:500;margin-bottom:5px}
+.wr p{font-size:13px;font-weight:300;color:var(--mu);line-height:1.73}
+.mbox{background:var(--off);border:1px solid var(--bd)}
+.mhd{padding:20px 36px;font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--mu);border-bottom:1px solid var(--bd)}
+.mr{display:flex;justify-content:space-between;align-items:center;padding:18px 36px;border-bottom:1px solid var(--bd);transition:background .18s}
+.mr:last-child{border-bottom:none}
+.mr:hover{background:var(--w)}
+.mrl{font-size:13px;font-weight:300;color:var(--mu)}
+.mrv{font-family:'Instrument Serif',serif;font-size:24px;color:var(--ink)}
+
+/* CTA */
+.cta{background:var(--ink);min-height:88svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 56px 72px;position:relative;overflow:hidden}
+.cvls{position:absolute;inset:0;pointer-events:none}
+.vl{position:absolute;top:0;bottom:0;width:1px;background:rgba(255,255,255,.04)}
+.cgh{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(80vw,640px);opacity:.025;pointer-events:none}
+.cgh svg{width:100%;height:100%;display:block}
+.chl{position:relative;z-index:1}
+.cl{display:block;font-family:'Instrument Serif',serif;font-size:clamp(48px,8.5vw,136px);line-height:.92;letter-spacing:-.032em;color:var(--w);clip-path:inset(0 0 100% 0);animation:wipe .9s cubic-bezier(.16,1,.3,1) forwards;animation-play-state:paused}
+.cl.it{font-style:italic;color:rgba(255,255,255,.26)}
+.cl.d1{animation-delay:.04s}
+.cl.d2{animation-delay:.16s}
+.cl.d3{animation-delay:.27s}
+.cta.live .cl{animation-play-state:running}
+.cbot{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-top:48px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);position:relative;z-index:1}
+.ccopy{font-size:14px;font-weight:300;color:rgba(255,255,255,.34);line-height:1.8;max-width:300px}
+.cr{display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0}
+.bw{display:inline-flex;align-items:center;gap:7px;background:var(--w);color:var(--ink);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:13px 28px;border-radius:2px;text-decoration:none;transition:background .2s,gap .28s}
+.bw:hover{background:var(--off);gap:13px}
+.cnote{font-size:11px;font-weight:300;color:rgba(255,255,255,.16);letter-spacing:.06em}
+
+/* FOOTER */
+footer{background:#060c18;padding:32px 56px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;border-top:1px solid rgba(255,255,255,.05)}
+.fl{display:flex;align-items:center;gap:10px;text-decoration:none}
+.fl svg{width:20px;height:20px;display:block}
+.fl span{font-family:'Instrument Serif',serif;font-size:14px;color:rgba(255,255,255,.35)}
+.fls{display:flex;gap:24px}
+.fls a{font-size:12px;font-weight:300;color:rgba(255,255,255,.2);text-decoration:none;transition:color .2s}
+.fls a:hover{color:rgba(255,255,255,.55)}
+footer p{font-size:11px;font-weight:300;color:rgba(255,255,255,.15)}
+
+/* REVEAL */
+.r{opacity:0;transform:translateY(24px);transition:opacity .82s cubic-bezier(.16,1,.3,1),transform .82s cubic-bezier(.16,1,.3,1)}
+.r.on{opacity:1;transform:none}
+.rr{opacity:0;transform:translateX(24px);transition:opacity .82s cubic-bezier(.16,1,.3,1),transform .82s cubic-bezier(.16,1,.3,1)}
+.rr.on{opacity:1;transform:none}
+
+/* MOBILE */
+@media(max-width:840px){
+  nav,nav.stuck{padding:15px 22px}
+  .nav-links{display:none}
+  .ham{display:flex}
+  .mob{padding:0 32px}
+  .mob-line{left:32px;right:32px}
+  .hero{padding:0 22px 52px;min-height:100svh}
+  .hg{width:90vw;right:-8vw;opacity:0}
+  .sline{left:22px}
+  .hbot{flex-direction:column;align-items:flex-start;gap:22px;margin-top:32px}
+  .hcopy{max-width:100%}
+  .hbtns{gap:12px}
+  .band-in{grid-template-columns:1fr;padding:0 22px}
+  .bc{padding:32px 0;border-right:none;border-bottom:1px solid var(--bd)}
+  .bc:last-child{border-bottom:none}
+  .sec{padding:72px 22px}
+  .tc{grid-template-columns:1fr;gap:16px;margin-bottom:40px}
+  .pg{grid-template-columns:1fr;gap:36px}
+  .sbox{position:static}
+  .sgrid,.sg{grid-template-columns:1fr;gap:0;background:none}
+  .sc{border-bottom:1px solid var(--bd);background:var(--off)}
+  .sv2{border-bottom:1px solid var(--bd)}
+  .pg2{grid-template-columns:1fr;gap:0;background:none}
+  .pk{border-bottom:1px solid rgba(255,255,255,.07)}
+  .wg{grid-template-columns:1fr;gap:36px}
+  .cta{padding:0 22px 52px;min-height:80svh}
+  .cbot{flex-direction:column;align-items:flex-start;gap:22px}
+  .cr{align-items:flex-start}
+  footer{padding:26px 22px;flex-direction:column;align-items:flex-start}
+}
+@media(max-width:440px){
+  .hl{font-size:clamp(48px,13.5vw,60px)}
+  .cl{font-size:clamp(40px,11.5vw,52px)}
+  .hbtns{flex-direction:column;align-items:flex-start}
+  .bt{display:none}
+}
+</style>
+</head>
+<body>
+<div id="cur"></div>
+
+<!-- SVG — redesigned logo mark: anchor with a geometric A implied in the negative space -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="A" viewBox="0 0 56 68">
+    <!-- top ring -->
+    <circle cx="28" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <!-- shaft -->
+    <line x1="28" y1="14" x2="28" y2="59" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <!-- crossbar -->
+    <line x1="8" y1="25" x2="48" y2="25" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <!-- left flange (short downward tick) -->
+    <line x1="8" y1="25" x2="8" y2="31.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <!-- right flange -->
+    <line x1="48" y1="25" x2="48" y2="31.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <!-- base arc: two elegant sweeping curves meeting at shaft base -->
+    <path d="M7.5 58.5 C7.5 40 28 38 28 58.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <path d="M48.5 58.5 C48.5 40 28 38 28 58.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="logo" href="#">
+    <div class="lm"><svg viewBox="0 0 56 68" fill="none"><use href="#A" color="#09172A"/></svg></div>
+    <div class="lt">
+      <span class="ln">Anchor Automations</span>
+      <span class="ls">AI Systems for Business</span>
+    </div>
+  </a>
+  <div class="nav-r">
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#services">Services</a>
+      <a href="#packages">Pricing</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact" class="nbtn">Book a Call</a>
+    </div>
+    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<nav class="mob" id="mob" aria-label="Mobile menu">
+  <a href="#problem" onclick="cM()">Problem</a>
+  <a href="#services" onclick="cM()">Services</a>
+  <a href="#packages" onclick="cM()">Pricing</a>
+  <a href="#why" onclick="cM()">Why Us</a>
+  <a href="#contact" onclick="cM()">Book a Call</a>
+  <div class="mob-line"></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hg"><svg viewBox="0 0 56 68" fill="none"><use href="#A" color="#09172A"/></svg></div>
+  <div class="hhl">
+    <span class="hl">Stop losing</span>
+    <span class="hl d2">leads.</span>
+    <span class="hl d3">Start closing.</span>
+  </div>
+  <div class="hbot">
+    <p class="hcopy">AI that follows up with missed calls, nurtures leads, books appointments, and collects reviews — automatically, 24/7.</p>
+    <div class="hbtns">
+      <a href="#contact" class="bf">Book a Demo →</a>
+      <a href="#services" class="bt">See how it works</a>
+    </div>
+  </div>
+  <div class="sline"></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq" aria-hidden="true">
+  <div class="mq-t">
+    <span class="mq-i">Missed Call Recovery<span class="mq-d"></span></span>
+    <span class="mq-i">Lead Follow-Up<span class="mq-d"></span></span>
+    <span class="mq-i">Appointment Booking<span class="mq-d"></span></span>
+    <span class="mq-i">Review Generation<span class="mq-d"></span></span>
+    <span class="mq-i">AI Chatbot<span class="mq-d"></span></span>
+    <span class="mq-i">CRM &amp; Pipeline<span class="mq-d"></span></span>
+    <span class="mq-i">Missed Call Recovery<span class="mq-d"></span></span>
+    <span class="mq-i">Lead Follow-Up<span class="mq-d"></span></span>
+    <span class="mq-i">Appointment Booking<span class="mq-d"></span></span>
+    <span class="mq-i">Review Generation<span class="mq-d"></span></span>
+    <span class="mq-i">AI Chatbot<span class="mq-d"></span></span>
+    <span class="mq-i">CRM &amp; Pipeline<span class="mq-d"></span></span>
+  </div>
+</div>
+
+<!-- BAND -->
+<div class="band">
+  <div class="band-in">
+    <div class="bc r"><div class="bn">62%</div><div class="bla">of business calls go unanswered every day</div></div>
+    <div class="bc r"><div class="bn">$127K</div><div class="bla">average annual revenue lost from missed leads</div></div>
+    <div class="bc r"><div class="bn">9×</div><div class="bla">more likely to close responding within 5 minutes</div></div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="sec" id="problem">
+  <div class="wrap">
+    <div class="pg">
+      <div>
+        <span class="tag r">The Problem</span>
+        <h2 class="h2 r">Your pipeline leaks <em>every day.</em></h2>
+        <div class="plst">
+          <div class="pr r"><div class="pn">01</div><div><h4>Missed calls become lost revenue</h4><p>Every unanswered call is a prospect who moved on. One missed deal can be $5K–$20K gone. It happens daily.</p></div></div>
+          <div class="pr r"><div class="pn">02</div><div><h4>Slow follow-up kills close rates</h4><p>Respond in 5 minutes and you're 9× more likely to close. Wait an hour and the lead is gone.</p></div></div>
+          <div class="pr r"><div class="pn">03</div><div><h4>No reviews means no trust</h4><p>Customers decide before they reach out. Without automated review collection, great work stays invisible.</p></div></div>
+        </div>
+      </div>
+      <div class="sbox rr">
+        <div class="sbig">$127K</div>
+        <div class="sdsc">average annual revenue lost per business from missed calls and slow follow-up.</div>
+        <div class="sdv"></div>
+        <div class="sr"><div class="sv">85%</div><div class="sl">of prospects won't try again if their first call isn't followed up in minutes.</div></div>
+        <div class="sr"><div class="sv">3.5×</div><div class="sl">more revenue from businesses that respond within 5 minutes.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="sec how" id="how">
+  <div class="wrap">
+    <div class="tc">
+      <div><span class="tag r">How It Works</span><h2 class="h2 r">Live in days, <em>not months.</em></h2></div>
+      <p class="bod r">We handle the entire setup. You configure nothing.</p>
+    </div>
+    <div class="sgrid">
+      <div class="sc r"><span class="scn">Step 01</span><h3>We audit your pipeline</h3><p>A free 30-minute call to find where leads fall through — missed calls, slow follow-up, no-shows. We find your biggest leaks.</p></div>
+      <div class="sc r"><span class="scn">Step 02</span><h3>We build your system</h3><p>We configure your automation stack custom to your business and voice. Zero work from you.</p></div>
+      <div class="sc r"><span class="scn">Step 03</span><h3>You close more</h3><p>Every missed call gets an instant follow-up. Every completed engagement requests a review. The system runs 24/7.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="tc">
+      <div><span class="tag r">What We Build</span><h2 class="h2 r">Six systems. One <em>operation.</em></h2></div>
+      <p class="bod r">Done for you. No software to learn. Built around how your business works.</p>
+    </div>
+    <div class="sg">
+      <div class="sv2 r" data-n="1"><span class="stier">Starter</span><h3>Missed Call Text-Back</h3><p>The moment a call goes unanswered, an automated message goes out — before your prospect calls someone else.</p></div>
+      <div class="sv2 r" data-n="2"><span class="stier">Growth</span><h3>Lead Follow-Up Sequences</h3><p>Multi-step text and email sequences that nurture every new lead automatically until they book or opt out.</p></div>
+      <div class="sv2 r" data-n="3"><span class="stier">Starter</span><h3>Review Generation</h3><p>After every engagement, your system automatically requests a Google review. More 5-stars means more inbound.</p></div>
+      <div class="sv2 r" data-n="4"><span class="stier">Growth</span><h3>Appointment Booking</h3><p>Prospects book directly into your calendar. Automated reminders cut no-shows by up to 70%.</p></div>
+      <div class="sv2 r" data-n="5"><span class="stier">Complete</span><h3>AI Website Chatbot</h3><p>Qualifies leads and books appointments 24/7 — nights, weekends, and holidays included.</p></div>
+      <div class="sv2 r" data-n="6"><span class="stier">Complete</span><h3>CRM &amp; Dashboard</h3><p>Every lead, conversation, and booking in one place. Full pipeline visibility at a glance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="sec psec" id="packages">
+  <div class="wrap">
+    <div class="tc">
+      <div><span class="tag r">Pricing</span><h2 class="h2 r">Flat rate. <em>No surprises.</em></h2></div>
+      <p class="bod r">No setup fees. No contracts. One extra closed deal per month covers it entirely.</p>
+    </div>
+    <div class="pg2">
+      <div class="pk r">
+        <span class="pnm">Anchor Starter</span>
+        <div class="ppr"><sup>$</sup>497</div>
+        <div class="pmo">per month</div>
+        <p class="pds">Stop losing leads to missed calls. Start collecting reviews that build trust before anyone reaches out.</p>
+        <ul class="pfl"><li>Missed call text-back</li><li>Automated review requests</li><li>Client dashboard</li><li>Full setup included</li><li>Email &amp; SMS support</li></ul>
+        <a href="#contact" class="pbtn">Get Started</a>
+      </div>
+      <div class="pk ft r">
+        <div class="pbdg">Most Popular</div>
+        <span class="pnm">Anchor Growth</span>
+        <div class="ppr"><sup>$</sup>997</div>
+        <div class="pmo">per month</div>
+        <p class="pds">Complete lead capture and conversion. Every lead followed up, every appointment booked — automatically.</p>
+        <ul class="pfl"><li>Everything in Starter</li><li>Lead follow-up sequences</li><li>Appointment booking</li><li>Calendar sync &amp; reminders</li><li>Priority support &amp; monthly call</li></ul>
+        <a href="#contact" class="pbtn">Get Started</a>
+      </div>
+      <div class="pk r">
+        <span class="pnm">Anchor Complete</span>
+        <div class="ppr"><sup>$</sup>1,497</div>
+        <div class="pmo">per month</div>
+        <p class="pds">Full-stack AI automation and CRM. The last system your business will ever need.</p>
+        <ul class="pfl"><li>Everything in Growth</li><li>AI website chatbot</li><li>Full CRM pipeline</li><li>Advanced analytics</li><li>Dedicated account manager</li></ul>
+        <a href="#contact" class="pbtn">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="wg">
+      <div>
+        <span class="tag r">Why Anchor</span>
+        <h2 class="h2 r">We don't sell software. <em>We sell results.</em></h2>
+        <div class="wrws">
+          <div class="wr r"><div class="wn">01</div><div><h4>Built for your workflow</h4><p>Designed around how your business actually operates — not adapted from generic tools.</p></div></div>
+          <div class="wr r"><div class="wn">02</div><div><h4>Done for you entirely</h4><p>We build it, test it, launch it, maintain it. Your only role is running your business.</p></div></div>
+          <div class="wr r"><div class="wn">03</div><div><h4>ROI within 30 days</h4><p>One extra closed deal per month covers your entire plan. Most clients see results in two weeks.</p></div></div>
+          <div class="wr r"><div class="wn">04</div><div><h4>No lock-in contracts</h4><p>Month-to-month. No cancellation fees. We earn your business every month.</p></div></div>
+        </div>
+      </div>
+      <div class="mbox rr">
+        <div class="mhd">Average results after 30 days</div>
+        <div class="mr"><span class="mrl">Missed call recovery</span><span class="mrv">↑ 78%</span></div>
+        <div class="mr"><span class="mrl">Lead response time</span><span class="mrv">&lt; 90s</span></div>
+        <div class="mr"><span class="mrl">New Google reviews / mo</span><span class="mrv">+ 15</span></div>
+        <div class="mr"><span class="mrl">No-show rate</span><span class="mrv">↓ 70%</span></div>
+        <div class="mr"><span class="mrl">Hours saved / week</span><span class="mrv">~10h</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="cvls" id="vlines"></div>
+  <div class="cgh"><svg viewBox="0 0 56 68" fill="none"><use href="#A" color="white"/></svg></div>
+  <div class="chl">
+    <span class="cl d1">Ready to</span>
+    <span class="cl d2">stop losing</span>
+    <span class="cl d3 it">revenue?</span>
+  </div>
+  <div class="cbot">
+    <p class="ccopy">Free 30-minute demo. We'll show you exactly what the system looks like for your business.</p>
+    <div class="cr">
+      <a href="https://calendly.com" class="bw">Book Your Free Demo →</a>
+      <span class="cnote">Free · No contracts · Live in days</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a class="fl" href="#">
+    <svg viewBox="0 0 56 68" fill="none"><use href="#A" color="rgba(255,255,255,0.35)"/></svg>
+    <span>Anchor Automations</span>
+  </a>
+  <div class="fls">
+    <a href="#services">Services</a>
+    <a href="#packages">Pricing</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <p>© 2025 Anchor Automations</p>
+</footer>
+
+<script>
+(function(){
+  /* cursor */
+  var c=document.getElementById('cur');
+  if(c&&window.matchMedia('(pointer:fine)').matches){
+    var x=-300,y=-300;
+    document.addEventListener('mousemove',function(e){x=e.clientX;y=e.clientY;},{passive:true});
+    (function t(){c.style.left=x+'px';c.style.top=y+'px';requestAnimationFrame(t);})();
+    document.querySelectorAll('a,button').forEach(function(el){
+      el.addEventListener('mouseenter',function(){c.classList.add('big');});
+      el.addEventListener('mouseleave',function(){c.classList.remove('big');});
+    });
+  }
+
+  /* nav */
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('stuck',window.scrollY>50);},{passive:true});
+
+  /* mobile menu */
+  var h=document.getElementById('ham'),m=document.getElementById('mob');
+  if(h&&m){
+    h.addEventListener('click',function(){
+      var o=!m.classList.contains('open');
+      m.classList.toggle('open',o);
+      h.classList.toggle('open',o);
+      document.body.style.overflow=o?'hidden':'';
+    });
+  }
+  window.cM=function(){
+    if(m)m.classList.remove('open');
+    if(h)h.classList.remove('open');
+    document.body.style.overflow='';
+  };
+
+  /* CTA lines */
+  var vl=document.getElementById('vlines');
+  if(vl){
+    var n=window.innerWidth<600?4:8;
+    for(var i=0;i<n;i++){var l=document.createElement('div');l.className='vl';l.style.left=((i+1)/(n+1)*100)+'%';vl.appendChild(l);}
+  }
+
+  /* scroll reveal */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:0.07});
+  document.querySelectorAll('.r,.rr').forEach(function(el){io.observe(el);});
+
+  /* stagger */
+  ['.plst','.sgrid','.sg','.pg2','.wrws','.band-in'].forEach(function(s){
+    var g=document.querySelector(s);
+    if(g)g.querySelectorAll('.r,.rr').forEach(function(el,i){el.style.transitionDelay=(i*0.065)+'s';});
+  });
+
+  /* CTA animate on scroll */
+  var ct=document.querySelector('.cta');
+  if(ct){
+    var co=new IntersectionObserver(function(es){if(es[0].isIntersecting){ct.classList.add('live');co.disconnect();}},{threshold:0.15});
+    co.observe(ct);
+  }
+
+  /* parallax ghost */
+  var hg=document.querySelector('.hg');
+  if(hg){
+    window.addEventListener('scroll',function(){hg.style.transform='translateY(calc(-50% + '+window.scrollY*.12+'px))';},{passive:true});
+  }
+})();
+</script>
+</body>
+</html>
