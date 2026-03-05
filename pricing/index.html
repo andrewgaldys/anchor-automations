@@ -67,42 +67,34 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.8);backdrop-filter:blur(32p
 .anim2{animation-delay:.15s}.anim3{animation-delay:.3s}
 @keyframes fi{to{opacity:1;transform:none}}
 
-/* PRICING */
+/* PRICING - SINGLE PLAN */
 .pkg-sec{padding:72px 56px 96px;position:relative;background:var(--bg)}
 .pkg-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 30%,rgba(79,142,255,.04),transparent);pointer-events:none}
 .wrap{max-width:1200px;margin:0 auto}
-.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;position:relative;z-index:1}
-.pk{padding:44px 36px;position:relative;overflow:hidden;border-radius:4px;border:1px solid rgba(255,255,255,.07);background:linear-gradient(160deg,rgba(255,255,255,.03),rgba(255,255,255,.01));backdrop-filter:blur(20px);transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s,border-color .3s;box-shadow:0 8px 32px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.04)}
-.pk::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);transition:background .3s}
-.pk:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,.4),0 0 40px rgba(79,142,255,.06);border-color:rgba(255,255,255,.11)}
-.pk:hover::before{background:linear-gradient(90deg,transparent,rgba(79,142,255,.35),transparent)}
-.pk.ft{border-color:rgba(79,142,255,.22);background:linear-gradient(160deg,rgba(79,142,255,.08),rgba(79,142,255,.03));box-shadow:0 8px 40px rgba(0,0,0,.35),0 0 60px rgba(79,142,255,.08),inset 0 1px 0 rgba(79,142,255,.15);padding-top:58px}
-.pk.ft::before{background:linear-gradient(90deg,transparent,var(--blue),var(--cyan),transparent)}
-.pk.ft:hover{box-shadow:0 24px 64px rgba(0,0,0,.45),0 0 80px rgba(79,142,255,.14);border-color:rgba(79,142,255,.4)}
-.pk-badge{position:absolute;top:0;left:36px;background:var(--blue);color:var(--bg);font-size:8px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:5px 13px;border-radius:0 0 3px 3px;box-shadow:0 4px 20px rgba(79,142,255,.35)}
-.pk-name{font-size:9px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.24);display:block;margin-bottom:22px;transition:color .2s}
-.pk.ft .pk-name{color:var(--blue);opacity:.85}
-.pk-price{font-family:'Instrument Serif',serif;font-size:62px;line-height:1;letter-spacing:-.03em;color:var(--w);margin-bottom:4px}
-.pk.ft .pk-price{color:var(--blue);text-shadow:0 0 48px rgba(79,142,255,.3)}
-.pk-price sup{font-size:22px;font-family:'DM Sans',sans-serif;font-weight:300;vertical-align:super;line-height:0}
-.pk-mo{font-size:11px;font-weight:300;color:rgba(255,255,255,.2);margin-bottom:24px;letter-spacing:.03em}
-.pk-desc{font-size:13px;font-weight:300;color:rgba(255,255,255,.3);line-height:1.75;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.06)}
-.pk.ft .pk-desc{border-color:rgba(79,142,255,.14);color:rgba(255,255,255,.42)}
-.pk-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
-.pk-list li{font-size:13px;font-weight:300;color:rgba(255,255,255,.36);display:flex;gap:11px;line-height:1.5;align-items:flex-start}
-.pk-list li::before{content:'—';color:rgba(255,255,255,.1);flex-shrink:0;margin-top:0}
-.pk.ft .pk-list li{color:rgba(255,255,255,.56)}
-.pk.ft .pk-list li::before{color:rgba(79,142,255,.4)}
-.pk-btn{display:block;text-align:center;padding:13px 20px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:all .22s;margin-top:auto}
-.pk-out{border:1px solid rgba(255,255,255,.09);color:rgba(255,255,255,.28);background:rgba(255,255,255,.02)}
-.pk-out:hover{border-color:rgba(79,142,255,.45);color:var(--blue);background:rgba(79,142,255,.06)}
+.pkg-single{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(79,142,255,.12);border:1px solid rgba(79,142,255,.15);border-radius:4px;overflow:hidden;box-shadow:0 0 80px rgba(79,142,255,.08),0 32px 64px rgba(0,0,0,.4),inset 0 1px 0 rgba(79,142,255,.2);position:relative;z-index:1}
+.pkg-single::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue),var(--cyan),transparent);z-index:2}
+.pk-left{padding:52px 48px;background:linear-gradient(160deg,rgba(79,142,255,.09),rgba(79,142,255,.04));display:flex;flex-direction:column;gap:0}
+.pk-name{font-size:9px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--blue);opacity:.8;display:block;margin-bottom:20px}
+.pk-price{font-family:'Instrument Serif',serif;font-size:72px;line-height:1;letter-spacing:-.04em;color:var(--blue);text-shadow:0 0 60px rgba(79,142,255,.35);margin-bottom:4px}
+.pk-price sup{font-size:26px;font-family:'DM Sans',sans-serif;font-weight:300;vertical-align:super;line-height:0}
+.pk-mo{font-size:11px;font-weight:300;color:rgba(255,255,255,.25);margin-bottom:24px;letter-spacing:.03em}
+.pk-desc{font-size:14px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.78;margin-bottom:32px}
+.pk-btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:all .22s;margin-bottom:32px}
 .pk-fill{background:var(--blue);border:1px solid var(--blue);color:var(--bg);box-shadow:0 0 28px rgba(79,142,255,.35),inset 0 1px 0 rgba(255,255,255,.2)}
-.pk-fill:hover{background:var(--cyan);border-color:var(--cyan);box-shadow:0 0 44px rgba(0,212,255,.45)}
-
-/* TRUST STRIP */
-.trust{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;margin-top:52px;padding-top:44px;border-top:1px solid rgba(255,255,255,.05);position:relative;z-index:1}
-.trust-item{font-size:11px;font-weight:300;color:rgba(255,255,255,.26);letter-spacing:.05em;display:flex;align-items:center;gap:9px}
-.trust-item::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--blue);opacity:.55;flex-shrink:0;box-shadow:0 0 6px var(--blue)}
+.pk-fill:hover{background:var(--cyan);border-color:var(--cyan);box-shadow:0 0 44px rgba(0,212,255,.45);transform:translateY(-1px)}
+.trust{display:flex;flex-wrap:wrap;gap:16px;margin-top:auto}
+.trust-item{font-size:11px;font-weight:300;color:rgba(255,255,255,.22);letter-spacing:.04em;display:flex;align-items:center;gap:8px}
+.trust-item::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--blue);opacity:.55;flex-shrink:0;box-shadow:0 0 5px var(--blue)}
+.pk-right{padding:52px 48px;background:rgba(5,13,26,.6);display:flex;flex-direction:column;gap:0}
+.pk-feature{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.pk-feature:first-child{padding-top:0}
+.pk-feat-num{font-family:'Instrument Serif',serif;font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.18);padding-top:3px}
+.pk-feat-title{font-size:14px;font-weight:500;color:rgba(255,255,255,.85);margin-bottom:5px;line-height:1.3}
+.pk-feat-desc{font-size:13px;font-weight:300;color:var(--dim);line-height:1.72}
+.pk-also{margin-top:24px;padding-top:24px}
+.pk-also-label{font-size:9px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.18);margin-bottom:14px}
+.pk-also-items{display:flex;flex-wrap:wrap;gap:8px}
+.pk-also-items span{font-size:11px;font-weight:300;color:rgba(255,255,255,.3);border:1px solid rgba(255,255,255,.07);padding:5px 12px;border-radius:2px;background:rgba(255,255,255,.02)}
 
 /* FAQ */
 .faq-sec{background:var(--bg2);padding:80px 56px;position:relative}
@@ -147,7 +139,7 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
 .r{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
 .r.on{opacity:1;transform:none}
 
-@media(max-width:840px){nav{padding:18px 24px}nav.stuck{padding:12px 24px}.nl{display:none}.ham{display:flex}.ph{padding:120px 24px 56px}.ph-rule{left:24px}.pkg-sec{padding:56px 24px 72px}.pkg-grid{grid-template-columns:1fr;gap:12px}.faq-sec{padding:56px 24px}.faq-grid{grid-template-columns:1fr;gap:0}.fq{border-bottom:1px solid rgba(255,255,255,.04)}.cta-strip{padding:56px 24px}.cs-inner{flex-direction:column;align-items:flex-start;gap:24px}.cs-right{align-items:flex-start}footer{padding:36px 24px 28px}.foot-top{flex-direction:column;gap:24px}.foot-links{gap:24px;flex-wrap:wrap}.foot-bottom{flex-direction:column;align-items:flex-start}.trust{gap:20px}}
+@media(max-width:840px){nav{padding:18px 24px}nav.stuck{padding:12px 24px}.nl{display:none}.ham{display:flex}.ph{padding:120px 24px 56px}.ph-rule{left:24px}.pkg-sec{padding:56px 24px 72px}.pkg-single{grid-template-columns:1fr}.pk-left{padding:40px 32px}.pk-right{padding:40px 32px}.faq-sec{padding:56px 24px}.faq-grid{grid-template-columns:1fr;gap:0}.fq{border-bottom:1px solid rgba(255,255,255,.04)}.cta-strip{padding:56px 24px}.cs-inner{flex-direction:column;align-items:flex-start;gap:24px}.cs-right{align-items:flex-start}footer{padding:36px 24px 28px}.foot-top{flex-direction:column;gap:24px}.foot-links{gap:24px;flex-wrap:wrap}.foot-bottom{flex-direction:column;align-items:flex-start}.trust{gap:20px}}
 </style>
 </head>
 <body>
@@ -194,56 +186,59 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
 
 <section class="pkg-sec">
   <div class="wrap">
-    <div class="pkg-grid">
-      <div class="pk r">
-        <span class="pk-name">Anchor Starter</span>
-        <div class="pk-price"><sup>$</sup>497</div>
-        <div class="pk-mo">per month</div>
-        <p class="pk-desc">Stop losing customers to missed calls. Start building the review reputation that earns trust before anyone contacts you.</p>
-        <ul class="pk-list">
-          <li>Missed call text-back</li>
-          <li>Automated review requests</li>
-          <li>Client dashboard access</li>
-          <li>Full setup &amp; launch included</li>
-          <li>Email &amp; SMS support</li>
-        </ul>
-        <a href="https://calendly.com/andrew-anchorautomations/30min" class="pk-btn pk-out" target="_blank" rel="noopener">Get Started</a>
-      </div>
-      <div class="pk ft r">
-        <div class="pk-badge">Most Popular</div>
-        <span class="pk-name">Anchor Growth</span>
+    <div class="pkg-single r">
+      <div class="pk-left">
+        <span class="pk-name">Anchor Core</span>
         <div class="pk-price"><sup>$</sup>997</div>
-        <div class="pk-mo">per month</div>
-        <p class="pk-desc">Complete customer capture and retention. Every inquiry followed up, every appointment booked — automatically, around the clock.</p>
-        <ul class="pk-list">
-          <li>Everything in Starter</li>
-          <li>Multi-step follow-up sequences</li>
-          <li>Appointment booking system</li>
-          <li>Calendar sync &amp; reminders</li>
-          <li>Priority support &amp; monthly call</li>
-        </ul>
-        <a href="https://calendly.com/andrew-anchorautomations/30min" class="pk-btn pk-fill" target="_blank" rel="noopener">Get Started</a>
+        <div class="pk-mo">per month · everything included</div>
+        <p class="pk-desc">One complete system. Four automations working together to capture every lead, follow up automatically, build your reputation, and fill your calendar — around the clock.</p>
+        <a href="https://calendly.com/andrew-anchorautomations/30min" class="pk-btn pk-fill" target="_blank" rel="noopener">Book a Free Demo →</a>
+        <div class="trust">
+          <span class="trust-item">No setup fees</span>
+          <span class="trust-item">No contracts</span>
+          <span class="trust-item">Cancel anytime</span>
+          <span class="trust-item">Live in days</span>
+        </div>
       </div>
-      <div class="pk r">
-        <span class="pk-name">Anchor Complete</span>
-        <div class="pk-price"><sup>$</sup>1,497</div>
-        <div class="pk-mo">per month</div>
-        <p class="pk-desc">Full-stack AI automation and CRM. The last system your business will ever need to build.</p>
-        <ul class="pk-list">
-          <li>Everything in Growth</li>
-          <li>AI website chatbot</li>
-          <li>Full CRM pipeline</li>
-          <li>Advanced analytics</li>
-          <li>Dedicated account manager</li>
-        </ul>
-        <a href="https://calendly.com/andrew-anchorautomations/30min" class="pk-btn pk-out" target="_blank" rel="noopener">Get Started</a>
+      <div class="pk-right">
+        <div class="pk-feature">
+          <div class="pk-feat-num">01</div>
+          <div>
+            <div class="pk-feat-title">Missed Call Text-Back</div>
+            <div class="pk-feat-desc">Instant automated text from your number the second a call goes unanswered. Never lose a lead to voicemail again.</div>
+          </div>
+        </div>
+        <div class="pk-feature">
+          <div class="pk-feat-num">02</div>
+          <div>
+            <div class="pk-feat-title">Review Generation</div>
+            <div class="pk-feat-desc">Automated Google review requests after every interaction. Build a 5-star reputation on autopilot.</div>
+          </div>
+        </div>
+        <div class="pk-feature">
+          <div class="pk-feat-num">03</div>
+          <div>
+            <div class="pk-feat-title">Lead Follow-Up Sequences</div>
+            <div class="pk-feat-desc">Multi-step SMS and email sequences that nurture every inquiry until they're ready to buy. Nobody falls through the cracks.</div>
+          </div>
+        </div>
+        <div class="pk-feature">
+          <div class="pk-feat-num">04</div>
+          <div>
+            <div class="pk-feat-title">Appointment Booking</div>
+            <div class="pk-feat-desc">Customers book directly into your calendar with automated reminders that cut no-shows by up to 70%.</div>
+          </div>
+        </div>
+        <div class="pk-also">
+          <div class="pk-also-label">Also included</div>
+          <div class="pk-also-items">
+            <span>Full setup &amp; launch</span>
+            <span>Client dashboard</span>
+            <span>Email &amp; SMS support</span>
+            <span>Monthly check-in call</span>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="trust r">
-      <span class="trust-item">100% done for you — zero technical work</span>
-      <span class="trust-item">No setup fees · No contracts · Cancel anytime</span>
-      <span class="trust-item">Live in days, not weeks</span>
-      <span class="trust-item">ROI in the first 30 days</span>
     </div>
   </div>
 </section>
@@ -252,12 +247,12 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   <div class="wrap">
     <h2 class="faq-h r">Common <em>questions.</em></h2>
     <div class="faq-grid">
-      <div class="fq r"><h4>Is there a setup fee?</h4><p>No. Every plan includes full setup and launch at no additional cost. You pay the monthly rate and we handle everything from day one.</p></div>
+      <div class="fq r"><h4>Is there a setup fee?</h4><p>No. Full setup and launch is included in your monthly rate. You pay $997 and we handle everything from day one.</p></div>
       <div class="fq r"><h4>How long does it take to go live?</h4><p>Most systems are live within 3–5 business days of your onboarding call. We move fast because every day you wait costs you revenue.</p></div>
       <div class="fq r"><h4>Can I cancel anytime?</h4><p>Yes. No long-term contracts. Cancel with 30 days notice. We're confident the system will pay for itself many times over — but we never lock you in.</p></div>
       <div class="fq r"><h4>Do I need any technical skills?</h4><p>None. Zero. We build everything, configure everything, and train you on what to expect. You run your business — we run the system.</p></div>
-      <div class="fq r"><h4>What businesses is this built for?</h4><p>Any Florida service business that relies on leads, bookings, or repeat customers. HVAC, dental, med spa, home services, legal, fitness, restaurants — if you get calls, you need this.</p></div>
-      <div class="fq r"><h4>What if I want to upgrade my plan?</h4><p>Easy. You can upgrade anytime — we'll build out the additional automations and have them live within a few days. No disruption to your existing systems.</p></div>
+      <div class="fq r"><h4>What businesses is this built for?</h4><p>Any service business that relies on leads, bookings, or repeat customers. HVAC, dental, med spa, home services, legal, fitness, restaurants — if you get calls, you need this.</p></div>
+      <div class="fq r"><h4>What does $997 actually get me?</h4><p>Four fully built automations, custom configured for your business, live in days. One new customer a month more than covers the entire cost.</p></div>
     </div>
   </div>
 </section>
@@ -266,8 +261,8 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   <div class="wrap">
     <div class="cs-inner r">
       <div class="cs-left">
-        <h2>Not sure which plan? <em>We'll tell you.</em></h2>
-        <p>Book a free 30-minute call. We'll audit your current setup, identify exactly where you're losing revenue, and recommend the right plan — no pressure, no pitch.</p>
+        <h2>See it before you <em>commit.</em></h2>
+        <p>Book a free 30-minute call. We'll show you exactly how the system works for your business and what it's already costing you to not have it.</p>
       </div>
       <div class="cs-right">
         <a href="https://calendly.com/andrew-anchorautomations/30min" class="bf" target="_blank" rel="noopener">Book a Free Demo →</a>
