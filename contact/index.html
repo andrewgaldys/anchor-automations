@@ -205,7 +205,9 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
 
   <div class="right-col">
     <div class="cal-wrap">
-      <div class="cal-inner" id="cal"></div>
+      <div class="cal-inner">
+        <iframe src="https://api.leadconnectorhq.com/widget/form/RYxTcpr2G21SY9NK2Fn3" style="width:100%;height:100%;min-height:520px;border:none;border-radius:4px;" scrolling="no" id="ghl-form"></iframe>
+      </div>
     </div>
   </div>
 </div>
@@ -217,7 +219,7 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   </div>
 </footer>
 
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script type="text/javascript" src="https://link.msgsndr.com/js/form_embed.js"></script>
 <script>
 (function(){
   var c=document.getElementById('cur');
@@ -226,17 +228,6 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   var h=document.getElementById('ham'),m=document.getElementById('mob');
   if(h&&m){h.addEventListener('click',function(){var o=!m.classList.contains('open');m.classList.toggle('open',o);h.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';});}
   window.cM=function(){if(m)m.classList.remove('open');if(h)h.classList.remove('open');document.body.style.overflow='';};
-  // init Calendly
-  var cal=document.getElementById('cal');
-  function initCal(){
-    if(window.Calendly&&cal){
-      Calendly.initInlineWidget({url:'https://calendly.com/andrew-anchorautomations/30min',parentElement:cal,prefill:{},utm:{}});
-    } else {
-      // fallback if Calendly fails to load
-      cal.innerHTML='<div class="cal-fallback"><p>Ready to book your free 30-minute call? Click below to pick a time that works for you.</p><a href="https://calendly.com/andrew-anchorautomations/30min" class="cf-btn" target="_blank" rel="noopener">Book Your Free Demo →</a></div>';
-    }
-  }
-  if(document.readyState==='loading'){window.addEventListener('load',function(){setTimeout(initCal,800);});}else{setTimeout(initCal,800);}
   document.getElementById('yr').textContent=new Date().getFullYear();
 })();
 </script>
