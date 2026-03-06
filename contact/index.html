@@ -80,16 +80,32 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.8);backdrop-filter:blur(32p
 .le-item{display:flex;align-items:flex-start;gap:12px;font-size:13px;font-weight:300;color:rgba(255,255,255,.38);line-height:1.6}
 .le-item::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--blue);opacity:.5;flex-shrink:0;margin-top:7px;box-shadow:0 0 5px var(--blue)}
 
-/* RIGHT COL - CALENDLY */
+/* RIGHT COL - FORM */
 .right-col{background:var(--bg2);position:relative;overflow:hidden;display:flex;flex-direction:column}
 .right-col::before{content:'';position:absolute;top:0;left:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,rgba(79,142,255,.15) 30%,rgba(79,142,255,.15) 70%,transparent)}
-.cal-wrap{flex:1;padding:120px 0 0;display:flex;flex-direction:column}
-.cal-inner{flex:1;min-height:700px}
-.cal-inner iframe,.calendly-inline-widget{width:100%!important;height:100%!important;min-height:700px;border:none}
-.cal-fallback{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px;text-align:center;gap:20px}
-.cal-fallback p{font-size:14px;font-weight:300;color:var(--dim);line-height:1.75;max-width:320px}
-.cf-btn{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:var(--bg);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:15px 32px;border-radius:4px;text-decoration:none;box-shadow:0 0 36px rgba(79,142,255,.42),inset 0 1px 0 rgba(255,255,255,.22);transition:all .25s cubic-bezier(.16,1,.3,1)}
-.cf-btn:hover{background:var(--cyan);box-shadow:0 0 52px rgba(0,212,255,.52);gap:16px;transform:translateY(-2px)}
+.cal-wrap{flex:1;padding:120px 56px 72px;display:flex;flex-direction:column;justify-content:center}
+.form-title{font-size:9px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--blue);opacity:.7;margin-bottom:32px}
+
+/* FORM FIELDS */
+.gf{display:flex;flex-direction:column;gap:18px}
+.gf-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.gf-field{display:flex;flex-direction:column;gap:7px}
+.gf-label{font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.28)}
+.gf-input{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:13px 16px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;color:var(--w);outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none}
+.gf-input::placeholder{color:rgba(255,255,255,.18)}
+.gf-input:focus{border-color:rgba(79,142,255,.45);box-shadow:0 0 0 3px rgba(79,142,255,.08),inset 0 1px 0 rgba(79,142,255,.06)}
+.gf-consent{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.gf-check{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.gf-check input[type=checkbox]{width:14px;height:14px;flex-shrink:0;margin-top:3px;accent-color:var(--blue);cursor:pointer}
+.gf-check span{font-size:11px;font-weight:300;color:rgba(255,255,255,.22);line-height:1.6}
+.gf-submit{display:flex;align-items:center;justify-content:center;width:100%;padding:15px 28px;background:var(--blue);border:none;border-radius:3px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--bg);cursor:pointer;transition:all .22s;box-shadow:0 0 28px rgba(79,142,255,.3),inset 0 1px 0 rgba(255,255,255,.2);margin-top:8px}
+.gf-submit:hover{background:var(--cyan);box-shadow:0 0 44px rgba(0,212,255,.45);transform:translateY(-1px)}
+.gf-submit:active{transform:translateY(0)}
+.gf-success{display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 24px;gap:16px}
+.gf-success-icon{width:48px;height:48px;border-radius:50%;border:1px solid rgba(79,142,255,.3);display:flex;align-items:center;justify-content:center;background:rgba(79,142,255,.06)}
+.gf-success-icon svg{width:20px;height:20px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.gf-success h3{font-family:'Instrument Serif',serif;font-size:28px;letter-spacing:-.02em;color:var(--w)}
+.gf-success p{font-size:13px;font-weight:300;color:var(--dim);line-height:1.75;max-width:280px}
 
 /* FOOTER */
 footer{background:var(--bg);padding:40px 56px 32px;position:relative;border-top:1px solid rgba(255,255,255,.04)}
@@ -107,13 +123,14 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   .left-col{padding:120px 40px 56px;justify-content:flex-start}
   .right-col::before{display:none}
   .right-col{border-top:1px solid rgba(255,255,255,.05)}
-  .cal-wrap{padding:56px 0 0}
-  .cal-inner{min-height:650px}
+  .cal-wrap{padding:56px 40px 72px}
+  .gf-row{grid-template-columns:1fr}
 }
 @media(max-width:840px){
   nav{padding:18px 24px}nav.stuck{padding:12px 24px}.nl{display:none}.ham{display:flex}
   .left-col{padding:100px 24px 48px}
   .l-rule{left:24px}
+  .cal-wrap{padding:48px 24px 64px}
   footer{padding:32px 24px 24px}
   .foot-bottom{flex-direction:column;align-items:flex-start}
 }
@@ -205,9 +222,49 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
 
   <div class="right-col">
     <div class="cal-wrap">
-      <div class="cal-inner">
-        <iframe src="https://api.leadconnectorhq.com/widget/form/RYxTcpr2G21SY9NK2Fn3" style="width:100%;height:100%;min-height:520px;border:none;border-radius:4px;" scrolling="no" id="ghl-form"></iframe>
+      <div class="form-title">Get Started</div>
+      <div class="gf-success" id="gf-success">
+        <div class="gf-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3>You're all set.</h3>
+        <p>We'll be in touch within 24 hours to schedule your free demo call.</p>
       </div>
+      <div class="gf" id="gf-form">
+        <div class="gf-row">
+          <div class="gf-field">
+            <label class="gf-label" for="fname">First Name</label>
+            <input class="gf-input" type="text" id="fname" name="first_name" placeholder="Andrew" autocomplete="given-name">
+          </div>
+          <div class="gf-field">
+            <label class="gf-label" for="lname">Last Name</label>
+            <input class="gf-input" type="text" id="lname" name="last_name" placeholder="Smith" autocomplete="family-name">
+          </div>
+        </div>
+        <div class="gf-field">
+          <label class="gf-label" for="phone">Phone</label>
+          <input class="gf-input" type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel">
+        </div>
+        <div class="gf-field">
+          <label class="gf-label" for="email">Email</label>
+          <input class="gf-input" type="email" id="email" name="email" placeholder="you@yourbusiness.com" autocomplete="email">
+        </div>
+        <div class="gf-field">
+          <label class="gf-label" for="bname">Business Name</label>
+          <input class="gf-input" type="text" id="bname" name="business_name" placeholder="Your Business">
+        </div>
+        <div class="gf-consent">
+          <label class="gf-check">
+            <input type="checkbox" id="consent1" required>
+            <span>I consent to receive text messages from Anchor Automations. Message frequency varies, message &amp; data rates may apply. Reply STOP to opt out.</span>
+          </label>
+          <label class="gf-check">
+            <input type="checkbox" id="consent2">
+            <span>I consent to receive marketing emails from Anchor Automations. You can unsubscribe anytime.</span>
+          </label>
+        </div>
+        <button class="gf-submit" id="gf-submit" type="button">Get Started →</button>
+      </div>
+      <!-- Hidden GHL iframe that handles actual submission -->
+      <iframe id="ghl-hidden" src="https://api.leadconnectorhq.com/widget/form/RYxTcpr2G21SY9NK2Fn3" style="display:none;width:0;height:0;border:none;" scrolling="no"></iframe>
     </div>
   </div>
 </div>
@@ -219,7 +276,6 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   </div>
 </footer>
 
-<script type="text/javascript" src="https://link.msgsndr.com/js/form_embed.js"></script>
 <script>
 (function(){
   var c=document.getElementById('cur');
@@ -229,6 +285,45 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   if(h&&m){h.addEventListener('click',function(){var o=!m.classList.contains('open');m.classList.toggle('open',o);h.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';});}
   window.cM=function(){if(m)m.classList.remove('open');if(h)h.classList.remove('open');document.body.style.overflow='';};
   document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // Form submission — fills hidden GHL iframe and submits
+  document.getElementById('gf-submit').addEventListener('click',function(){
+    var fname=document.getElementById('fname').value.trim();
+    var lname=document.getElementById('lname').value.trim();
+    var phone=document.getElementById('phone').value.trim();
+    var email=document.getElementById('email').value.trim();
+    var bname=document.getElementById('bname').value.trim();
+    var consent1=document.getElementById('consent1').checked;
+    if(!fname||!lname||!phone||!email||!bname||!consent1){
+      alert('Please fill in all fields and accept the SMS consent to continue.');
+      return;
+    }
+    var btn=document.getElementById('gf-submit');
+    btn.textContent='Sending...';
+    btn.disabled=true;
+
+    // Submit directly to GHL via form POST
+    var f=document.createElement('form');
+    f.method='POST';
+    f.action='https://api.leadconnectorhq.com/widget/form/RYxTcpr2G21SY9NK2Fn3';
+    f.target='ghl-hidden';
+    f.style.display='none';
+    var fields={first_name:fname,last_name:lname,phone:phone,email:email,business_name:bname};
+    Object.keys(fields).forEach(function(k){
+      var i=document.createElement('input');
+      i.type='hidden';i.name=k;i.value=fields[k];
+      f.appendChild(i);
+    });
+    document.body.appendChild(f);
+    f.submit();
+    document.body.removeChild(f);
+
+    setTimeout(function(){
+      document.getElementById('gf-form').style.display='none';
+      var s=document.getElementById('gf-success');
+      s.style.display='flex';
+    },800);
+  });
 })();
 </script>
 </body>
