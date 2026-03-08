@@ -46,14 +46,13 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.85);backdrop-filter:blur(32
 .ph{padding:160px 56px 88px;position:relative;overflow:hidden;text-align:center}
 .ph-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(79,142,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,142,255,.03) 1px,transparent 1px);background-size:76px 76px;mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,black,transparent 100%)}
 .ph-orb{position:absolute;width:700px;height:700px;left:50%;top:-250px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(79,142,255,.08) 0%,transparent 70%);pointer-events:none}
-.ph-tag{font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:24px;position:relative;z-index:1;opacity:0;animation:fi .7s .1s cubic-bezier(.16,1,.3,1) forwards}
-.ph-h1{font-family:'Instrument Serif',serif;font-size:clamp(40px,5.5vw,88px);line-height:1.08;letter-spacing:-.02em;color:var(--w);position:relative;z-index:1;margin-bottom:20px;opacity:0;animation:fi .8s .2s cubic-bezier(.16,1,.3,1) forwards;-webkit-font-smoothing:antialiased;font-weight:400}
+.ph-tag{font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:24px;position:relative;z-index:1}
+.ph-h1{font-family:'Instrument Serif',serif;font-size:clamp(40px,5.5vw,88px);line-height:1.08;letter-spacing:-.02em;color:var(--w);position:relative;z-index:1;margin-bottom:20px;-webkit-font-smoothing:antialiased;font-weight:400}
 .ph-h1 em{font-style:italic;color:var(--blue)}
-.ph-sub{font-size:19px;font-weight:300;color:var(--dim);max-width:540px;line-height:1.85;position:relative;z-index:1;margin:0 auto 40px;opacity:0;animation:fi .8s .35s cubic-bezier(.16,1,.3,1) forwards}
-.ph-pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;opacity:0;animation:fi .8s .5s cubic-bezier(.16,1,.3,1) forwards}
+.ph-sub{font-size:19px;font-weight:300;color:var(--dim);max-width:540px;line-height:1.85;position:relative;z-index:1;margin:0 auto 40px}
+.ph-pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
 .ph-pill{font-size:12px;font-weight:400;color:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.09);padding:8px 18px;border-radius:100px;display:flex;align-items:center;gap:7px}
 .ph-pill span{color:var(--blue)}
-@keyframes fi{to{opacity:1;transform:none}}
 .wrap{max-width:1240px;margin:0 auto}
 .sdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.05) 20%,rgba(79,142,255,.1) 50%,rgba(255,255,255,.05) 80%,transparent)}
 .r{opacity:0;transform:translateY(28px);transition:opacity .72s cubic-bezier(.16,1,.3,1),transform .72s cubic-bezier(.16,1,.3,1)}
@@ -76,7 +75,7 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.85);backdrop-filter:blur(32
 .pk-sub-note{font-size:13px;font-weight:300;color:rgba(255,255,255,.18);text-align:center;margin-bottom:32px}
 .trust{display:flex;flex-wrap:wrap;gap:10px;padding-top:28px;border-top:1px solid rgba(255,255,255,.05)}
 .tr{font-size:13px;font-weight:300;color:rgba(255,255,255,.28);display:flex;align-items:center;gap:6px}
-.tr::before{content:'✓';color:var(--blue);font-size:12px}
+.tr::before{content:'&#10003;';color:var(--blue);font-size:12px}
 .pk-right{padding:52px 48px;display:flex;flex-direction:column}
 .pk-right-label{font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.18);margin-bottom:28px;display:block}
 .pk-features{display:flex;flex-direction:column;margin-bottom:0}
@@ -128,7 +127,7 @@ footer{background:var(--bg);padding:48px 56px 36px;position:relative}
 footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.18),transparent)}
 .foot-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.04)}
 .foot-brand{display:flex;align-items:center;gap:9px;text-decoration:none;margin-bottom:10px}
-.foot-brand svg{width:16px;height:20px;display:block;filter:drop-shadow(0 0 5px rgba(79,142,255,.4))}
+.foot-brand svg{width:16px;height:20px;display:block}
 .foot-brand-name{font-family:'Instrument Serif',serif;font-size:15px;color:rgba(255,255,255,.55)}
 .foot-tagline{font-size:13px;font-weight:300;color:rgba(255,255,255,.18);max-width:220px;line-height:1.72}
 .foot-links{display:flex;gap:56px}
@@ -141,8 +140,7 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
 @media(max-width:840px){
   nav{padding:18px 24px}nav.stuck{padding:12px 24px}
   .nl{display:none}.ham{display:flex}
-  .ph{padding:120px 24px 64px}.ph-h1{font-size:clamp(36px,11vw,60px)}.ph-sub{font-size:17px}
-  .ph-pills{gap:8px}
+  .ph{padding:120px 24px 64px}.ph-sub{font-size:17px}.ph-pills{gap:8px}
   .pkg-sec{padding:32px 24px 64px}.pk-left{padding:40px 28px}.pk-right{padding:40px 28px}.pk-price{font-size:64px}
   .compare-sec{padding:56px 24px}.faq-sec{padding:56px 24px}
   .faq-grid{grid-template-columns:1fr}.fq{padding:28px 24px}
@@ -182,38 +180,38 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   <div class="ph-grid"></div><div class="ph-orb"></div>
   <span class="ph-tag">Simple, Transparent Pricing</span>
   <h1 class="ph-h1">One plan. Everything included.<br><em>First month on us.</em></h1>
-  <p class="ph-sub">No setup fees. No contracts. No surprises. A complete AI automation system running your business in the background — free for the first 30 days.</p>
+  <p class="ph-sub">No setup fees. No contracts. No surprises. A complete AI automation system running in the background — free for the first 30 days.</p>
   <div class="ph-pills">
-    <div class="ph-pill"><span>✓</span> No setup fee</div>
-    <div class="ph-pill"><span>✓</span> No contracts — ever</div>
-    <div class="ph-pill"><span>✓</span> Live in 48 hours</div>
-    <div class="ph-pill"><span>✓</span> Done for you</div>
-    <div class="ph-pill"><span>✓</span> First month free</div>
+    <div class="ph-pill"><span>&#10003;</span> No setup fee</div>
+    <div class="ph-pill"><span>&#10003;</span> No contracts &mdash; ever</div>
+    <div class="ph-pill"><span>&#10003;</span> Live in 48 hours</div>
+    <div class="ph-pill"><span>&#10003;</span> Done for you</div>
+    <div class="ph-pill"><span>&#10003;</span> First month free</div>
   </div>
 </section>
 <section class="pkg-sec">
   <div class="wrap">
     <div class="pkg-grid r">
       <div class="pk-left">
-        <span class="pk-label">Growth Plan — All Four Systems</span>
+        <span class="pk-label">Growth Plan &mdash; All Four Systems</span>
         <span class="pk-price"><sup>$</sup>997</span>
-        <p class="pk-mo">per month · cancel anytime</p>
+        <p class="pk-mo">per month &middot; cancel anytime</p>
         <div class="pk-free-box">
-          <div class="pk-free-icon">✦</div>
-          <div><strong>First month is free</strong><p>We build it, run it for 30 days, and you see the results before paying a cent. No credit card required to start.</p></div>
+          <div class="pk-free-icon">&#10022;</div>
+          <div><strong>First month is on us</strong><p>We build it, run it for 30 days, and you see the results before paying a cent. No credit card required to start.</p></div>
         </div>
         <p class="pk-desc">One flat rate. All four automations custom-built for your business. No hourly rates, no add-ons, no surprise invoices.</p>
-        <a href="https://calendly.com/anchorautomations/30min" class="pk-btn" target="_blank" rel="noopener">Claim Your Free Month →</a>
-        <p class="pk-sub-note">No credit card required · Cancel anytime</p>
+        <a href="https://calendly.com/anchorautomations/30min" class="pk-btn" target="_blank" rel="noopener">Claim Your Free Month &#8594;</a>
+        <p class="pk-sub-note">No credit card required &middot; Cancel anytime</p>
         <div class="trust">
           <span class="tr">No setup fee</span><span class="tr">No contracts</span><span class="tr">Live in 48 hrs</span><span class="tr">Done for you</span><span class="tr">Cancel anytime</span>
         </div>
       </div>
       <div class="pk-right">
-        <span class="pk-right-label">What's included in every plan</span>
+        <span class="pk-right-label">What&apos;s included in every plan</span>
         <div class="pk-features">
-          <div class="pk-feature"><div class="pk-feat-num">01</div><div><div class="pk-feat-title">Missed Call Text-Back</div><div class="pk-feat-desc">Every missed call fires an instant automated text-back within seconds — so no lead walks away before you even know they called.</div></div></div>
-          <div class="pk-feature"><div class="pk-feat-num">02</div><div><div class="pk-feat-title">Review Generation</div><div class="pk-feat-desc">Automated Google review requests after every completed job. Build a 5-star reputation on autopilot — no awkward asking required.</div></div></div>
+          <div class="pk-feature"><div class="pk-feat-num">01</div><div><div class="pk-feat-title">Missed Call Text-Back</div><div class="pk-feat-desc">Every missed call fires an instant automated text-back within seconds &mdash; so no lead walks away before you even know they called.</div></div></div>
+          <div class="pk-feature"><div class="pk-feat-num">02</div><div><div class="pk-feat-title">Review Generation</div><div class="pk-feat-desc">Automated Google review requests after every completed job. Build a 5-star reputation on autopilot &mdash; no awkward asking required.</div></div></div>
           <div class="pk-feature"><div class="pk-feat-num">03</div><div><div class="pk-feat-title">Lead Follow-Up Sequences</div><div class="pk-feat-desc">Multi-step SMS and email sequences that follow up every new inquiry automatically. Stops the moment they respond.</div></div></div>
           <div class="pk-feature"><div class="pk-feat-num">04</div><div><div class="pk-feat-title">Appointment Reminders</div><div class="pk-feat-desc">Confirmation at booking, reminder 24 hours out, reminder 1 hour out. No-shows drop by up to 65% immediately.</div></div></div>
         </div>
@@ -236,32 +234,32 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
       <div class="cmp-col">
         <div class="cmp-head">Hiring In-House</div>
         <div class="cmp-price">$4,000+</div><div class="cmp-price-note">per month + benefits</div>
-        <div class="cmp-row"><span class="cx">✗</span> Weeks to hire and train</div>
-        <div class="cmp-row"><span class="cx">✗</span> Only works business hours</div>
-        <div class="cmp-row"><span class="cx">✗</span> Sick days, turnover, HR</div>
-        <div class="cmp-row"><span class="cx">✗</span> Manual follow-up only</div>
-        <div class="cmp-row"><span class="cx">✗</span> Can't scale automatically</div>
-        <div class="cmp-row"><span class="cx">✗</span> No free trial</div>
+        <div class="cmp-row"><span class="cx">&#10007;</span> Weeks to hire and train</div>
+        <div class="cmp-row"><span class="cx">&#10007;</span> Only works business hours</div>
+        <div class="cmp-row"><span class="cx">&#10007;</span> Sick days, turnover, HR</div>
+        <div class="cmp-row"><span class="cx">&#10007;</span> Manual follow-up only</div>
+        <div class="cmp-row"><span class="cx">&#10007;</span> Can&apos;t scale automatically</div>
+        <div class="cmp-row"><span class="cx">&#10007;</span> No free trial</div>
       </div>
       <div class="cmp-col anchor">
         <div class="cmp-head">Anchor Automations <span class="cmp-badge">Best Value</span></div>
-        <div class="cmp-price">$997</div><div class="cmp-price-note">per month · first month free</div>
-        <div class="cmp-row"><span class="ck">✓</span> Live in 48 hours</div>
-        <div class="cmp-row"><span class="ck">✓</span> Runs 24/7 automatically</div>
-        <div class="cmp-row"><span class="ck">✓</span> Zero management needed</div>
-        <div class="cmp-row"><span class="ck">✓</span> All 4 automations included</div>
-        <div class="cmp-row"><span class="ck">✓</span> Scales with your business</div>
-        <div class="cmp-row"><span class="ck">✓</span> First month completely free</div>
+        <div class="cmp-price">$997</div><div class="cmp-price-note">per month &middot; first month free</div>
+        <div class="cmp-row"><span class="ck">&#10003;</span> Live in 48 hours</div>
+        <div class="cmp-row"><span class="ck">&#10003;</span> Runs 24/7 automatically</div>
+        <div class="cmp-row"><span class="ck">&#10003;</span> Zero management needed</div>
+        <div class="cmp-row"><span class="ck">&#10003;</span> All 4 automations included</div>
+        <div class="cmp-row"><span class="ck">&#10003;</span> Scales with your business</div>
+        <div class="cmp-row"><span class="ck">&#10003;</span> First month completely free</div>
       </div>
       <div class="cmp-col">
         <div class="cmp-head">DIY / Other Tools</div>
-        <div class="cmp-price">$200–800</div><div class="cmp-price-note">per month + your time</div>
-        <div class="cmp-row"><span class="cx">✗</span> Months to set up properly</div>
-        <div class="cmp-row"><span class="cx">✗</span> Requires technical skills</div>
-        <div class="cmp-row"><span class="cx">✗</span> Constant maintenance</div>
-        <div class="cmp-row"><span class="cx">✗</span> Disconnected tools</div>
-        <div class="cmp-row"><span class="cx">✗</span> You're on your own</div>
-        <div class="cmp-row"><span class="cx">✗</span> No support included</div>
+        <div class="cmp-price">$200&ndash;800</div><div class="cmp-price-note">per month + your time</div>
+        <div class="cmp-row"><span class="cx">&#10007;</span> Months to set up properly</div>
+        <div class="cmp-row"><span class="cx">&#10007;</span> Requires technical skills</div>
+        <div class="cmp-row"><span class="cx">&#10007;</span> Constant maintenance</div>
+        <div class="cmp-row"><span class="cx">&#10007;</span> Disconnected tools</div>
+        <div class="cmp-row"><span class="cx">&#10007;</span> You&apos;re on your own</div>
+        <div class="cmp-row"><span class="cx">&#10007;</span> No support included</div>
       </div>
     </div>
   </div>
@@ -272,11 +270,11 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
     <h2 class="sec-h r">Common <em>questions.</em></h2>
     <div class="faq-grid">
       <div class="fq r"><h4>Is there really no setup fee?</h4><p>None. Full setup and launch is included in your $997/mo rate. We handle everything from the onboarding call to go-live.</p></div>
-      <div class="fq r"><h4>How does the free month work?</h4><p>We build and run all four systems completely free for your first 30 days. At the end of the month, if you've seen results, we send the invoice. No credit card needed upfront.</p></div>
+      <div class="fq r"><h4>How does the free month work?</h4><p>We build and run all four systems completely free for your first 30 days. At the end of the month, if you&apos;ve seen results, we send the invoice. No credit card needed upfront.</p></div>
       <div class="fq r"><h4>How fast does it go live?</h4><p>Most systems are live within 48 hours of your onboarding call. We move fast because every day without this running costs you real revenue.</p></div>
-      <div class="fq r"><h4>Can I cancel anytime?</h4><p>Yes. No contracts, no lock-ins. Cancel with 30 days notice. We're confident the system will more than pay for itself — but we never trap you.</p></div>
-      <div class="fq r"><h4>Do I need any tech skills?</h4><p>Zero. We build everything, configure everything, and train you on what to expect. You run your business — we run the system.</p></div>
-      <div class="fq r"><h4>What businesses is this built for?</h4><p>Any service business that depends on leads, calls, or repeat bookings — HVAC, dental, cleaning, legal, fitness, home services, restaurants. If you get calls, you need this.</p></div>
+      <div class="fq r"><h4>Can I cancel anytime?</h4><p>Yes. No contracts, no lock-ins. Cancel with 30 days notice. We&apos;re confident the system will more than pay for itself &mdash; but we never trap you.</p></div>
+      <div class="fq r"><h4>Do I need any tech skills?</h4><p>Zero. We build everything, configure everything, and train you on what to expect. You run your business &mdash; we run the system.</p></div>
+      <div class="fq r"><h4>What businesses is this built for?</h4><p>Any service business that depends on leads, calls, or repeat bookings &mdash; HVAC, dental, cleaning, legal, fitness, home services. If you get calls, you need this.</p></div>
     </div>
   </div>
 </section>
@@ -286,11 +284,11 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
     <div class="cs-inner r">
       <div class="cs-left">
         <h2>Nothing to lose.<br><em>Everything to gain.</em></h2>
-        <p>Book a free 30-minute call. We'll show you exactly how the system works for your business — then set it all up free for the first month.</p>
+        <p>Book a free 30-minute call. We&apos;ll show you exactly how the system works for your business &mdash; then set it all up free for the first month.</p>
       </div>
       <div class="cs-right">
-        <a href="https://calendly.com/anchorautomations/30min" class="bf" target="_blank" rel="noopener">Claim Your Free Month →</a>
-        <span class="cs-note">No credit card · No contracts · Live in 48 hours</span>
+        <a href="https://calendly.com/anchorautomations/30min" class="bf" target="_blank" rel="noopener">Claim Your Free Month &#8594;</a>
+        <span class="cs-note">No credit card &middot; No contracts &middot; Live in 48 hours</span>
       </div>
     </div>
   </div>
@@ -304,10 +302,10 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
       </div>
       <div class="foot-links">
         <div class="foot-col"><h5>Navigate</h5><a href="/">Home</a><a href="/services">Services</a><a href="/pricing">Pricing</a><a href="/contact">Contact</a></div>
-        <div class="foot-col"><h5>Get Started</h5><a href="https://calendly.com/anchorautomations/30min" target="_blank" rel="noopener">Claim Your Free Month</a><a href="/pricing">View Pricing</a><a href="mailto:hello@anchorautomations.ai">hello@anchorautomations.ai</a><a href="tel:7722850834">(772) 285-0834</a></div>
+        <div class="foot-col"><h5>Get Started</h5><a href="https://calendly.com/anchorautomations/30min" target="_blank">Claim Your Free Month</a><a href="/pricing">View Pricing</a><a href="mailto:hello@anchorautomations.ai">hello@anchorautomations.ai</a><a href="tel:7722850834">(772) 285-0834</a></div>
       </div>
     </div>
-    <div class="foot-bottom"><p>© <span id="yr"></span> Anchor Automations · anchorautomations.ai</p><p>Palm City, FL · Serving businesses across the US</p></div>
+    <div class="foot-bottom"><p>&copy; <span id="yr"></span> Anchor Automations &middot; anchorautomations.ai</p><p>Palm City, FL &middot; Serving businesses across the US</p></div>
   </div>
 </footer>
 <script>
@@ -320,8 +318,8 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   window.cM=function(){if(m)m.classList.remove('open');if(h)h.classList.remove('open');document.body.style.overflow='';};
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:0.06});
   document.querySelectorAll('.r').forEach(function(el){io.observe(el);});
+  setTimeout(function(){document.querySelectorAll('.r').forEach(function(el){el.classList.add('on');});},400);
   document.getElementById('yr').textContent=new Date().getFullYear();
-  setTimeout(function(){document.querySelectorAll('.r').forEach(function(el){el.classList.add('on');});},300);
 })();
 </script>
 </body>
