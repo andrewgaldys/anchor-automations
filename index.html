@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anchor Automations — AI Systems for Florida Businesses</title>
-<meta name="description" content="AI automation systems for US businesses. Missed call recovery, follow-up sequences, review generation — done for you.">
+<meta name="description" content="AI automation systems for Florida businesses. Missed call recovery, follow-up sequences, review generation — done for you.">
 <meta property="og:title" content="Anchor — AI Automations for Businesses">
 <meta property="og:description" content="AI automation systems built for US businesses. Done for you — live in days.">
 <meta property="og:url" content="https://anchorautomations.ai">
@@ -31,13 +31,14 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:28px 56px;transition:all .4s cubic-bezier(.16,1,.3,1)}
 nav.stuck{padding:14px 56px;background:rgba(5,13,26,.8);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border-bottom:1px solid rgba(255,255,255,.05);box-shadow:0 8px 40px rgba(0,0,0,.5),0 1px 0 rgba(79,142,255,.08)}
-.logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
-.lm{width:20px;height:25px;flex-shrink:0}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none;flex-shrink:0}
+.lm{width:30px;height:38px;flex-shrink:0}
 .lm svg{width:100%;height:100%;display:block;filter:drop-shadow(0 0 8px rgba(79,142,255,.55))}
 
+.logo-name{font-size:15px;font-weight:500;letter-spacing:.04em;color:rgba(255,255,255,.75)}
 .nav-r{display:flex;align-items:center;gap:36px}
 .nl{display:flex;align-items:center;gap:30px}
-.nl a{font-size:12px;font-weight:400;color:rgba(255,255,255,.38);text-decoration:none;letter-spacing:.02em;transition:color .2s;position:relative}
+.nl a{font-size:14px;font-weight:400;color:rgba(255,255,255,.38);text-decoration:none;letter-spacing:.02em;transition:color .2s;position:relative}
 .nl a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--blue);transition:width .25s}
 .nl a:hover,.nl a.act{color:rgba(255,255,255,.8)}
 .nl a:hover::after,.nl a.act::after{width:100%}
@@ -58,8 +59,8 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.8);backdrop-filter:blur(32p
 @keyframes mu{to{opacity:1;transform:none}}
 
 /* HERO */
-.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 56px 88px;position:relative;overflow:hidden}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(79,142,255,.033) 1px,transparent 1px),linear-gradient(90deg,rgba(79,142,255,.033) 1px,transparent 1px);background-size:76px 76px;z-index:0;mask-image:radial-gradient(ellipse 85% 65% at 65% 38%,black 15%,transparent 100%)}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 56px 88px;position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(79,142,255,.033) 1px,transparent 1px),linear-gradient(90deg,rgba(79,142,255,.033) 1px,transparent 1px);background-size:76px 76px;z-index:0;mask-image:radial-gradient(ellipse 85% 65% at 50% 50%,black 15%,transparent 100%)}
 .orb{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
 .orb1{width:720px;height:720px;right:-150px;top:-200px;background:radial-gradient(circle,rgba(79,142,255,.09) 0%,rgba(79,142,255,.02) 55%,transparent 70%);animation:ob1 14s ease-in-out infinite}
 .orb2{width:480px;height:480px;left:-80px;bottom:60px;background:radial-gradient(circle,rgba(0,212,255,.055) 0%,transparent 65%);animation:ob2 19s ease-in-out infinite}
@@ -67,26 +68,34 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.8);backdrop-filter:blur(32p
 @keyframes ob2{0%,100%{transform:translate(0,0)}50%{transform:translate(22px,-32px)}}
 .hg{position:absolute;right:-2vw;top:50%;width:min(50vw,640px);transform:translateY(-50%);opacity:0;pointer-events:none;z-index:0;animation:gf 2.5s .7s cubic-bezier(.16,1,.3,1) forwards}
 .hg svg{width:100%;height:100%;display:block;filter:drop-shadow(0 0 60px rgba(79,142,255,.12))}
-@keyframes gf{to{opacity:.07}}
-.h-rule{position:absolute;top:0;left:56px;width:0;height:1px;background:linear-gradient(90deg,var(--blue),rgba(0,212,255,.4),transparent);animation:rw 1.2s 1.3s ease forwards;z-index:1}
+@keyframes gf{to{opacity:.04}}
+.h-rule{position:absolute;top:0;left:50%;transform:translateX(-50%);width:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue),rgba(0,212,255,.4),transparent);animation:rw 1.2s 1.3s ease forwards;z-index:1}
 @keyframes rw{to{width:38%}}
-.hhl{position:relative;z-index:1}
-.hl{display:block;font-family:'Instrument Serif',serif;font-size:clamp(48px,8.5vw,132px);line-height:.95;letter-spacing:-.038em;color:var(--w);padding-bottom:.12em;clip-path:inset(0 0 100% 0);animation:wipe .88s cubic-bezier(.16,1,.3,1) forwards}
+.hhl{position:relative;z-index:1;width:100%}
+.hero-tag{font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);opacity:.8;display:block;margin-bottom:28px;clip-path:inset(0 0 100% 0);animation:wipe .7s .1s cubic-bezier(.16,1,.3,1) forwards}
+.hl{display:block;font-family:'Instrument Serif',serif;font-size:clamp(56px,9.5vw,148px);line-height:.95;letter-spacing:-.038em;color:var(--w);padding-bottom:.12em;clip-path:inset(0 0 100% 0);animation:wipe .88s cubic-bezier(.16,1,.3,1) forwards}
 .hl.d2{animation-delay:.14s}
 .hl.d3{animation-delay:.27s;font-style:italic;color:var(--blue);text-shadow:0 0 90px rgba(79,142,255,.45),0 0 40px rgba(79,142,255,.2)}
 @keyframes wipe{to{clip-path:inset(0 0 -10% 0)}}
-.hbot{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-top:56px;padding-top:28px;border-top:1px solid rgba(255,255,255,.06);position:relative;z-index:1;opacity:0;animation:fi .9s .58s cubic-bezier(.16,1,.3,1) forwards}
+.hbot{display:flex;flex-direction:column;align-items:center;gap:28px;margin-top:48px;position:relative;z-index:1;opacity:0;animation:fi .9s .58s cubic-bezier(.16,1,.3,1) forwards}
 @keyframes fi{to{opacity:1}}
-.hcopy{font-size:14px;font-weight:300;line-height:1.95;color:var(--dim);max-width:380px}
-.hcopy strong{color:rgba(255,255,255,.82);font-weight:400}
-.hbtns{display:flex;align-items:center;gap:16px;flex-shrink:0}
-.bf{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:var(--bg);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:15px 32px;border-radius:4px;text-decoration:none;box-shadow:0 0 36px rgba(79,142,255,.42),0 4px 20px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.22);transition:all .25s cubic-bezier(.16,1,.3,1)}
+.hcopy{font-size:18px;font-weight:300;line-height:1.85;color:var(--dim);max-width:580px;text-align:center}
+.hcopy strong{color:rgba(255,255,255,.88);font-weight:400}
+.hbtns{display:flex;align-items:center;justify-content:center;gap:16px;flex-shrink:0}
+.bf{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:var(--bg);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:18px 40px;border-radius:4px;text-decoration:none;box-shadow:0 0 36px rgba(79,142,255,.42),0 4px 20px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.22);transition:all .25s cubic-bezier(.16,1,.3,1)}
 .bf:hover{background:var(--cyan);box-shadow:0 0 52px rgba(0,212,255,.52),0 8px 28px rgba(0,0,0,.35);gap:16px;transform:translateY(-2px)}
-.bt{font-size:13px;font-weight:400;color:rgba(255,255,255,.26);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.09);padding-bottom:2px;transition:color .2s,border-color .2s}
+.bt{font-size:14px;font-weight:400;color:rgba(255,255,255,.26);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.09);padding-bottom:2px;transition:color .2s,border-color .2s}
 .bt:hover{color:rgba(255,255,255,.58);border-color:rgba(255,255,255,.2)}
-.hscroll{position:absolute;bottom:32px;left:56px;display:flex;align-items:center;gap:10px;opacity:0;animation:fi .6s 2.3s forwards;z-index:1}
+.hscroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;opacity:0;animation:fi .6s 2.3s forwards;z-index:1}
 .hscroll-ln{width:24px;height:1px;background:rgba(255,255,255,.11)}
 .hscroll span{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.14)}
+
+/* VALUE BAR */
+.val-bar{background:rgba(79,142,255,.05);border-top:1px solid rgba(79,142,255,.12);border-bottom:1px solid rgba(79,142,255,.12);padding:18px 56px}
+.val-wrap{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.val-item{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:400;color:rgba(255,255,255,.65);white-space:nowrap}
+.val-icon{color:var(--blue);font-size:15px;font-weight:600}
+.val-div{width:1px;height:16px;background:rgba(255,255,255,.08);flex-shrink:0}
 
 /* MARQUEE */
 .mq{overflow:hidden;white-space:nowrap;border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);background:rgba(255,255,255,.012);padding:15px 0;position:relative}
@@ -102,10 +111,10 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.8);backdrop-filter:blur(32p
 .sec{padding:96px 56px;position:relative}
 .wrap{max-width:1200px;margin:0 auto}
 .sdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.05) 20%,rgba(79,142,255,.1) 50%,rgba(255,255,255,.05) 80%,transparent)}
-.tag{font-size:9px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);opacity:.7;display:block;margin-bottom:18px}
-.h2{font-family:'Instrument Serif',serif;font-size:clamp(30px,3.5vw,54px);font-weight:400;line-height:1.06;letter-spacing:-.028em;color:var(--w);margin-bottom:16px}
+.tag{font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);opacity:.7;display:block;margin-bottom:18px}
+.h2{font-family:'Instrument Serif',serif;font-size:clamp(36px,4.2vw,66px);font-weight:400;line-height:1.06;letter-spacing:-.028em;color:var(--w);margin-bottom:16px}
 .h2 em{font-style:italic;color:var(--blue);text-shadow:0 0 40px rgba(79,142,255,.22)}
-.bod{font-size:14px;font-weight:300;line-height:1.9;color:var(--dim);max-width:360px}
+.bod{font-size:17px;font-weight:300;line-height:1.9;color:var(--dim);max-width:380px}
 .tc{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;margin-bottom:52px}
 .r{opacity:0;transform:translateY(26px);transition:opacity .72s cubic-bezier(.16,1,.3,1),transform .72s cubic-bezier(.16,1,.3,1)}
 .rx{opacity:0;transform:translateX(22px);transition:opacity .72s cubic-bezier(.16,1,.3,1),transform .72s cubic-bezier(.16,1,.3,1)}
@@ -120,13 +129,13 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.8);backdrop-filter:blur(32p
 .pi:last-child{border-bottom:1px solid rgba(255,255,255,.05)}
 .pi:hover{border-top-color:rgba(79,142,255,.38)}
 .pi-n{font-family:'Instrument Serif',serif;font-size:10px;letter-spacing:.16em;color:rgba(255,255,255,.17);padding-top:4px}
-.pi h4{font-size:14px;font-weight:500;margin-bottom:7px;line-height:1.3;color:rgba(255,255,255,.88)}
-.pi p{font-size:13px;font-weight:300;color:var(--dim);line-height:1.75}
+.pi h4{font-size:16px;font-weight:500;margin-bottom:7px;line-height:1.3;color:rgba(255,255,255,.88)}
+.pi p{font-size:14px;font-weight:300;color:var(--dim);line-height:1.75}
 /* stat box */
 .dbox{padding:44px 40px;position:sticky;top:96px;background:linear-gradient(160deg,rgba(79,142,255,.06),rgba(79,142,255,.02));border:1px solid rgba(79,142,255,.14);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border-radius:2px;box-shadow:0 0 0 1px rgba(255,255,255,.025) inset,0 28px 56px rgba(0,0,0,.45),0 0 80px rgba(79,142,255,.05)}
 .dbox::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.5),rgba(0,212,255,.3),transparent)}
 .db-big{font-family:'Instrument Serif',serif;font-size:clamp(66px,7vw,106px);line-height:1;letter-spacing:-.04em;color:var(--blue);margin-bottom:8px;text-shadow:0 0 80px rgba(79,142,255,.45)}
-.db-sub{font-size:13px;font-weight:300;color:rgba(255,255,255,.25);line-height:1.8;margin-bottom:34px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.05)}
+.db-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,.25);line-height:1.8;margin-bottom:34px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.05)}
 .db-stat{margin-bottom:20px}
 .db-val{font-family:'Instrument Serif',serif;font-size:33px;color:var(--cyan);line-height:1;margin-bottom:5px;text-shadow:0 0 28px rgba(0,212,255,.28)}
 .db-lbl{font-size:12px;font-weight:300;color:rgba(255,255,255,.25);line-height:1.65}
@@ -147,10 +156,34 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.8);backdrop-filter:blur(32p
 .hc-inner{display:flex;align-items:center;gap:14px;margin-bottom:28px;position:relative;z-index:1}
 .hc-num{width:30px;height:30px;border-radius:50%;border:1px solid rgba(79,142,255,.22);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--blue);flex-shrink:0;background:rgba(79,142,255,.05);transition:all .3s}
 .hc-tag{font-size:9px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.18)}
-.hc h3{font-family:'Instrument Serif',serif;font-size:21px;font-weight:400;margin-bottom:12px;line-height:1.22;color:var(--w);position:relative;z-index:1}
-.hc p{font-size:13px;font-weight:300;color:var(--dim);line-height:1.82;position:relative;z-index:1}
+.hc h3{font-family:'Instrument Serif',serif;font-size:24px;font-weight:400;margin-bottom:12px;line-height:1.22;color:var(--w);position:relative;z-index:1}
+.hc p{font-size:14px;font-weight:300;color:var(--dim);line-height:1.82;position:relative;z-index:1}
 
-/* RESULTS */
+/* BEFORE / AFTER */
+.ba-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:0;margin-bottom:40px;align-items:start}
+.ba-col{display:flex;flex-direction:column;gap:0}
+.ba-label{font-size:9px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;padding:12px 28px;margin-bottom:2px;display:inline-block;border-radius:2px}
+.ba-before .ba-label{color:rgba(255,100,100,.6);background:rgba(255,100,100,.05);border:1px solid rgba(255,100,100,.1)}
+.ba-after .ba-label{color:var(--blue);background:rgba(79,142,255,.06);border:1px solid rgba(79,142,255,.14)}
+.ba-label.after{color:var(--blue)}
+.ba-item{display:flex;gap:16px;align-items:flex-start;padding:22px 28px;border-bottom:1px solid rgba(255,255,255,.04)}
+.ba-item:first-of-type{border-top:1px solid rgba(255,255,255,.04)}
+.ba-item.bad{background:rgba(255,60,60,.02)}
+.ba-item.good{background:rgba(79,142,255,.03)}
+.ba-icon{font-size:14px;font-weight:700;flex-shrink:0;margin-top:2px;width:20px}
+.ba-item.bad .ba-icon{color:rgba(255,100,100,.5)}
+.ba-item.good .ba-icon{color:var(--blue)}
+.ba-item strong{font-size:15px;font-weight:500;color:var(--w);display:block;margin-bottom:5px;line-height:1.3}
+.ba-item p{font-size:14px;font-weight:300;color:var(--dim);line-height:1.7}
+.ba-divider{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 24px;gap:0;align-self:stretch}
+.ba-div-line{flex:1;width:1px;background:linear-gradient(180deg,transparent,rgba(79,142,255,.2),transparent)}
+.ba-div-dot{font-size:18px;color:var(--blue);opacity:.5;padding:8px 0}
+.ba-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+.bs-item{padding:32px 28px;background:linear-gradient(160deg,rgba(79,142,255,.06),rgba(79,142,255,.02));border:1px solid rgba(79,142,255,.12);border-radius:2px}
+.bs-num{font-family:'Instrument Serif',serif;font-size:46px;line-height:1;letter-spacing:-.03em;color:var(--blue);margin-bottom:10px;text-shadow:0 0 40px rgba(79,142,255,.3)}
+.bs-lbl{font-size:15px;font-weight:300;color:var(--dim);line-height:1.7}
+
+/* RESULTS (keep for fallback) */
 .res-bg{background:var(--bg)}
 .res-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 110%,rgba(79,142,255,.05),transparent);pointer-events:none}
 .res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -180,7 +213,7 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.8);backdrop-filter:blur(32p
 .cl.d1{animation-delay:.04s}.cl.d2{animation-delay:.18s}.cl.d3{animation-delay:.31s}
 .cta.live .cl{animation-play-state:running}
 .cta-bot{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-top:56px;padding-top:28px;border-top:1px solid rgba(255,255,255,.06);position:relative;z-index:1}
-.cta-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,.27);line-height:1.9;max-width:340px}
+.cta-copy{font-size:17px;font-weight:300;color:rgba(255,255,255,.27);line-height:1.9;max-width:420px}
 .cta-r{display:flex;flex-direction:column;align-items:flex-end;gap:12px;flex-shrink:0}
 .bw{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:var(--bg);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:16px 34px;border-radius:4px;text-decoration:none;box-shadow:0 0 40px rgba(79,142,255,.44),0 4px 18px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.22);transition:all .25s cubic-bezier(.16,1,.3,1)}
 .bw:hover{background:var(--cyan);box-shadow:0 0 56px rgba(0,212,255,.55),0 8px 28px rgba(0,0,0,.3);gap:16px;transform:translateY(-2px)}
@@ -204,25 +237,82 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
 
 /* MOBILE */
 @media(max-width:840px){
-  nav{padding:18px 24px}nav.stuck{padding:12px 24px}
+  nav{padding:18px 24px}
+  nav.stuck{padding:12px 24px}
   .nl{display:none}.ham{display:flex}
-  .hero{padding:0 24px 72px}.h-rule{left:24px}.hscroll{left:24px}
-  .hg{width:85vw;right:-12vw;top:26%;transform:none;animation:none;opacity:.065}
-  .hcopy{max-width:100%}.hbtns{gap:12px;flex-wrap:wrap}
-  .sec{padding:64px 24px}
-  .tc{grid-template-columns:1fr;gap:14px;margin-bottom:40px}
-  .prb-grid{grid-template-columns:1fr;gap:28px}.dbox{position:static}
-  .how-grid{grid-template-columns:1fr;gap:0;background:none}.hc{border-bottom:1px solid rgba(255,255,255,.04)}
-  .res-grid{grid-template-columns:1fr;gap:10px}
-  .cta{padding:0 24px 64px;min-height:80svh}.cta-gh{display:none}
-  .cta-bot{flex-direction:column;align-items:flex-start;gap:22px}.cta-r{align-items:flex-start}
+
+  /* Hero — centered, readable */
+  .hero{padding:100px 24px 72px;justify-content:center;min-height:100svh}
+  .hg{display:none}
+  .h-rule{left:50%;transform:translateX(-50%)}
+  .hscroll{display:none}
+  .hl{font-size:clamp(44px,12vw,72px)}
+  .hcopy{font-size:16px;max-width:100%;text-align:center}
+  .hbot{align-items:center;gap:24px;margin-top:36px}
+  .hbtns{flex-direction:column;align-items:center;width:100%;gap:14px}
+  .bf{width:100%;justify-content:center;padding:18px 24px;font-size:13px}
+  .bt{font-size:13px}
+  .hero-tag{font-size:9px;letter-spacing:.18em}
+
+  /* Value bar — wrap nicely */
+  .val-bar{padding:16px 24px}
+  .val-wrap{flex-direction:column;align-items:flex-start;gap:10px}
+  .val-div{display:none}
+  .val-item{font-size:14px}
+
+  /* Sections */
+  .sec{padding:56px 24px}
+  .tc{grid-template-columns:1fr;gap:12px;margin-bottom:36px}
+  .bod{max-width:100%;font-size:15px}
+  .h2{font-size:clamp(30px,8vw,48px)}
+
+  /* Problem */
+  .prb-grid{grid-template-columns:1fr;gap:28px}
+  .dbox{position:static}
+  .db-big{font-size:clamp(56px,14vw,90px)}
+  .pi h4{font-size:15px}
+  .pi p{font-size:14px}
+
+  /* How it works */
+  .how-grid{grid-template-columns:1fr;gap:0;background:none}
+  .hc{border-bottom:1px solid rgba(255,255,255,.04);padding:36px 24px}
+  .hc h3{font-size:20px}
+  .hc p{font-size:14px}
+
+  /* Before/After */
+  .ba-grid{grid-template-columns:1fr;gap:4px}
+  .ba-divider{flex-direction:row;padding:12px 0;align-self:auto}
+  .ba-div-line{flex:1;height:1px;width:auto}
+  .ba-div-dot{padding:0 12px}
+  .ba-stats{grid-template-columns:1fr;gap:8px}
+  .ba-item strong{font-size:14px}
+  .ba-item p{font-size:13px}
+  .bs-num{font-size:36px}
+  .bs-lbl{font-size:14px}
+
+  /* CTA */
+  .cta{padding:72px 24px 64px;min-height:auto;text-align:center}
+  .cta-gh{display:none}
+  .cta-bot{flex-direction:column;align-items:center;gap:22px;text-align:center}
+  .cta-r{align-items:center;flex-direction:column;width:100%}
+  .cta-copy{font-size:15px;max-width:100%;text-align:center}
+  .bw{width:100%;text-align:center;justify-content:center}
+  .cta-note{text-align:center}
+  .cl{font-size:clamp(36px,10vw,56px)}
+
+  /* Footer */
   footer{padding:40px 24px 28px}
-  .foot-top{flex-direction:column;gap:28px}.foot-links{gap:28px;flex-wrap:wrap}
+  .foot-top{flex-direction:column;gap:28px}
+  .foot-links{gap:28px;flex-wrap:wrap}
   .foot-bottom{flex-direction:column;align-items:flex-start}
 }
+
 @media(max-width:440px){
-  .hl{font-size:clamp(42px,13.5vw,60px)}.cl{font-size:clamp(34px,11vw,50px)}
-  .hbtns{flex-direction:column;align-items:flex-start}.bt{display:none}
+  .hl{font-size:clamp(38px,11.5vw,56px)}
+  .cl{font-size:clamp(30px,10vw,48px)}
+  .hbtns{flex-direction:column;align-items:center;width:100%}
+  .hero-tag{font-size:8px;letter-spacing:.14em}
+  .val-item{font-size:13px}
 }
 </style>
 </head>
@@ -240,7 +330,7 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   </symbol>
 </svg>
 <nav id="nav">
-  <a class="logo" href="/"><div class="lm"><svg viewBox="0 0 56 68" fill="none"><use href="#A" color="rgba(255,255,255,.85)"/></svg></div></a>
+  <a class="logo" href="/"><div class="lm"><svg viewBox="0 0 56 68" fill="none"><use href="#A" color="rgba(79,142,255,1)"/></svg></div></a>
   <div class="nav-r">
     <div class="nl">
       <a href="/" class="act">Home</a>
@@ -267,19 +357,34 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   <div class="hg"><svg viewBox="0 0 56 68" fill="none"><use href="#A" color="rgba(79,142,255,1)"/></svg></div>
   <div class="h-rule"></div>
   <div class="hhl">
-    <span class="hl">Your business,</span>
-    <span class="hl d2">running itself.</span>
-    <span class="hl d3">Automatically.</span>
+    <span class="hero-tag">AI Automation · Done For You · First Month On Us</span>
+    <span class="hl">Stop losing leads.</span>
+    <span class="hl d2">Start growing</span>
+    <span class="hl d3">automatically.</span>
   </div>
   <div class="hbot">
-    <p class="hcopy">Every missed call is a <strong>real customer</strong> who needed you — and found someone else. We build AI systems that respond instantly, follow up automatically, and keep your business running around the clock.</p>
+    <p class="hcopy">We build AI automation systems for service businesses — <strong>missed call recovery, lead follow-up, review generation, and appointment booking.</strong> Done for you. Live in 48 hours. <strong>First month on us.</strong></p>
     <div class="hbtns">
-      <a href="https://calendly.com/andrew-anchorautomations/30min" class="bf" target="_blank" rel="noopener">Book a Free Demo →</a>
+      <a href="https://calendly.com/andrew-anchorautomations/30min" class="bf" target="_blank" rel="noopener">Claim Your Free Month →</a>
       <a href="#problem" class="bt">See what it's costing you</a>
     </div>
   </div>
   <div class="hscroll"><div class="hscroll-ln"></div><span>Scroll</span></div>
 </section>
+
+<div class="val-bar">
+  <div class="val-wrap">
+    <div class="val-item"><span class="val-icon">✓</span><span>First month on us</span></div>
+    <div class="val-div"></div>
+    <div class="val-item"><span class="val-icon">✓</span><span>No contracts — ever</span></div>
+    <div class="val-div"></div>
+    <div class="val-item"><span class="val-icon">✓</span><span>Live in 48 hours</span></div>
+    <div class="val-div"></div>
+    <div class="val-item"><span class="val-icon">✓</span><span>$997/mo flat — all 4 automations</span></div>
+    <div class="val-div"></div>
+    <div class="val-item"><span class="val-icon">✓</span><span>Done for you — zero tech work</span></div>
+  </div>
+</div>
 
 <div class="mq" aria-hidden="true"><div class="mq-t"><span class="mq-i">Missed Call Recovery<span class="mq-d"></span></span><span class="mq-i">Lead Follow-Up<span class="mq-d"></span></span><span class="mq-i">Appointment Booking<span class="mq-d"></span></span><span class="mq-i">Review Generation<span class="mq-d"></span></span><span class="mq-i">AI Chatbot<span class="mq-d"></span></span><span class="mq-i">CRM &amp; Pipeline<span class="mq-d"></span></span><span class="mq-i">Missed Call Recovery<span class="mq-d"></span></span><span class="mq-i">Lead Follow-Up<span class="mq-d"></span></span><span class="mq-i">Appointment Booking<span class="mq-d"></span></span><span class="mq-i">Review Generation<span class="mq-d"></span></span><span class="mq-i">AI Chatbot<span class="mq-d"></span></span><span class="mq-i">CRM &amp; Pipeline<span class="mq-d"></span></span></div></div>
 
@@ -288,11 +393,11 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
     <div class="prb-grid">
       <div>
         <span class="tag r">The Problem</span>
-        <h2 class="h2 r">Your business is losing customers <em>right now.</em></h2>
+        <h2 class="h2 r">Your business is bleeding revenue <em>every single day.</em></h2>
         <div class="prb-list">
-          <div class="pi r"><div class="pi-n">01</div><div><h4>Missed calls are missed customers</h4><p>Every unanswered call is a real person who needed you. They didn't leave a voicemail — they called the next business on the list.</p></div></div>
-          <div class="pi r"><div class="pi-n">02</div><div><h4>Slow response means lost business</h4><p>You have a 5-minute window. After that, conversion rates drop 80%. Your competitor with automation already replied.</p></div></div>
-          <div class="pi r"><div class="pi-n">03</div><div><h4>Invisible businesses don't get chosen</h4><p>Before anyone contacts you, they check reviews. Businesses with 50+ Google reviews win 3× more — but customers never leave one without a prompt.</p></div></div>
+          <div class="pi r"><div class="pi-n">01</div><div><h4>Missed calls = missed money</h4><p>Every unanswered call is a real person with money to spend. They didn't leave a voicemail — they called your competitor and booked with them instead.</p></div></div>
+          <div class="pi r"><div class="pi-n">02</div><div><h4>You have a 5-minute window</h4><p>After 5 minutes, conversion rates drop by 80%. If you're not responding instantly, you're handing warm leads to whoever is.</p></div></div>
+          <div class="pi r"><div class="pi-n">03</div><div><h4>No reviews means no new customers</h4><p>93% of people check Google reviews before calling. If you have fewer than 50 reviews, you're invisible to most of your market.</p></div></div>
         </div>
       </div>
       <div class="dbox rx">
@@ -326,13 +431,39 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
 <section class="sec res-bg" id="results">
   <div class="wrap">
     <div class="tc">
-      <div><span class="tag r">Results</span><h2 class="h2 r">What the system does <em>in 30 days.</em></h2></div>
-      <p class="bod r">First month numbers from Florida businesses that made the switch.</p>
+      <div><span class="tag r">Before & After</span><h2 class="h2 r">What changes when you <em>automate.</em></h2></div>
+      <p class="bod r">Real numbers. Real businesses. This is what the system does in 30 days.</p>
     </div>
-    <div class="res-grid">
-      <div class="rc r"><div class="rc-num">+$34K</div><div class="rc-copy">in recovered revenue in month one — from missed call follow-up alone. The system paid for itself 68× over.</div><div class="rc-from">Home Services · Tampa, FL</div></div>
-      <div class="rc r"><div class="rc-num">23 reviews</div><div class="rc-copy">collected in 30 days after automating post-visit review requests. Google rating went from 3.8 to 4.6 stars.</div><div class="rc-from">Med Spa · Miami, FL</div></div>
-      <div class="rc r"><div class="rc-num">↓ 68%</div><div class="rc-copy">fewer no-shows after automated appointment reminders launched. 8–10 recovered bookings every week.</div><div class="rc-from">Dental Practice · Orlando, FL</div></div>
+    <div class="ba-grid r">
+      <div class="ba-col ba-before">
+        <div class="ba-label">Before Anchor</div>
+        <div class="ba-item bad"><span class="ba-icon">✗</span><div><strong>Missed calls go unanswered</strong><p>Leads call, get voicemail, and never call back. Revenue walks out the door silently.</p></div></div>
+        <div class="ba-item bad"><span class="ba-icon">✗</span><div><strong>Follow-up never happens</strong><p>New leads sit in your inbox. You mean to call back but life gets in the way. They move on.</p></div></div>
+        <div class="ba-item bad"><span class="ba-icon">✗</span><div><strong>Reviews trickle in slowly</strong><p>Happy customers forget to leave reviews. You stay stuck at 3-4 stars while competitors climb.</p></div></div>
+        <div class="ba-item bad"><span class="ba-icon">✗</span><div><strong>No-shows kill your schedule</strong><p>Clients forget appointments. You lose the slot, the revenue, and the time to rebook it.</p></div></div>
+      </div>
+      <div class="ba-divider"><div class="ba-div-line"></div><div class="ba-div-dot">→</div><div class="ba-div-line"></div></div>
+      <div class="ba-col ba-after">
+        <div class="ba-label after">After Anchor</div>
+        <div class="ba-item good"><span class="ba-icon">✓</span><div><strong>Every missed call gets a text in seconds</strong><p>Leads get an instant reply before they can call your competitor. Conversations start automatically.</p></div></div>
+        <div class="ba-item good"><span class="ba-icon">✓</span><div><strong>Leads get followed up for you</strong><p>A multi-step SMS and email sequence nurtures every new lead automatically — stops the moment they respond.</p></div></div>
+        <div class="ba-item good"><span class="ba-icon">✓</span><div><strong>Reviews roll in on autopilot</strong><p>Every completed job triggers a review request. Businesses go from 20 to 50+ reviews in 30 days.</p></div></div>
+        <div class="ba-item good"><span class="ba-icon">✓</span><div><strong>Reminders eliminate no-shows</strong><p>Clients get reminders at 24 hours and 1 hour before. No-shows drop by 60-70% in the first month.</p></div></div>
+      </div>
+    </div>
+    <div class="ba-stats r">
+      <div class="bs-item">
+        <div class="bs-num">+12 leads</div>
+        <div class="bs-lbl">recovered per month from missed calls alone. At a $300 average job, that's <strong style="color:rgba(255,255,255,.7)">$3,600/mo in revenue</strong> you're currently leaving on the table.</div>
+      </div>
+      <div class="bs-item">
+        <div class="bs-num">4.2 → 4.8★</div>
+        <div class="bs-lbl">average Google rating after 30 days of automated review requests. Businesses with 4.8★ get <strong style="color:rgba(255,255,255,.7)">3× more calls</strong> than those under 4.0.</div>
+      </div>
+      <div class="bs-item">
+        <div class="bs-num">↓ 65% no-shows</div>
+        <div class="bs-lbl">after automated reminders go live. For a business with 20 appointments a week, that's <strong style="color:rgba(255,255,255,.7)">13 recovered bookings every month.</strong></div>
+      </div>
     </div>
   </div>
 </section>
@@ -343,15 +474,15 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   <div class="cta-gh"><svg viewBox="0 0 56 68" fill="none"><use href="#A" color="rgba(79,142,255,.9)"/></svg></div>
   <div class="cta-rule"></div>
   <div class="cta-hl">
-    <span class="cl d1">Every hour</span>
-    <span class="cl d2">you wait,</span>
-    <span class="cl d3 it">customers disappear.</span>
+    <span class="cl d1">First month on us.</span>
+    <span class="cl d2">No contracts.</span>
+    <span class="cl d3 it">Nothing to lose.</span>
   </div>
   <div class="cta-bot">
-    <p class="cta-copy">Book a free 30-minute call. We'll map the exact system for your business and show you what it's already costing you to not have one.</p>
+    <p class="cta-copy">We're selectively bringing on launch clients. We'll set everything up and run it completely free for 30 days. After that it's $997/mo — and by then you'll have seen exactly what it does for your business.</p>
     <div class="cta-r">
-      <a href="https://calendly.com/andrew-anchorautomations/30min" class="bw" target="_blank" rel="noopener">Book Your Free Demo →</a>
-      <span class="cta-note">Free · No contracts · Live in days</span>
+      <a href="https://calendly.com/andrew-anchorautomations/30min" class="bw" target="_blank" rel="noopener">Claim Your Free Month →</a>
+      <span class="cta-note">Free month · No contracts · Live in 48 hours</span>
     </div>
   </div>
 </section>
@@ -361,17 +492,17 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
     <div class="foot-top">
       <div>
         <a class="foot-brand" href="/"><svg viewBox="0 0 56 68" fill="none"><use href="#A" color="rgba(79,142,255,.65)"/></svg><span class="foot-brand-name">Anchor Automations</span></a>
-        <p class="foot-tagline">AI automation systems for US businesses. Built for you, run by us.</p>
+        <p class="foot-tagline">AI automation systems for Florida businesses. Built for you, run by us.</p>
       </div>
       <div class="foot-links">
         <div class="foot-col"><h5>Navigate</h5><a href="/">Home</a><a href="/services">Services</a><a href="/pricing">Pricing</a><a href="/contact">Contact</a></div>
-        <div class="foot-col"><h5>Get Started</h5><a href="https://calendly.com/andrew-anchorautomations/30min" target="_blank" rel="noopener">Book a Demo</a><a href="/pricing">View Pricing</a><a href="mailto:hello@anchorautomations.ai">hello@anchorautomations.ai</a></div>
+        <div class="foot-col"><h5>Get Started</h5><a href="https://calendly.com/andrew-anchorautomations/30min" target="_blank" rel="noopener">Book a Demo</a><a href="/pricing">View Pricing</a><a href="/cdn-cgi/l/email-protection#741c1118181b34151a171c1b061501001b1915001d1b1a075a151d"><span class="__cf_email__" data-cfemail="fd9598919192bd9c939e95928f9c888992909c899492938ed39c94">[email&#160;protected]</span></a></div>
       </div>
     </div>
-    <div class="foot-bottom"><p>© <span id="yr"></span> Anchor Automations · anchorautomations.ai</p><p>Palm City, FL · Serving businesses across the US</p></div>
+    <div class="foot-bottom"><p>© <span id="yr"></span> Anchor Automations · anchorautomations.ai</p><p>Palm Beach, FL · Serving businesses across the US</p></div>
   </div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
   var c=document.getElementById('cur');
   if(c&&window.matchMedia('(pointer:fine)').matches){var x=-300,y=-300;document.addEventListener('mousemove',function(e){x=e.clientX;y=e.clientY;},{passive:true});(function t(){c.style.left=x+'px';c.style.top=y+'px';requestAnimationFrame(t);})();document.querySelectorAll('a,button').forEach(function(el){el.addEventListener('mouseenter',function(){c.classList.add('big');});el.addEventListener('mouseleave',function(){c.classList.remove('big');});});}
@@ -388,7 +519,7 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   var ct=document.querySelector('.cta');
   if(ct){var co=new IntersectionObserver(function(es){if(es[0].isIntersecting){ct.classList.add('live');co.disconnect();}},{threshold:0.1});co.observe(ct);}
   var hg=document.querySelector('.hg');
-  if(hg&&window.innerWidth>840){window.addEventListener('scroll',function(){hg.style.transform='translateY(calc(-50% + '+window.scrollY*.08+'px))';},{passive:true});}
+  if(hg&&window.innerWidth>900){document.addEventListener('mousemove',function(e){var rx=(e.clientX/window.innerWidth-.5)*18;var ry=(e.clientY/window.innerHeight-.5)*12;hg.style.transform='translateY(-50%) rotate3d('+(-ry/12)+','+(rx/18)+',0,'+Math.sqrt(rx*rx+ry*ry)*.4+'deg)';},{passive:true});}
   document.getElementById('yr').textContent=new Date().getFullYear();
 })();
 </script>
