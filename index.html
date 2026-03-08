@@ -6,25 +6,32 @@
 <title>Anchor Automations — AI Systems for Service Businesses</title>
 <meta name="description" content="We build AI automation systems that recover missed calls, generate reviews, follow up leads, and eliminate no-shows. Done for you. First month free.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 68'><rect width='56' height='68' rx='6' fill='%23050d1a'/><circle cx='28' cy='8.5' r='5.5' fill='none' stroke='%234F8EFF' stroke-width='3'/><line x1='28' y1='14' x2='28' y2='59' stroke='%234F8EFF' stroke-width='3'/><line x1='8' y1='25' x2='48' y2='25' stroke='%234F8EFF' stroke-width='3'/><line x1='8' y1='25' x2='8' y2='31.5' stroke='%234F8EFF' stroke-width='3'/><line x1='48' y1='25' x2='48' y2='31.5' stroke='%234F8EFF' stroke-width='3'/><path d='M7.5 58.5 C7.5 40 28 38 28 58.5' fill='none' stroke='%234F8EFF' stroke-width='3'/><path d='M48.5 58.5 C48.5 40 28 38 28 58.5' fill='none' stroke='%234F8EFF' stroke-width='3'/></svg>">
+<meta property="og:title" content="Anchor — AI Automations for Businesses">
+<meta property="og:description" content="AI automation systems built for US businesses. Done for you — live in days.">
+<meta property="og:url" content="https://anchorautomations.ai">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Anchor — AI Automations for Businesses">
+<meta name="twitter:description" content="AI automation systems built for US businesses. Done for you — live in days.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#050d1a;--bg2:#0a1628;--w:#fff;--blue:#4F8EFF;--cyan:#00D4FF;--dim:rgba(255,255,255,.38)}
+:root{--bg:#050d1a;--bg2:#0a1628;--w:#ffffff;--blue:#4F8EFF;--cyan:#00D4FF;--dim:rgba(255,255,255,.34)}
 html{scroll-behavior:smooth;overflow-x:hidden}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--w);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 @media(pointer:fine){body{cursor:none}}
-body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.02;pointer-events:none;z-index:999;background-size:256px}
-#cur{position:fixed;z-index:9999;pointer-events:none;border-radius:50%;transform:translate(-50%,-50%);left:-300px;top:-300px;width:6px;height:6px;background:var(--blue);box-shadow:0 0 14px var(--blue);transition:width .3s,height .3s,opacity .3s}
-#cur.big{width:44px;height:44px;opacity:.1}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.022;pointer-events:none;z-index:999;background-size:256px}
+#cur{position:fixed;z-index:9999;pointer-events:none;border-radius:50%;transform:translate(-50%,-50%);left:-300px;top:-300px;width:6px;height:6px;background:var(--blue);box-shadow:0 0 14px var(--blue);transition:width .3s cubic-bezier(.25,.46,.45,.94),height .3s,opacity .3s}
+#cur.big{width:48px;height:48px;opacity:.1}
 @media(pointer:coarse){#cur{display:none!important}}
 
-/* ── NAV ── */
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:28px 56px;transition:all .4s cubic-bezier(.16,1,.3,1)}
-nav.stuck{padding:14px 56px;background:rgba(5,13,26,.88);backdrop-filter:blur(32px);border-bottom:1px solid rgba(255,255,255,.05)}
-.logo{display:flex;align-items:center;text-decoration:none}
-.lm{width:30px;height:38px}
-.lm svg{width:100%;height:100%;display:block;filter:drop-shadow(0 0 8px rgba(79,142,255,.5))}
+nav.stuck{padding:14px 56px;background:rgba(5,13,26,.88);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border-bottom:1px solid rgba(255,255,255,.05);box-shadow:0 8px 40px rgba(0,0,0,.5)}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.lm{width:30px;height:38px;flex-shrink:0}
+.lm svg{width:100%;height:100%;display:block;filter:drop-shadow(0 0 8px rgba(79,142,255,.55))}
 .nav-r{display:flex;align-items:center;gap:36px}
 .nl{display:flex;align-items:center;gap:30px}
 .nl a{font-size:14px;font-weight:400;color:rgba(255,255,255,.38);text-decoration:none;letter-spacing:.02em;transition:color .2s;position:relative}
@@ -32,8 +39,8 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.88);backdrop-filter:blur(32
 .nl a:hover,.nl a.act{color:rgba(255,255,255,.8)}
 .nl a:hover::after,.nl a.act::after{width:100%}
 .nb{font-size:11px!important;font-weight:600!important;letter-spacing:.1em!important;text-transform:uppercase;background:rgba(79,142,255,.08)!important;color:var(--blue)!important;border:1px solid rgba(79,142,255,.28)!important;padding:10px 22px;border-radius:4px;text-decoration:none;transition:all .22s!important;white-space:nowrap}
-.nb:hover{background:rgba(79,142,255,.18)!important;border-color:rgba(79,142,255,.5)!important;box-shadow:0 0 24px rgba(79,142,255,.18)!important}
-.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:301}
+.nb:hover{background:rgba(79,142,255,.18)!important;border-color:rgba(79,142,255,.55)!important;box-shadow:0 0 28px rgba(79,142,255,.18)!important}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:301;flex-shrink:0}
 .ham span{display:block;width:22px;height:1.5px;background:var(--w);transition:transform .3s,opacity .3s}
 .ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .ham.open span:nth-child(2){opacity:0}
@@ -46,46 +53,52 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.88);backdrop-filter:blur(32
 .mob .mcta{margin-top:32px!important;font-family:'DM Sans',sans-serif!important;font-size:11px!important;font-weight:600!important;letter-spacing:.12em!important;text-transform:uppercase!important;color:var(--blue)!important;border:1px solid rgba(79,142,255,.3)!important;padding:14px 28px!important;border-radius:4px!important;width:fit-content!important;display:inline-block!important;background:rgba(79,142,255,.07)!important}
 @keyframes mu{to{opacity:1;transform:none}}
 
-/* ── HERO — centered ── */
+/* HERO — centered */
 .hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 56px 80px;position:relative;overflow:hidden;background:var(--bg)}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(79,142,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(79,142,255,.035) 1px,transparent 1px);background-size:80px 80px;z-index:0;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%)}
 .orb1{position:absolute;width:800px;height:800px;left:50%;top:50%;transform:translate(-50%,-55%);border-radius:50%;background:radial-gradient(circle,rgba(79,142,255,.07) 0%,transparent 65%);pointer-events:none;z-index:0}
 .orb2{position:absolute;width:500px;height:500px;left:50%;bottom:-100px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(0,212,255,.04) 0%,transparent 65%);pointer-events:none;z-index:0}
 .hero-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;max-width:960px}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(79,142,255,.08);border:1px solid rgba(79,142,255,.2);border-radius:100px;padding:7px 16px;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:36px;opacity:0;animation:fi .6s .1s cubic-bezier(.16,1,.3,1) forwards}
-.hero-badge span{width:6px;height:6px;border-radius:50%;background:var(--blue);box-shadow:0 0 8px var(--blue);flex-shrink:0;animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+
+/* Hero tag: "AI Automation · Done For You · First Month On Us" */
+.hero-tag{font-size:10px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:40px;opacity:0;animation:fi .6s .1s cubic-bezier(.16,1,.3,1) forwards}
+.hero-tag span{color:var(--blue);opacity:.7;padding:0 10px}
+
+/* Hero headline: 3 lines, fading opacity */
 .hhl{margin-bottom:32px}
-.hl{display:block;font-family:'Instrument Serif',serif;font-size:clamp(52px,8.5vw,132px);line-height:.93;letter-spacing:-.034em;clip-path:inset(0 0 100% 0);animation:wipe .85s cubic-bezier(.16,1,.3,1) forwards}
-.hl.l1{color:rgba(255,255,255,.12);animation-delay:.2s}
-.hl.l2{color:rgba(255,255,255,.35);animation-delay:.32s}
-.hl.l3{color:var(--w);animation-delay:.44s}
-.hl.l4{font-style:italic;color:var(--blue);text-shadow:0 0 80px rgba(79,142,255,.4);animation-delay:.56s}
+.hl{display:block;font-family:'Instrument Serif',serif;font-size:clamp(52px,8.5vw,130px);line-height:.93;letter-spacing:-.034em;clip-path:inset(0 0 100% 0);animation:wipe .85s cubic-bezier(.16,1,.3,1) forwards}
+.hl.l1{color:rgba(255,255,255,.08);animation-delay:.2s}
+.hl.l2{color:rgba(255,255,255,.22);animation-delay:.32s}
+.hl.l3{color:var(--w);animation-delay:.2s}
 @keyframes wipe{to{clip-path:inset(0 0 0% 0)}}
-.hcopy{font-size:18px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.42);max-width:580px;margin-bottom:44px;opacity:0;animation:fi .8s .8s cubic-bezier(.16,1,.3,1) forwards}
+
+.hcopy{font-size:18px;font-weight:300;line-height:1.82;color:rgba(255,255,255,.42);max-width:580px;margin-bottom:44px;opacity:0;animation:fi .8s .75s cubic-bezier(.16,1,.3,1) forwards}
 .hcopy strong{color:rgba(255,255,255,.75);font-weight:400}
-.hbtns{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;opacity:0;animation:fi .7s .95s cubic-bezier(.16,1,.3,1) forwards}
+.hbtns{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;opacity:0;animation:fi .7s .9s cubic-bezier(.16,1,.3,1) forwards}
 .bf{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:var(--bg);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:18px 40px;border-radius:4px;text-decoration:none;box-shadow:0 0 40px rgba(79,142,255,.45),inset 0 1px 0 rgba(255,255,255,.2);transition:all .25s cubic-bezier(.16,1,.3,1)}
 .bf:hover{background:var(--cyan);box-shadow:0 0 60px rgba(0,212,255,.55);transform:translateY(-2px)}
 .bt{font-size:14px;font-weight:400;color:rgba(255,255,255,.3);text-decoration:none;letter-spacing:.03em;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:2px;transition:color .2s,border-color .2s}
 .bt:hover{color:rgba(255,255,255,.65);border-color:rgba(255,255,255,.25)}
-.hero-trust{display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:center;margin-top:52px;opacity:0;animation:fi .7s 1.1s cubic-bezier(.16,1,.3,1) forwards}
-.ht{font-size:12px;font-weight:300;color:rgba(255,255,255,.22);letter-spacing:.04em;display:flex;align-items:center;gap:7px}
-.ht::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--blue);opacity:.6;flex-shrink:0}
+
+/* Value bar below CTAs */
+.val-bar{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;margin-top:52px;opacity:0;animation:fi .7s 1.05s cubic-bezier(.16,1,.3,1) forwards}
+.val-item{font-size:12px;font-weight:300;color:rgba(255,255,255,.28);letter-spacing:.04em;display:flex;align-items:center;gap:7px;padding:0 20px}
+.val-item::before{content:'✓';color:var(--blue);font-size:11px;font-weight:600}
+.val-div{width:1px;height:14px;background:rgba(255,255,255,.1)}
 .hscroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fi .6s 1.5s forwards;z-index:1}
 .hscroll-ln{width:1px;height:36px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.2));animation:sc 1.8s ease-in-out infinite}
 @keyframes sc{0%,100%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
 .hscroll span{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.18)}
 @keyframes fi{to{opacity:1}}
 
-/* ── MARQUEE ── */
+/* MARQUEE */
 .mq{overflow:hidden;border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);padding:14px 0;background:var(--bg2)}
 .mq-t{display:flex;white-space:nowrap;animation:mqs 30s linear infinite}
 .mq-i{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.14);padding:0 32px;flex-shrink:0}
 .mq-d{display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--blue);opacity:.4;margin-left:32px;vertical-align:middle}
 @keyframes mqs{to{transform:translateX(-50%)}}
 
-/* ── SHARED ── */
+/* SHARED */
 .sdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.05) 20%,rgba(79,142,255,.1) 50%,rgba(255,255,255,.05) 80%,transparent)}
 .r{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
 .r.on{opacity:1;transform:none}
@@ -94,16 +107,18 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.88);backdrop-filter:blur(32
 .sec-h{font-family:'Instrument Serif',serif;font-size:clamp(36px,4vw,64px);line-height:1.06;letter-spacing:-.024em;color:var(--w);margin-bottom:20px;font-weight:400}
 .sec-h em{font-style:italic;color:var(--blue)}
 
-/* ── VALUE (above the fold numbers) ── */
-.value-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.05)}
-.vb-item{background:var(--bg2);padding:40px 44px;position:relative;overflow:hidden}
-.vb-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--cyan));transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
-.vb-item:hover::before{transform:scaleX(1)}
-.vb-num{font-family:'Instrument Serif',serif;font-size:clamp(42px,4vw,64px);line-height:1;letter-spacing:-.03em;color:var(--blue);margin-bottom:12px;text-shadow:0 0 40px rgba(79,142,255,.2)}
-.vb-lbl{font-size:15px;font-weight:400;color:rgba(255,255,255,.7);margin-bottom:6px}
-.vb-sub{font-size:13px;font-weight:300;color:rgba(255,255,255,.3);line-height:1.7}
+/* PROBLEM SECTION */
+.problem{padding:100px 56px;background:var(--bg2);position:relative}
+.problem::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.15),transparent)}
+.prb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.05);margin-top:60px}
+.pi{background:var(--bg2);padding:44px 40px;position:relative;overflow:hidden}
+.pi::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,rgba(255,60,60,.0),rgba(255,60,60,.0));transition:background .4s}
+.pi:hover::after{background:linear-gradient(90deg,rgba(255,60,60,.4),transparent)}
+.dbox{position:absolute;top:32px;right:32px;font-family:'Instrument Serif',serif;font-size:56px;line-height:1;letter-spacing:-.04em;color:rgba(255,255,255,.04)}
+.pi h4{font-size:18px;font-weight:500;color:rgba(255,255,255,.8);margin-bottom:12px}
+.pi p{font-size:15px;font-weight:300;color:rgba(255,255,255,.35);line-height:1.82}
 
-/* ── BEFORE / AFTER CASE STUDIES ── */
+/* BEFORE / AFTER CASE STUDIES */
 .cases{padding:100px 56px;background:var(--bg);position:relative;overflow:hidden}
 .cases::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 100%,rgba(79,142,255,.04),transparent);pointer-events:none}
 .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:60px}
@@ -113,7 +128,7 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.88);backdrop-filter:blur(32
 .cs-industry{font-size:9px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:20px;display:block}
 .cs-bef{background:rgba(255,60,60,.06);border:1px solid rgba(255,60,60,.12);border-radius:4px;padding:20px 22px;margin-bottom:3px}
 .cs-aft{background:rgba(79,142,255,.07);border:1px solid rgba(79,142,255,.18);border-radius:4px;padding:20px 22px}
-.cs-arrow{display:flex;justify-content:center;align-items:center;padding:6px 0;color:rgba(255,255,255,.15);font-size:18px;position:relative;z-index:1}
+.cs-arrow{display:flex;justify-content:center;align-items:center;padding:6px 0;color:rgba(255,255,255,.15);font-size:18px}
 .cs-label{font-size:9px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;margin-bottom:8px;display:block}
 .cs-bef .cs-label{color:rgba(255,80,80,.5)}
 .cs-aft .cs-label{color:var(--blue);opacity:.7}
@@ -124,7 +139,7 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.88);backdrop-filter:blur(32
 .cs-bef .cs-desc{color:rgba(255,255,255,.22)}
 .cs-footer{padding:20px 36px 28px;border-top:1px solid rgba(255,255,255,.05);margin-top:20px;font-size:11px;font-weight:400;letter-spacing:.08em;color:rgba(255,255,255,.18)}
 
-/* ── SERVICES ── */
+/* SERVICES */
 .svcs{padding:100px 56px;background:var(--bg2);position:relative}
 .svcs::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.15),transparent)}
 .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.04);margin-top:60px}
@@ -137,15 +152,46 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.88);backdrop-filter:blur(32
 .sg-copy{font-size:15px;font-weight:300;color:rgba(255,255,255,.36);line-height:1.82;margin-bottom:16px}
 .sg-stat{font-size:12px;font-weight:500;color:var(--blue);opacity:.75;letter-spacing:.03em}
 
-/* ── CTA ── */
+/* BA STATS */
+.ba-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.05)}
+.bs{background:var(--bg);padding:52px 48px;text-align:center;position:relative;overflow:hidden}
+.bs::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--blue),var(--cyan),transparent);transform:scaleX(0);transform-origin:center;transition:transform .6s}
+.bs:hover::before{transform:scaleX(1)}
+.bs-num{font-family:'Instrument Serif',serif;font-size:clamp(48px,5vw,80px);line-height:1;letter-spacing:-.04em;color:var(--blue);text-shadow:0 0 50px rgba(79,142,255,.25);margin-bottom:12px}
+.bs-lbl{font-size:16px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.65}
+
+/* PRICING */
+.pricing{padding:100px 56px;background:var(--bg2);position:relative}
+.pricing::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.15),transparent)}
+.pkg{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(79,142,255,.12);border:1px solid rgba(79,142,255,.18);border-radius:6px;overflow:hidden;box-shadow:0 0 80px rgba(79,142,255,.07),0 32px 64px rgba(0,0,0,.4);position:relative;z-index:1;margin-top:60px}
+.pkg::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue),var(--cyan),transparent);z-index:2}
+.pk-l{padding:56px 52px;background:linear-gradient(160deg,rgba(79,142,255,.1),rgba(79,142,255,.03));border-right:1px solid rgba(79,142,255,.1);display:flex;flex-direction:column}
+.pk-lbl{font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--blue);opacity:.8;display:block;margin-bottom:24px}
+.pk-price{font-family:'Instrument Serif',serif;font-size:80px;line-height:1;letter-spacing:-.04em;color:var(--blue);display:inline}
+.pk-price sup{font-size:28px;font-family:'DM Sans',sans-serif;font-weight:300;vertical-align:super;line-height:0}
+.pk-mo{font-size:14px;font-weight:300;color:rgba(255,255,255,.22);margin-bottom:28px;letter-spacing:.02em}
+.pk-free{background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.2);border-radius:4px;padding:16px 20px;margin-bottom:28px}
+.pk-free strong{font-size:16px;font-weight:500;color:var(--cyan);display:block;margin-bottom:4px}
+.pk-free p{font-size:14px;font-weight:300;color:rgba(255,255,255,.38);line-height:1.6}
+.pk-desc{font-size:16px;font-weight:300;color:rgba(255,255,255,.42);line-height:1.8;margin-bottom:32px}
+.pk-btn{display:flex;align-items:center;justify-content:center;padding:18px 32px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:4px;background:var(--blue);color:var(--bg);box-shadow:0 0 32px rgba(79,142,255,.38),inset 0 1px 0 rgba(255,255,255,.2);margin-bottom:12px;transition:all .22s}
+.pk-btn:hover{background:var(--cyan);box-shadow:0 0 44px rgba(0,212,255,.45);transform:translateY(-1px)}
+.pk-note{font-size:13px;font-weight:300;color:rgba(255,255,255,.18);letter-spacing:.04em;text-align:center}
+.pk-r{padding:56px 52px;background:rgba(8,18,34,.5);display:flex;flex-direction:column}
+.pk-r-lbl{font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.18);margin-bottom:28px;display:block}
+.pk-feats{display:flex;flex-direction:column}
+.pk-feat{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.pk-feat:first-child{border-top:1px solid rgba(255,255,255,.05)}
+.pk-fn{font-family:'Instrument Serif',serif;font-size:22px;color:var(--blue);opacity:.28;flex-shrink:0;width:28px;font-weight:400;padding-top:2px}
+.pk-ft{font-size:16px;font-weight:500;color:rgba(255,255,255,.85);margin-bottom:6px}
+.pk-fd{font-size:15px;font-weight:300;color:rgba(255,255,255,.36);line-height:1.72}
+
+/* CTA */
 .cta{min-height:88svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 56px;position:relative;overflow:hidden;background:var(--bg2)}
 .cta::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.2),transparent)}
 .cta-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(79,142,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(79,142,255,.035) 1px,transparent 1px);background-size:80px 80px;z-index:0;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 20%,transparent 100%)}
 .cta-orb{position:absolute;width:800px;height:800px;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(0,212,255,.06) 0%,transparent 65%);pointer-events:none;z-index:0}
 .cta-inner{position:relative;z-index:1;max-width:800px}
-.cta-rule{position:absolute;top:0;left:50%;transform:translateX(-50%);width:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue),var(--cyan),transparent);z-index:1}
-.cta.live .cta-rule{animation:rw2 .9s .05s ease forwards}
-@keyframes rw2{to{width:60%}}
 .cl{display:block;font-family:'Instrument Serif',serif;font-size:clamp(52px,8vw,122px);line-height:.93;letter-spacing:-.032em;font-weight:400;animation-fill-mode:both;opacity:0;animation-name:fi;animation-duration:.9s;animation-timing-function:cubic-bezier(.16,1,.3,1);animation-play-state:paused}
 .cl.d1{color:rgba(255,255,255,.1);animation-delay:.05s}
 .cl.d2{color:rgba(255,255,255,.28);animation-delay:.18s}
@@ -159,7 +205,7 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.88);backdrop-filter:blur(32
 .cta-note{margin-top:20px;font-size:12px;font-weight:300;color:rgba(255,255,255,.15);letter-spacing:.06em;opacity:0;animation-fill-mode:both;animation-play-state:paused;animation-name:fi;animation-duration:.8s;animation-delay:.85s}
 .cta.live .cta-note{animation-play-state:running}
 
-/* ── FOOTER ── */
+/* FOOTER */
 footer{background:var(--bg);padding:48px 56px 36px;position:relative}
 footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.18),transparent)}
 .foot-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.04)}
@@ -174,7 +220,7 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
 .foot-bottom p{font-size:11px;font-weight:300;color:rgba(255,255,255,.15);letter-spacing:.03em}
 
-/* ── MOBILE ── */
+/* MOBILE */
 @media(max-width:840px){
   nav{padding:18px 24px}nav.stuck{padding:12px 24px}
   .nl{display:none}.ham{display:flex}
@@ -183,12 +229,13 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   .hcopy{font-size:16px}
   .hbtns{flex-direction:column;align-items:stretch;width:100%;max-width:340px}
   .bf{width:100%;justify-content:center}
-  .hero-trust{gap:16px}
-  .value-bar{grid-template-columns:1fr}
-  .cases{padding:64px 24px}
-  .cases-grid{grid-template-columns:1fr}
-  .svcs{padding:64px 24px}
-  .svc-grid{grid-template-columns:1fr}
+  .val-bar{flex-direction:column;align-items:center;gap:12px}
+  .val-div{display:none}
+  .problem{padding:64px 24px}.prb-grid{grid-template-columns:1fr}
+  .cases{padding:64px 24px}.cases-grid{grid-template-columns:1fr}
+  .svcs{padding:64px 24px}.svc-grid{grid-template-columns:1fr}
+  .ba-stats{grid-template-columns:1fr}
+  .pricing{padding:64px 24px}.pkg{grid-template-columns:1fr}.pk-l{border-right:none;border-bottom:1px solid rgba(79,142,255,.1)}
   .cta{padding:64px 24px}
   .cta-btns{flex-direction:column;align-items:stretch;max-width:340px;margin:36px auto 0}
   .bf.cta-bf{width:100%;justify-content:center}
@@ -200,13 +247,12 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
 @media(max-width:440px){
   .hl{font-size:clamp(38px,11vw,64px)}
   .cl{font-size:clamp(40px,12vw,80px)}
-  .vb-num{font-size:42px}
 }
 </style>
 </head>
 <body>
 <div id="cur"></div>
-<svg style="display:none">
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
   <symbol id="A" viewBox="0 0 56 68">
     <circle cx="28" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
     <line x1="28" y1="14" x2="28" y2="59" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -240,29 +286,31 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   <a href="https://calendly.com/anchorautomations/30min" class="mcta" onclick="cM()" target="_blank" rel="noopener">Claim Your Free Month</a>
 </div>
 
-<!-- HERO — centered, value-first -->
+<!-- HERO — centered, tag + 3-line fading headline -->
 <section class="hero">
   <div class="hero-grid"></div>
   <div class="orb1"></div>
   <div class="orb2"></div>
   <div class="hero-inner">
-    <div class="hero-badge"><span></span>Selectively onboarding launch clients &mdash; first month free</div>
+    <div class="hero-tag">AI Automation<span>·</span>Done For You<span>·</span>First Month On Us</div>
     <div class="hhl">
-      <span class="hl l1">Your business is</span>
-      <span class="hl l2">losing $3,600</span>
-      <span class="hl l3">every month</span>
-      <span class="hl l4">to missed calls.</span>
+      <span class="hl l3">Run your business on autopilot.</span>
     </div>
-    <p class="hcopy">We build AI systems that respond to missed calls instantly, follow up every lead automatically, and generate reviews on autopilot. <strong>Done for you. Live in 48 hours.</strong></p>
+    <p class="hcopy">We build AI automation systems for service businesses — <strong>missed call recovery, lead follow-up, review generation, and appointment booking.</strong> Done for you. Live in 48 hours. <strong>First month on us.</strong></p>
     <div class="hbtns">
       <a href="https://calendly.com/anchorautomations/30min" class="bf" target="_blank" rel="noopener">Claim Your Free Month &#8594;</a>
-      <a href="#proof" class="bt">See real results &#8595;</a>
+      <a href="#proof" class="bt">See what it's costing you</a>
     </div>
-    <div class="hero-trust">
-      <span class="ht">No setup fee</span>
-      <span class="ht">No contracts</span>
-      <span class="ht">Live in 48 hours</span>
-      <span class="ht">Done for you</span>
+    <div class="val-bar">
+      <span class="val-item">No setup fee</span>
+      <span class="val-div"></span>
+      <span class="val-item">Live in 48 hours</span>
+      <span class="val-div"></span>
+      <span class="val-item">Done for you</span>
+      <span class="val-div"></span>
+      <span class="val-item">First month on us</span>
+      <span class="val-div"></span>
+      <span class="val-item">No contracts — ever</span>
     </div>
   </div>
   <div class="hscroll"><div class="hscroll-ln"></div><span>Scroll</span></div>
@@ -290,31 +338,41 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   </div>
 </div>
 
-<!-- VALUE NUMBERS — immediate proof above the fold -->
-<div class="value-bar">
-  <div class="vb-item r">
-    <div class="vb-num">+12</div>
-    <div class="vb-lbl">Leads recovered per month</div>
-    <div class="vb-sub">From missed calls alone. At $300/job that&rsquo;s $3,600/mo sitting on the table right now.</div>
+<div class="sdiv"></div>
+
+<!-- PROBLEM -->
+<section class="problem" id="proof">
+  <div class="wrap">
+    <span class="sec-tag r">The Problem</span>
+    <h2 class="sec-h r">Three ways your business is <em>bleeding revenue right now.</em></h2>
+    <div class="prb-grid">
+      <div class="pi r">
+        <div class="dbox">01</div>
+        <h4>Missed calls go unanswered</h4>
+        <p>Every call that goes to voicemail is a customer who needed you. They don't wait — they call your competitor and book with them. You never even know it happened.</p>
+      </div>
+      <div class="pi r">
+        <div class="dbox">02</div>
+        <h4>New leads go cold instantly</h4>
+        <p>You have a 5-minute window to respond before conversion drops 80%. Most businesses respond hours later — or not at all. That lead has already moved on.</p>
+      </div>
+      <div class="pi r">
+        <div class="dbox">03</div>
+        <h4>No-shows block your schedule</h4>
+        <p>A missed appointment isn't just lost revenue — it's a blocked slot that could have gone to someone else. Most businesses lose 2–4 bookings a week to no-shows alone.</p>
+      </div>
+    </div>
   </div>
-  <div class="vb-item r">
-    <div class="vb-num">4.2&rarr;4.8&#9733;</div>
-    <div class="vb-lbl">Google rating in 30 days</div>
-    <div class="vb-sub">Automated review requests after every job. Businesses at 4.8&#9733; get 3&times; more calls than those under 4.0.</div>
-  </div>
-  <div class="vb-item r">
-    <div class="vb-num">&darr;65%</div>
-    <div class="vb-lbl">Fewer no-shows immediately</div>
-    <div class="vb-sub">Confirmation + 24hr + 1hr reminders. Avg. 13 recovered bookings every single month.</div>
-  </div>
-</div>
+</section>
+
+<div class="sdiv"></div>
 
 <!-- BEFORE / AFTER CASE STUDIES -->
-<section class="cases" id="proof">
+<section class="cases">
   <div class="wrap">
-    <span class="sec-tag r">Real results</span>
-    <h2 class="sec-h r">What the first 30 days <em>actually look like.</em></h2>
-    <p class="r" style="font-size:16px;font-weight:300;color:rgba(255,255,255,.35);line-height:1.8;max-width:540px;margin-top:8px">Before and after, from Florida businesses that made the switch. These are month one numbers.</p>
+    <span class="sec-tag r">Real Results</span>
+    <h2 class="sec-h r">What month one actually <em>looks like.</em></h2>
+    <p class="r" style="font-size:16px;font-weight:300;color:rgba(255,255,255,.35);line-height:1.8;max-width:540px;margin-top:8px">Before and after, from businesses that made the switch. These are 30-day numbers.</p>
     <div class="cases-grid">
 
       <!-- Case 1 -->
@@ -330,7 +388,7 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
           <div class="cs-aft">
             <span class="cs-label">After 30 days</span>
             <div class="cs-stat">+$34K revenue</div>
-            <div class="cs-desc">Missed call text-back converted 11 of those leads. System paid for itself 68&times; over.</div>
+            <div class="cs-desc">Missed call text-back converted 11 of those leads. System paid for itself 34&times; over.</div>
           </div>
         </div>
         <div class="cs-footer">Missed Call Text-Back &middot; Month 1</div>
@@ -342,14 +400,14 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
           <span class="cs-industry">Med Spa &middot; Miami, FL</span>
           <div class="cs-bef">
             <span class="cs-label">Before</span>
-            <div class="cs-stat">3.8 &#9733; on Google</div>
+            <div class="cs-stat">3.8&#9733; on Google</div>
             <div class="cs-desc">Only 14 reviews total. Losing clients to competitors with 4.7+ ratings. Invisible online.</div>
           </div>
           <div class="cs-arrow">&#8595;</div>
           <div class="cs-aft">
             <span class="cs-label">After 30 days</span>
-            <div class="cs-stat">4.6 &#9733; &middot; 23 reviews</div>
-            <div class="cs-desc">23 new 5-star reviews in one month. Google ranking climbed. New client inquiries up 40%.</div>
+            <div class="cs-stat">4.6&#9733; &middot; 23 reviews</div>
+            <div class="cs-desc">23 new 5-star reviews in one month. Google ranking climbed. New inquiries up 40%.</div>
           </div>
         </div>
         <div class="cs-footer">Review Generation &middot; Month 1</div>
@@ -362,13 +420,13 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
           <div class="cs-bef">
             <span class="cs-label">Before</span>
             <div class="cs-stat">6&ndash;8 no-shows/week</div>
-            <div class="cs-desc">Blocked appointment slots. Staff calling manually to confirm. Still losing 25% of bookings.</div>
+            <div class="cs-desc">Blocked slots. Staff calling manually to confirm. Still losing 25% of bookings.</div>
           </div>
           <div class="cs-arrow">&#8595;</div>
           <div class="cs-aft">
             <span class="cs-label">After 30 days</span>
             <div class="cs-stat">&darr;68% no-shows</div>
-            <div class="cs-desc">8&ndash;10 recovered bookings per week. Staff freed up completely. Zero manual confirmations.</div>
+            <div class="cs-desc">8&ndash;10 recovered bookings per week. Staff freed up. Zero manual confirmations.</div>
           </div>
         </div>
         <div class="cs-footer">Appointment Reminders &middot; Month 1</div>
@@ -384,7 +442,7 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
 <section class="svcs">
   <div class="wrap">
     <span class="sec-tag r">The Systems</span>
-    <h2 class="sec-h r">Four automations. One complete<br><em>revenue protection system.</em></h2>
+    <h2 class="sec-h r">Four automations. One complete <em>revenue protection system.</em></h2>
     <div class="svc-grid">
       <div class="sg r">
         <span class="sg-num">01</span>
@@ -407,7 +465,7 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
       <div class="sg r">
         <span class="sg-num">04</span>
         <div class="sg-title">Appointment Reminders</div>
-        <p class="sg-copy">Confirmation at booking. Reminder 24hrs out. Reminder 1hr out. Clients show prepared and on time. No-shows drop by up to 65%.</p>
+        <p class="sg-copy">Confirmation at booking. Reminder 24hrs out. Reminder 1hr out. Clients show up prepared and on time. No-shows drop by up to 65%.</p>
         <span class="sg-stat">&darr;65% no-shows, 13 bookings recovered/mo &rarr;</span>
       </div>
     </div>
@@ -416,14 +474,76 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
 
 <div class="sdiv"></div>
 
-<!-- CTA — centered, selectively onboarding -->
+<!-- STATS -->
+<div class="ba-stats">
+  <div class="bs r">
+    <div class="bs-num">+12</div>
+    <div class="bs-lbl">leads recovered<br>per month avg.</div>
+  </div>
+  <div class="bs r">
+    <div class="bs-num">4.2&rarr;4.8&#9733;</div>
+    <div class="bs-lbl">Google rating<br>in 30 days</div>
+  </div>
+  <div class="bs r">
+    <div class="bs-num">&darr;65%</div>
+    <div class="bs-lbl">fewer no-shows<br>after go-live</div>
+  </div>
+</div>
+
+<div class="sdiv"></div>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="wrap">
+    <span class="sec-tag r">Pricing</span>
+    <h2 class="sec-h r">One plan. Everything included. <em>First month on us.</em></h2>
+    <div class="pkg r">
+      <div class="pk-l">
+        <span class="pk-lbl">Growth Plan &mdash; All Four Systems</span>
+        <span class="pk-price"><sup>$</sup>997</span>
+        <p class="pk-mo">per month &middot; cancel anytime</p>
+        <div class="pk-free">
+          <strong>&#x2726; First month is completely free</strong>
+          <p>We build it, run it for 30 days, and you see real results before paying a cent. No credit card required to start.</p>
+        </div>
+        <p class="pk-desc">One flat rate. All four automations custom-built and launched for your business. No setup fees, no hourly rates, no surprises.</p>
+        <a href="https://calendly.com/anchorautomations/30min" class="pk-btn" target="_blank" rel="noopener">Claim Your Free Month &#8594;</a>
+        <p class="pk-note">No credit card &middot; No contracts &middot; Cancel anytime</p>
+      </div>
+      <div class="pk-r">
+        <span class="pk-r-lbl">What's included</span>
+        <div class="pk-feats">
+          <div class="pk-feat">
+            <div class="pk-fn">01</div>
+            <div><div class="pk-ft">Missed Call Text-Back</div><div class="pk-fd">Every missed call fires an instant automated text-back within seconds — no lead walks away to a competitor.</div></div>
+          </div>
+          <div class="pk-feat">
+            <div class="pk-fn">02</div>
+            <div><div class="pk-ft">Review Generation</div><div class="pk-fd">Automated Google review requests after every job. Build a 5-star reputation on autopilot.</div></div>
+          </div>
+          <div class="pk-feat">
+            <div class="pk-fn">03</div>
+            <div><div class="pk-ft">Lead Follow-Up Sequences</div><div class="pk-fd">Multi-step SMS and email sequences that follow up every new inquiry. Stops when they respond.</div></div>
+          </div>
+          <div class="pk-feat">
+            <div class="pk-fn">04</div>
+            <div><div class="pk-ft">Appointment Reminders</div><div class="pk-fd">Confirmation at booking, reminder 24 hours out, reminder 1 hour out. No-shows drop immediately.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sdiv"></div>
+
+<!-- CTA — selectively bringing on launch clients -->
 <section class="cta" id="cta">
   <div class="cta-grid"></div>
   <div class="cta-orb"></div>
-  <div class="cta-rule"></div>
   <div class="cta-inner">
-    <div class="cta-hl">
-      <span class="cl d1">We&rsquo;re selectively</span>
+    <div>
+      <span class="cl d1">We're selectively</span>
       <span class="cl d2">bringing on</span>
       <span class="cl d3">launch clients.</span>
     </div>
@@ -450,7 +570,7 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
         </div>
         <div class="foot-col">
           <h5>Contact</h5>
-          <a href="mailto:hello@anchorautomations.ai">hello@anchorautomations.ai</a>
+          <a href="/cdn-cgi/l/email-protection#157d7079797a55747b767d7a677460617a7874617c7a7b663b747c"><span class="__cf_email__" data-cfemail="8ee6ebe2e2e1ceefe0ede6e1fceffbfae1e3effae7e1e0fda0efe7">[email&#160;protected]</span></a>
           <a href="tel:7722850834">(772) 285-0834</a>
           <a href="https://calendly.com/anchorautomations/30min" target="_blank" rel="noopener">Claim Your Free Month</a>
         </div>
@@ -463,7 +583,7 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
   var c=document.getElementById('cur');
   if(c&&window.matchMedia('(pointer:fine)').matches){
@@ -494,13 +614,4 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   setTimeout(function(){document.querySelectorAll('.r').forEach(function(el){el.classList.add('on');});},400);
   var ct=document.getElementById('cta');
   if(ct){
-    var co=new IntersectionObserver(function(es){
-      if(es[0].isIntersecting){ct.classList.add('live');co.disconnect();}
-    },{threshold:0.1});
-    co.observe(ct);
-  }
-  document.getElementById('yr').textContent=new Date().getFullYear();
-})();
-</script>
-</body>
-</html>
+    var co=new I
