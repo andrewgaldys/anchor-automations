@@ -20,7 +20,7 @@
 :root{--bg:#050d1a;--bg2:#0a1628;--w:#ffffff;--blue:#4F8EFF;--cyan:#00D4FF;--dim:rgba(255,255,255,.34)}
 html{scroll-behavior:smooth;overflow-x:hidden}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--w);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-@media(pointer:fine){body{cursor:none}}
+
 body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.022;pointer-events:none;z-index:999;background-size:256px}
 #cur{position:fixed;z-index:9999;pointer-events:none;border-radius:50%;transform:translate(-50%,-50%);left:-300px;top:-300px;width:6px;height:6px;background:var(--blue);box-shadow:0 0 14px var(--blue);transition:width .3s cubic-bezier(.25,.46,.45,.94),height .3s,opacity .3s}
 #cur.big{width:48px;height:48px;opacity:.1}
@@ -66,7 +66,7 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.88);backdrop-filter:blur(32
 
 /* Hero headline: 3 lines, fading opacity */
 .hhl{margin-bottom:32px}
-.hl{display:block;font-family:'Instrument Serif',serif;font-size:clamp(52px,8.5vw,130px);line-height:.93;letter-spacing:-.034em;clip-path:inset(0 0 100% 0);animation:wipe .85s cubic-bezier(.16,1,.3,1) forwards}
+.hl{display:block;font-family:'Instrument Serif',serif;font-size:clamp(42px,6vw,96px);line-height:.95;letter-spacing:-.034em;clip-path:inset(0 0 100% 0);animation:wipe .85s cubic-bezier(.16,1,.3,1) forwards}
 .hl.l1{color:rgba(255,255,255,.08);animation-delay:.2s}
 .hl.l2{color:rgba(255,255,255,.22);animation-delay:.32s}
 .hl.l3{color:var(--w);animation-delay:.2s}
@@ -294,7 +294,8 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   <div class="hero-inner">
     <div class="hero-tag">AI Automation<span>·</span>Done For You<span>·</span>First Month On Us</div>
     <div class="hhl">
-      <span class="hl l3">Run your business on autopilot.</span>
+      <span class="hl l3">Run your business</span>
+      <span class="hl l3" style="animation-delay:.35s">on autopilot.</span>
     </div>
     <p class="hcopy">We build AI automation systems for service businesses — <strong>missed call recovery, lead follow-up, review generation, and appointment booking.</strong> Done for you. Live in 48 hours. <strong>First month on us.</strong></p>
     <div class="hbtns">
@@ -614,4 +615,13 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   setTimeout(function(){document.querySelectorAll('.r').forEach(function(el){el.classList.add('on');});},400);
   var ct=document.getElementById('cta');
   if(ct){
-    var co=new I
+    var co=new IntersectionObserver(function(es){
+    if(es[0].isIntersecting){ct.classList.add('live');co.disconnect();}
+  },{threshold:0.1});
+  co.observe(ct);
+  }
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
