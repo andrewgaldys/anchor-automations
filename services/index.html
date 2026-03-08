@@ -46,18 +46,16 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.85);backdrop-filter:blur(32
 .ph{padding:160px 56px 100px;position:relative;overflow:hidden;text-align:center}
 .ph-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(79,142,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,142,255,.03) 1px,transparent 1px);background-size:76px 76px;mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,black,transparent 100%)}
 .ph-orb{position:absolute;width:700px;height:700px;left:50%;top:-250px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(79,142,255,.08) 0%,transparent 70%);pointer-events:none}
-.ph-tag{font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:24px;position:relative;z-index:1;opacity:0;animation:fi .7s .1s cubic-bezier(.16,1,.3,1) forwards}
-.ph-h1{font-family:'Instrument Serif',serif;font-size:clamp(40px,5.5vw,88px);line-height:1.08;letter-spacing:-.02em;color:var(--w);position:relative;z-index:1;margin-bottom:28px;opacity:0;animation:fi .8s .2s cubic-bezier(.16,1,.3,1) forwards;-webkit-font-smoothing:antialiased;font-weight:400}
+.ph-tag{font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:24px;position:relative;z-index:1}
+.ph-h1{font-family:'Instrument Serif',serif;font-size:clamp(40px,5.5vw,88px);line-height:1.08;letter-spacing:-.02em;color:var(--w);position:relative;z-index:1;margin-bottom:28px;-webkit-font-smoothing:antialiased;font-weight:400}
 .ph-h1 em{font-style:italic;color:var(--blue)}
-.ph-sub{font-size:19px;font-weight:300;color:var(--dim);max-width:580px;line-height:1.85;position:relative;z-index:1;margin:0 auto;opacity:0;animation:fi .8s .35s cubic-bezier(.16,1,.3,1) forwards}
-@keyframes fi{to{opacity:1;transform:none}}
+.ph-sub{font-size:19px;font-weight:300;color:var(--dim);max-width:580px;line-height:1.85;position:relative;z-index:1;margin:0 auto}
 .wrap{max-width:1240px;margin:0 auto}
 .sdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.05) 20%,rgba(79,142,255,.1) 50%,rgba(255,255,255,.05) 80%,transparent)}
 .r{opacity:0;transform:translateY(28px);transition:opacity .72s cubic-bezier(.16,1,.3,1),transform .72s cubic-bezier(.16,1,.3,1)}
 .r.on{opacity:1;transform:none}
 .svc-wrap{padding:0 56px}
 .svc-block{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.05);position:relative}
-.svc-block::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.0),transparent);transition:background .5s;pointer-events:none}
 .svc-block:hover::after{background:linear-gradient(90deg,transparent,rgba(79,142,255,.4),transparent)}
 .svc-left{padding:80px 72px 80px 0;border-right:1px solid rgba(255,255,255,.05)}
 .svc-right{padding:80px 0 80px 72px;display:flex;flex-direction:column;gap:32px}
@@ -106,13 +104,10 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   nav{padding:18px 24px}nav.stuck{padding:12px 24px}
   .nl{display:none}.ham{display:flex}
   .ph{padding:120px 24px 72px}
-  .ph-h1{font-size:clamp(36px,11vw,60px)}
-  .ph-sub{font-size:17px}
   .svc-wrap{padding:0 24px}
   .svc-block{grid-template-columns:1fr}
   .svc-left{padding:52px 0 36px;border-right:none;border-bottom:1px solid rgba(255,255,255,.05)}
   .svc-right{padding:36px 0 52px}
-  .svc-pain{font-size:16px}.svc-desc{font-size:16px}.svc-step-text{font-size:15px}
   .cta-strip{padding:60px 24px}
   .cs-inner{grid-template-columns:1fr;gap:36px}
   .cs-right{align-items:flex-start}
@@ -157,8 +152,7 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   <p class="ph-sub">Each system targets a specific leak in your business. Together they form a complete automated operation — done for you, live in 48 hours.</p>
 </section>
 <div class="sdiv"></div>
-<div class="svc-wrap">
-<div class="wrap">
+<div class="svc-wrap"><div class="wrap">
   <div class="svc-block r">
     <div class="svc-left">
       <span class="svc-num">01 / 04</span>
@@ -172,9 +166,9 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
     <div class="svc-right">
       <div class="svc-stat-card"><div class="svc-stat-num">+12</div><div class="svc-stat-lbl">leads recovered per month on average. At a $300 average job value, that's $3,600/mo in revenue you're currently losing silently.</div></div>
       <div class="svc-steps">
-        <div class="svc-step"><span class="svc-step-arrow">→</span><p class="svc-step-text"><strong>Call comes in, goes unanswered</strong> — your system detects it instantly</p></div>
-        <div class="svc-step"><span class="svc-step-arrow">→</span><p class="svc-step-text"><strong>Automatic text fires within seconds</strong> — "Hey, sorry we missed you! How can we help?"</p></div>
-        <div class="svc-step"><span class="svc-step-arrow">→</span><p class="svc-step-text"><strong>Conversation opens in your inbox</strong> — you reply when free, lead stays warm</p></div>
+        <div class="svc-step"><span class="svc-step-arrow">&#8594;</span><p class="svc-step-text"><strong>Call comes in, goes unanswered</strong> — your system detects it instantly</p></div>
+        <div class="svc-step"><span class="svc-step-arrow">&#8594;</span><p class="svc-step-text"><strong>Automatic text fires within seconds</strong> — "Hey, sorry we missed you! How can we help?"</p></div>
+        <div class="svc-step"><span class="svc-step-arrow">&#8594;</span><p class="svc-step-text"><strong>Conversation opens in your inbox</strong> — you reply when free, lead stays warm</p></div>
       </div>
     </div>
   </div>
@@ -190,11 +184,11 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
       <div class="svc-tags"><span class="svc-tag">Auto Request</span><span class="svc-tag">Google Reviews</span><span class="svc-tag">Post-Job Trigger</span><span class="svc-tag">Custom Timing</span></div>
     </div>
     <div class="svc-right">
-      <div class="svc-stat-card"><div class="svc-stat-num">4.2→4.8★</div><div class="svc-stat-lbl">average Google rating improvement within 30 days. Businesses with 4.8★ receive 3× more inbound calls than those rated under 4.0.</div></div>
+      <div class="svc-stat-card"><div class="svc-stat-num">4.2&#8594;4.8&#9733;</div><div class="svc-stat-lbl">average Google rating improvement within 30 days. Businesses with 4.8&#9733; receive 3&#215; more inbound calls than those rated under 4.0.</div></div>
       <div class="svc-steps">
-        <div class="svc-step"><span class="svc-step-arrow">→</span><p class="svc-step-text"><strong>Job is completed</strong> — review request trigger fires automatically</p></div>
-        <div class="svc-step"><span class="svc-step-arrow">→</span><p class="svc-step-text"><strong>Customer receives a personalized text</strong> — with a direct link to your Google profile</p></div>
-        <div class="svc-step"><span class="svc-step-arrow">→</span><p class="svc-step-text"><strong>Reviews accumulate every week</strong> — your rating climbs, your visibility grows</p></div>
+        <div class="svc-step"><span class="svc-step-arrow">&#8594;</span><p class="svc-step-text"><strong>Job is completed</strong> — review request trigger fires automatically</p></div>
+        <div class="svc-step"><span class="svc-step-arrow">&#8594;</span><p class="svc-step-text"><strong>Customer receives a personalized text</strong> — with a direct link to your Google profile</p></div>
+        <div class="svc-step"><span class="svc-step-arrow">&#8594;</span><p class="svc-step-text"><strong>Reviews accumulate every week</strong> — your rating climbs, your visibility grows</p></div>
       </div>
     </div>
   </div>
@@ -210,11 +204,11 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
       <div class="svc-tags"><span class="svc-tag">Instant SMS</span><span class="svc-tag">Multi-Step Email</span><span class="svc-tag">Auto Stop on Reply</span><span class="svc-tag">Written in Your Voice</span></div>
     </div>
     <div class="svc-right">
-      <div class="svc-stat-card"><div class="svc-stat-num">3.5×</div><div class="svc-stat-lbl">more revenue when a business responds to a lead within 5 minutes. Your system responds in seconds — around the clock, every day.</div></div>
+      <div class="svc-stat-card"><div class="svc-stat-num">3.5&#215;</div><div class="svc-stat-lbl">more revenue when a business responds to a lead within 5 minutes. Your system responds in seconds — around the clock, every day.</div></div>
       <div class="svc-steps">
-        <div class="svc-step"><span class="svc-step-arrow">→</span><p class="svc-step-text"><strong>New lead comes in</strong> — immediate SMS sent within seconds</p></div>
-        <div class="svc-step"><span class="svc-step-arrow">→</span><p class="svc-step-text"><strong>Follow-up sequence runs over 6 days</strong> — SMS and email, written in your voice</p></div>
-        <div class="svc-step"><span class="svc-step-arrow">→</span><p class="svc-step-text"><strong>Lead replies — sequence stops instantly</strong> — conversation moves to your inbox</p></div>
+        <div class="svc-step"><span class="svc-step-arrow">&#8594;</span><p class="svc-step-text"><strong>New lead comes in</strong> — immediate SMS sent within seconds</p></div>
+        <div class="svc-step"><span class="svc-step-arrow">&#8594;</span><p class="svc-step-text"><strong>Follow-up sequence runs over 6 days</strong> — SMS and email, written in your voice</p></div>
+        <div class="svc-step"><span class="svc-step-arrow">&#8594;</span><p class="svc-step-text"><strong>Lead replies — sequence stops instantly</strong> — conversation moves to your inbox</p></div>
       </div>
     </div>
   </div>
@@ -230,16 +224,15 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
       <div class="svc-tags"><span class="svc-tag">Instant Confirm</span><span class="svc-tag">24hr Reminder</span><span class="svc-tag">1hr Reminder</span><span class="svc-tag">Calendar Sync</span></div>
     </div>
     <div class="svc-right">
-      <div class="svc-stat-card"><div class="svc-stat-num">↓65%</div><div class="svc-stat-lbl">fewer no-shows after automated reminders go live. For a business with 20 weekly appointments, that's 13 recovered bookings every single month.</div></div>
+      <div class="svc-stat-card"><div class="svc-stat-num">&#8595;65%</div><div class="svc-stat-lbl">fewer no-shows after automated reminders go live. For a business with 20 weekly appointments, that's 13 recovered bookings every single month.</div></div>
       <div class="svc-steps">
-        <div class="svc-step"><span class="svc-step-arrow">→</span><p class="svc-step-text"><strong>Appointment is booked</strong> — instant confirmation SMS sent automatically</p></div>
-        <div class="svc-step"><span class="svc-step-arrow">→</span><p class="svc-step-text"><strong>24 hours before</strong> — reminder fires with option to reschedule</p></div>
-        <div class="svc-step"><span class="svc-step-arrow">→</span><p class="svc-step-text"><strong>1 hour before</strong> — final reminder sent, client shows up prepared</p></div>
+        <div class="svc-step"><span class="svc-step-arrow">&#8594;</span><p class="svc-step-text"><strong>Appointment is booked</strong> — instant confirmation SMS sent automatically</p></div>
+        <div class="svc-step"><span class="svc-step-arrow">&#8594;</span><p class="svc-step-text"><strong>24 hours before</strong> — reminder fires with option to reschedule</p></div>
+        <div class="svc-step"><span class="svc-step-arrow">&#8594;</span><p class="svc-step-text"><strong>1 hour before</strong> — final reminder sent, client shows up prepared</p></div>
       </div>
     </div>
   </div>
-</div>
-</div>
+</div></div>
 <div class="sdiv"></div>
 <section class="cta-strip">
   <div class="wrap">
@@ -249,8 +242,8 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
         <p>Book a free 30-minute call. We'll walk you through exactly how each system works for your specific business — and set it all up free for the first month.</p>
       </div>
       <div class="cs-right">
-        <a href="https://calendly.com/anchorautomations/30min" class="bf" target="_blank" rel="noopener">Claim Your Free Month →</a>
-        <span class="cs-note">First month on us · No contracts · Live in 48 hours</span>
+        <a href="https://calendly.com/anchorautomations/30min" class="bf" target="_blank" rel="noopener">Claim Your Free Month &#8594;</a>
+        <span class="cs-note">First month on us &middot; No contracts &middot; Live in 48 hours</span>
       </div>
     </div>
   </div>
@@ -267,7 +260,7 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
         <div class="foot-col"><h5>Get Started</h5><a href="https://calendly.com/anchorautomations/30min" target="_blank" rel="noopener">Claim Your Free Month</a><a href="/pricing">View Pricing</a><a href="mailto:hello@anchorautomations.ai">hello@anchorautomations.ai</a><a href="tel:7722850834">(772) 285-0834</a></div>
       </div>
     </div>
-    <div class="foot-bottom"><p>© <span id="yr"></span> Anchor Automations · anchorautomations.ai</p><p>Palm City, FL · Serving businesses across the US</p></div>
+    <div class="foot-bottom"><p>&copy; <span id="yr"></span> Anchor Automations &middot; anchorautomations.ai</p><p>Palm City, FL &middot; Serving businesses across the US</p></div>
   </div>
 </footer>
 <script>
@@ -280,8 +273,8 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   window.cM=function(){if(m)m.classList.remove('open');if(h)h.classList.remove('open');document.body.style.overflow='';};
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:0.06});
   document.querySelectorAll('.r').forEach(function(el){io.observe(el);});
+  setTimeout(function(){document.querySelectorAll('.r').forEach(function(el){el.classList.add('on');});},400);
   document.getElementById('yr').textContent=new Date().getFullYear();
-  setTimeout(function(){document.querySelectorAll('.r').forEach(function(el){el.classList.add('on');});},300);
 })();
 </script>
 </body>
