@@ -18,8 +18,6 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 #cur{position:fixed;z-index:9999;pointer-events:none;border-radius:50%;transform:translate(-50%,-50%);left:-300px;top:-300px;width:6px;height:6px;background:var(--blue);box-shadow:0 0 14px var(--blue);transition:width .3s,height .3s,opacity .3s}
 #cur.big{width:48px;height:48px;opacity:.1}
 @media(pointer:coarse){#cur{display:none!important}}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:28px 56px;transition:all .4s cubic-bezier(.16,1,.3,1)}
 nav.stuck{padding:14px 56px;background:rgba(5,13,26,.85);backdrop-filter:blur(32px);border-bottom:1px solid rgba(255,255,255,.05);box-shadow:0 8px 40px rgba(0,0,0,.5)}
 .logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
@@ -45,9 +43,7 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.85);backdrop-filter:blur(32
 .mob a:hover{color:var(--blue)}
 .mob .mcta{margin-top:32px!important;font-family:'DM Sans',sans-serif!important;font-size:11px!important;font-weight:600!important;letter-spacing:.12em!important;text-transform:uppercase!important;color:var(--blue)!important;border:1px solid rgba(79,142,255,.3)!important;padding:14px 28px!important;border-radius:4px!important;width:fit-content!important;display:inline-block!important;background:rgba(79,142,255,.07)!important}
 @keyframes mu{to{opacity:1;transform:none}}
-
-/* PAGE HERO */
-.ph{padding:160px 56px 80px;position:relative;overflow:hidden;text-align:center}
+.ph{padding:160px 56px 88px;position:relative;overflow:hidden;text-align:center}
 .ph-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(79,142,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,142,255,.03) 1px,transparent 1px);background-size:76px 76px;mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,black,transparent 100%)}
 .ph-orb{position:absolute;width:700px;height:700px;left:50%;top:-250px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(79,142,255,.08) 0%,transparent 70%);pointer-events:none}
 .ph-tag{font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:24px;position:relative;z-index:1;opacity:0;animation:fi .7s .1s cubic-bezier(.16,1,.3,1) forwards}
@@ -56,74 +52,43 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.85);backdrop-filter:blur(32
 .ph-sub{font-size:19px;font-weight:300;color:var(--dim);max-width:540px;line-height:1.85;position:relative;z-index:1;margin:0 auto 40px;opacity:0;animation:fi .8s .35s cubic-bezier(.16,1,.3,1) forwards}
 .ph-pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;opacity:0;animation:fi .8s .5s cubic-bezier(.16,1,.3,1) forwards}
 .ph-pill{font-size:12px;font-weight:400;color:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.09);padding:8px 18px;border-radius:100px;display:flex;align-items:center;gap:7px}
-.ph-pill span{color:var(--blue);font-size:11px}
+.ph-pill span{color:var(--blue)}
 @keyframes fi{to{opacity:1;transform:none}}
-
-/* SHARED */
 .wrap{max-width:1240px;margin:0 auto}
 .sdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.05) 20%,rgba(79,142,255,.1) 50%,rgba(255,255,255,.05) 80%,transparent)}
 .r{opacity:0;transform:translateY(28px);transition:opacity .72s cubic-bezier(.16,1,.3,1),transform .72s cubic-bezier(.16,1,.3,1)}
 .r.on{opacity:1;transform:none}
-
-/* RESULTS BAR */
-.results-bar{padding:52px 56px;background:var(--bg2);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04)}
-.results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.05)}
-.res-item{background:var(--bg2);padding:36px 32px;text-align:center}
-.res-num{font-family:'Instrument Serif',serif;font-size:clamp(36px,4vw,60px);line-height:1;color:var(--blue);margin-bottom:10px;font-weight:400}
-.res-label{font-size:15px;font-weight:300;color:rgba(255,255,255,.38);line-height:1.55}
-
-/* FREE BANNER */
-.free-wrap{padding:52px 56px 0}
-.free-banner{background:linear-gradient(135deg,rgba(79,142,255,.14),rgba(0,212,255,.07));border:1px solid rgba(79,142,255,.3);border-radius:6px;padding:32px 44px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;overflow:hidden}
-.free-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--blue),var(--cyan),transparent)}
-.free-banner-l{display:flex;align-items:center;gap:24px}
-.free-badge{background:var(--blue);color:var(--bg);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:10px 18px;border-radius:3px;white-space:nowrap;flex-shrink:0}
-.free-text strong{font-size:18px;font-weight:500;color:var(--w);display:block;margin-bottom:5px}
-.free-text p{font-size:15px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.6}
-.free-cta{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:var(--bg);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:16px 32px;border-radius:4px;text-decoration:none;white-space:nowrap;flex-shrink:0;box-shadow:0 0 28px rgba(79,142,255,.4);transition:all .22s}
-.free-cta:hover{background:var(--cyan);box-shadow:0 0 44px rgba(0,212,255,.5);transform:translateY(-1px)}
-
-/* MAIN PRICING CARD */
-.pkg-sec{padding:40px 56px 80px}
+.pkg-sec{padding:56px 56px 80px}
 .pkg-grid{display:grid;grid-template-columns:420px 1fr;border:1px solid rgba(79,142,255,.18);border-radius:6px;overflow:hidden;box-shadow:0 0 100px rgba(79,142,255,.07),0 32px 80px rgba(0,0,0,.4);position:relative}
 .pkg-grid::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue),var(--cyan),transparent);z-index:2}
-
 .pk-left{padding:52px 48px;background:linear-gradient(160deg,rgba(79,142,255,.1),rgba(79,142,255,.03));border-right:1px solid rgba(79,142,255,.1);display:flex;flex-direction:column}
 .pk-label{font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--blue);opacity:.8;display:block;margin-bottom:24px}
-.pk-price-row{display:flex;align-items:flex-end;gap:12px;margin-bottom:6px}
 .pk-price{font-family:'Instrument Serif',serif;font-size:80px;line-height:1;letter-spacing:-.04em;color:var(--blue);font-weight:400}
 .pk-price sup{font-size:28px;font-family:'DM Sans',sans-serif;font-weight:300;vertical-align:super;line-height:0}
 .pk-mo{font-size:14px;font-weight:300;color:rgba(255,255,255,.22);margin-bottom:28px;letter-spacing:.02em}
-
 .pk-free-box{background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.25);border-radius:4px;padding:18px 20px;margin-bottom:28px;display:flex;gap:12px;align-items:flex-start}
 .pk-free-icon{font-size:18px;flex-shrink:0;margin-top:2px}
 .pk-free-box strong{font-size:16px;font-weight:500;color:var(--cyan);display:block;margin-bottom:4px}
 .pk-free-box p{font-size:14px;font-weight:300;color:rgba(255,255,255,.38);line-height:1.65}
-
 .pk-desc{font-size:16px;font-weight:300;color:rgba(255,255,255,.42);line-height:1.8;margin-bottom:32px}
 .pk-btn{display:flex;align-items:center;justify-content:center;padding:18px 32px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:all .22s;background:var(--blue);color:var(--bg);box-shadow:0 0 32px rgba(79,142,255,.38),inset 0 1px 0 rgba(255,255,255,.2);margin-bottom:12px}
 .pk-btn:hover{background:var(--cyan);box-shadow:0 0 44px rgba(0,212,255,.45);transform:translateY(-1px)}
-.pk-sub-note{font-size:13px;font-weight:300;color:rgba(255,255,255,.18);letter-spacing:.04em;text-align:center;margin-bottom:32px}
+.pk-sub-note{font-size:13px;font-weight:300;color:rgba(255,255,255,.18);text-align:center;margin-bottom:32px}
 .trust{display:flex;flex-wrap:wrap;gap:10px;padding-top:28px;border-top:1px solid rgba(255,255,255,.05)}
 .tr{font-size:13px;font-weight:300;color:rgba(255,255,255,.28);display:flex;align-items:center;gap:6px}
 .tr::before{content:'✓';color:var(--blue);font-size:12px}
-
-/* Right side */
-.pk-right{padding:52px 48px;display:flex;flex-direction:column;gap:0}
+.pk-right{padding:52px 48px;display:flex;flex-direction:column}
 .pk-right-label{font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.18);margin-bottom:28px;display:block}
 .pk-features{display:flex;flex-direction:column;margin-bottom:0}
 .pk-feature{display:flex;gap:20px;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.05)}
 .pk-feature:first-child{border-top:1px solid rgba(255,255,255,.05)}
 .pk-feat-num{font-family:'Instrument Serif',serif;font-size:22px;color:var(--blue);opacity:.28;flex-shrink:0;width:28px;font-weight:400;padding-top:2px}
-.pk-feat-body{}
 .pk-feat-title{font-size:16px;font-weight:500;color:rgba(255,255,255,.85);margin-bottom:6px}
 .pk-feat-desc{font-size:15px;font-weight:300;color:rgba(255,255,255,.36);line-height:1.72}
-.pk-also{padding:28px 0 0;margin-top:4px}
+.pk-also{padding:28px 0 0}
 .pk-also-label{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.16);margin-bottom:14px}
 .pk-also-items{display:flex;flex-wrap:wrap;gap:8px}
 .pk-also-items span{font-size:13px;font-weight:300;color:rgba(255,255,255,.3);border:1px solid rgba(255,255,255,.07);padding:7px 14px;border-radius:2px}
-
-/* COMPARE SECTION */
 .compare-sec{padding:80px 56px;background:var(--bg2);position:relative}
 .compare-sec::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.12),transparent)}
 .sec-label{font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:16px;display:block}
@@ -139,21 +104,16 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.85);backdrop-filter:blur(32
 .cmp-col.anchor .cmp-price{color:var(--blue)}
 .cmp-price-note{font-size:13px;font-weight:300;color:rgba(255,255,255,.2);margin-bottom:28px}
 .cmp-col.anchor .cmp-price-note{color:rgba(79,142,255,.6)}
-.cmp-rows{display:flex;flex-direction:column;gap:0}
 .cmp-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:14px;font-weight:300;color:rgba(255,255,255,.35)}
 .cmp-col.anchor .cmp-row{color:rgba(255,255,255,.65)}
 .cmp-row .ck{color:var(--blue);font-size:13px;flex-shrink:0}
 .cmp-row .cx{color:rgba(255,255,255,.14);font-size:13px;flex-shrink:0}
-
-/* FAQ */
-.faq-sec{padding:80px 56px;background:var(--bg)}
+.faq-sec{padding:80px 56px}
 .faq-sec::before{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.1),transparent);margin-bottom:80px}
 .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.04)}
 .fq{background:var(--bg);padding:36px 32px}
 .fq h4{font-size:17px;font-weight:500;color:rgba(255,255,255,.82);margin-bottom:12px;line-height:1.4}
 .fq p{font-size:16px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.82}
-
-/* CTA STRIP */
 .cta-strip{padding:88px 56px;background:var(--bg2);position:relative;overflow:hidden}
 .cta-strip::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.2),transparent)}
 .cs-inner{display:grid;grid-template-columns:1fr auto;gap:72px;align-items:center}
@@ -164,8 +124,6 @@ nav.stuck{padding:14px 56px;background:rgba(5,13,26,.85);backdrop-filter:blur(32
 .bf{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:var(--bg);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:18px 38px;border-radius:4px;text-decoration:none;box-shadow:0 0 36px rgba(79,142,255,.42),inset 0 1px 0 rgba(255,255,255,.22);transition:all .25s cubic-bezier(.16,1,.3,1)}
 .bf:hover{background:var(--cyan);box-shadow:0 0 52px rgba(0,212,255,.52);transform:translateY(-2px)}
 .cs-note{font-size:12px;color:rgba(255,255,255,.15);letter-spacing:.05em}
-
-/* FOOTER */
 footer{background:var(--bg);padding:48px 56px 36px;position:relative}
 footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.18),transparent)}
 .foot-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.04)}
@@ -179,49 +137,17 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
 .foot-col a:hover{color:rgba(255,255,255,.65)}
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
 .foot-bottom p{font-size:11px;font-weight:300;color:rgba(255,255,255,.15);letter-spacing:.03em}
-
-/* MOBILE */
-@media(max-width:900px){
-  .pkg-grid{grid-template-columns:1fr}
-  .pk-left{border-right:none;border-bottom:1px solid rgba(79,142,255,.1)}
-  .compare-grid{grid-template-columns:1fr}
-  .cmp-col:not(.anchor){display:none}
-  .compare-grid{background:none}
-}
+@media(max-width:900px){.pkg-grid{grid-template-columns:1fr}.pk-left{border-right:none;border-bottom:1px solid rgba(79,142,255,.1)}.compare-grid{grid-template-columns:1fr}.cmp-col:not(.anchor){display:none}}
 @media(max-width:840px){
   nav{padding:18px 24px}nav.stuck{padding:12px 24px}
   .nl{display:none}.ham{display:flex}
-  .ph{padding:120px 24px 64px}
-  .ph-h1{font-size:clamp(36px,11vw,60px)}
-  .ph-sub{font-size:17px}
-  .results-bar{padding:40px 24px}
-  .results-grid{grid-template-columns:1fr 1fr}
-  .free-wrap{padding:40px 24px 0}
-  .free-banner{flex-direction:column;align-items:flex-start;padding:24px}
-  .free-banner-l{flex-direction:column;align-items:flex-start;gap:12px}
-  .free-text strong{font-size:17px}
-  .free-cta{width:100%;justify-content:center}
-  .pkg-sec{padding:32px 24px 64px}
-  .pk-left{padding:40px 28px}
-  .pk-right{padding:40px 28px}
-  .pk-price{font-size:64px}
-  .compare-sec{padding:56px 24px}
-  .faq-sec{padding:56px 24px}
-  .faq-grid{grid-template-columns:1fr}
-  .fq{padding:28px 24px}
-  .cta-strip{padding:60px 24px}
-  .cs-inner{grid-template-columns:1fr;gap:32px}
-  .cs-right{align-items:flex-start}
-  .bf{width:100%;justify-content:center}
-  footer{padding:40px 24px 28px}
-  .foot-top{flex-direction:column;gap:28px}
-  .foot-links{gap:28px;flex-wrap:wrap}
-  .foot-bottom{flex-direction:column;align-items:flex-start}
-}
-@media(max-width:440px){
-  .ph-h1{font-size:clamp(32px,11vw,52px)}
-  .results-grid{grid-template-columns:1fr 1fr}
-  .res-num{font-size:clamp(28px,9vw,44px)}
+  .ph{padding:120px 24px 64px}.ph-h1{font-size:clamp(36px,11vw,60px)}.ph-sub{font-size:17px}
+  .ph-pills{gap:8px}
+  .pkg-sec{padding:32px 24px 64px}.pk-left{padding:40px 28px}.pk-right{padding:40px 28px}.pk-price{font-size:64px}
+  .compare-sec{padding:56px 24px}.faq-sec{padding:56px 24px}
+  .faq-grid{grid-template-columns:1fr}.fq{padding:28px 24px}
+  .cta-strip{padding:60px 24px}.cs-inner{grid-template-columns:1fr;gap:32px}.cs-right{align-items:flex-start}.bf{width:100%;justify-content:center}
+  footer{padding:40px 24px 28px}.foot-top{flex-direction:column;gap:28px}.foot-links{gap:28px;flex-wrap:wrap}.foot-bottom{flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
@@ -238,32 +164,22 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
     <path d="M48.5 58.5 C48.5 40 28 38 28 58.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
   </symbol>
 </svg>
-
 <nav id="nav">
   <a class="logo" href="/"><div class="lm"><svg viewBox="0 0 56 68" fill="none"><use href="#A" color="rgba(79,142,255,1)"/></svg></div></a>
   <div class="nav-r">
     <div class="nl">
-      <a href="/">Home</a>
-      <a href="/services">Services</a>
-      <a href="/pricing" class="act">Pricing</a>
-      <a href="/contact">Contact</a>
+      <a href="/">Home</a><a href="/services">Services</a><a href="/pricing" class="act">Pricing</a><a href="/contact">Contact</a>
       <a href="https://calendly.com/anchorautomations/30min" class="nb" target="_blank" rel="noopener">Book a Demo</a>
     </div>
     <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="mob" id="mob">
-  <a href="/" onclick="cM()">Home</a>
-  <a href="/services" onclick="cM()">Services</a>
-  <a href="/pricing" onclick="cM()">Pricing</a>
-  <a href="/contact" onclick="cM()">Contact</a>
+  <a href="/" onclick="cM()">Home</a><a href="/services" onclick="cM()">Services</a><a href="/pricing" onclick="cM()">Pricing</a><a href="/contact" onclick="cM()">Contact</a>
   <a href="https://calendly.com/anchorautomations/30min" class="mcta" target="_blank" rel="noopener">Claim Your Free Month</a>
 </div>
-
-<!-- HERO -->
 <section class="ph">
-  <div class="ph-grid"></div>
-  <div class="ph-orb"></div>
+  <div class="ph-grid"></div><div class="ph-orb"></div>
   <span class="ph-tag">Simple, Transparent Pricing</span>
   <h1 class="ph-h1">One plan. Everything included.<br><em>First month on us.</em></h1>
   <p class="ph-sub">No setup fees. No contracts. No surprises. A complete AI automation system running your business in the background — free for the first 30 days.</p>
@@ -275,183 +191,96 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
     <div class="ph-pill"><span>✓</span> First month free</div>
   </div>
 </section>
-
-
-
-
-
-<!-- PRICING CARD -->
 <section class="pkg-sec">
   <div class="wrap">
     <div class="pkg-grid r">
-
       <div class="pk-left">
         <span class="pk-label">Growth Plan — All Four Systems</span>
-        <div class="pk-price-row">
-          <span class="pk-price"><sup>$</sup>997</span>
-        </div>
+        <span class="pk-price"><sup>$</sup>997</span>
         <p class="pk-mo">per month · cancel anytime</p>
-
         <div class="pk-free-box">
           <div class="pk-free-icon">✦</div>
-          <div>
-            <strong>First month is free</strong>
-            <p>We build it, run it for 30 days, and you see the results before paying a cent. No credit card required to start.</p>
-          </div>
+          <div><strong>First month is free</strong><p>We build it, run it for 30 days, and you see the results before paying a cent. No credit card required to start.</p></div>
         </div>
-
-        <p class="pk-desc">One flat rate. All four automations custom-built for your business. No hourly rates, no add-ons, no surprise invoices. One new customer a month more than covers the cost.</p>
-
+        <p class="pk-desc">One flat rate. All four automations custom-built for your business. No hourly rates, no add-ons, no surprise invoices.</p>
         <a href="https://calendly.com/anchorautomations/30min" class="pk-btn" target="_blank" rel="noopener">Claim Your Free Month →</a>
         <p class="pk-sub-note">No credit card required · Cancel anytime</p>
-
         <div class="trust">
-          <span class="tr">No setup fee</span>
-          <span class="tr">No contracts</span>
-          <span class="tr">Live in 48 hrs</span>
-          <span class="tr">Done for you</span>
-          <span class="tr">Cancel anytime</span>
+          <span class="tr">No setup fee</span><span class="tr">No contracts</span><span class="tr">Live in 48 hrs</span><span class="tr">Done for you</span><span class="tr">Cancel anytime</span>
         </div>
       </div>
-
       <div class="pk-right">
         <span class="pk-right-label">What's included in every plan</span>
         <div class="pk-features">
-          <div class="pk-feature">
-            <div class="pk-feat-num">01</div>
-            <div class="pk-feat-body">
-              <div class="pk-feat-title">Missed Call Text-Back</div>
-              <div class="pk-feat-desc">Every missed call fires an instant automated text-back within seconds — so no lead walks away before you even know they called.</div>
-            </div>
-          </div>
-          <div class="pk-feature">
-            <div class="pk-feat-num">02</div>
-            <div class="pk-feat-body">
-              <div class="pk-feat-title">Review Generation</div>
-              <div class="pk-feat-desc">Automated Google review requests after every completed job. Build a 5-star reputation on autopilot — no awkward asking required.</div>
-            </div>
-          </div>
-          <div class="pk-feature">
-            <div class="pk-feat-num">03</div>
-            <div class="pk-feat-body">
-              <div class="pk-feat-title">Lead Follow-Up Sequences</div>
-              <div class="pk-feat-desc">Multi-step SMS and email sequences that follow up every new inquiry automatically. Stops the moment they respond.</div>
-            </div>
-          </div>
-          <div class="pk-feature">
-            <div class="pk-feat-num">04</div>
-            <div class="pk-feat-body">
-              <div class="pk-feat-title">Appointment Reminders</div>
-              <div class="pk-feat-desc">Confirmation at booking, reminder 24 hours out, reminder 1 hour out. No-shows drop by up to 65% immediately.</div>
-            </div>
-          </div>
+          <div class="pk-feature"><div class="pk-feat-num">01</div><div><div class="pk-feat-title">Missed Call Text-Back</div><div class="pk-feat-desc">Every missed call fires an instant automated text-back within seconds — so no lead walks away before you even know they called.</div></div></div>
+          <div class="pk-feature"><div class="pk-feat-num">02</div><div><div class="pk-feat-title">Review Generation</div><div class="pk-feat-desc">Automated Google review requests after every completed job. Build a 5-star reputation on autopilot — no awkward asking required.</div></div></div>
+          <div class="pk-feature"><div class="pk-feat-num">03</div><div><div class="pk-feat-title">Lead Follow-Up Sequences</div><div class="pk-feat-desc">Multi-step SMS and email sequences that follow up every new inquiry automatically. Stops the moment they respond.</div></div></div>
+          <div class="pk-feature"><div class="pk-feat-num">04</div><div><div class="pk-feat-title">Appointment Reminders</div><div class="pk-feat-desc">Confirmation at booking, reminder 24 hours out, reminder 1 hour out. No-shows drop by up to 65% immediately.</div></div></div>
         </div>
         <div class="pk-also">
           <div class="pk-also-label">Also included</div>
           <div class="pk-also-items">
-            <span>Full setup &amp; launch</span>
-            <span>Onboarding call</span>
-            <span>Client dashboard</span>
-            <span>SMS &amp; email support</span>
-            <span>Monthly check-in</span>
-            <span>Custom copy &amp; voice</span>
+            <span>Full setup &amp; launch</span><span>Onboarding call</span><span>Client dashboard</span><span>SMS &amp; email support</span><span>Monthly check-in</span><span>Custom copy &amp; voice</span>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
 <div class="sdiv"></div>
-
-<!-- COMPARE -->
 <section class="compare-sec">
   <div class="wrap">
     <span class="sec-label r">Why not just hire someone?</span>
-    <h2 class="sec-h r">See how we stack up against<br><em>the alternatives.</em></h2>
+    <h2 class="sec-h r">See how we stack up against <em>the alternatives.</em></h2>
     <div class="compare-grid r">
       <div class="cmp-col">
         <div class="cmp-head">Hiring In-House</div>
-        <div class="cmp-price">$4,000+</div>
-        <div class="cmp-price-note">per month + benefits</div>
-        <div class="cmp-rows">
-          <div class="cmp-row"><span class="cx">✗</span> Weeks to hire and train</div>
-          <div class="cmp-row"><span class="cx">✗</span> Only works business hours</div>
-          <div class="cmp-row"><span class="cx">✗</span> Sick days, turnover, HR</div>
-          <div class="cmp-row"><span class="cx">✗</span> Manual follow-up only</div>
-          <div class="cmp-row"><span class="cx">✗</span> Can't scale automatically</div>
-          <div class="cmp-row"><span class="cx">✗</span> No free trial</div>
-        </div>
+        <div class="cmp-price">$4,000+</div><div class="cmp-price-note">per month + benefits</div>
+        <div class="cmp-row"><span class="cx">✗</span> Weeks to hire and train</div>
+        <div class="cmp-row"><span class="cx">✗</span> Only works business hours</div>
+        <div class="cmp-row"><span class="cx">✗</span> Sick days, turnover, HR</div>
+        <div class="cmp-row"><span class="cx">✗</span> Manual follow-up only</div>
+        <div class="cmp-row"><span class="cx">✗</span> Can't scale automatically</div>
+        <div class="cmp-row"><span class="cx">✗</span> No free trial</div>
       </div>
       <div class="cmp-col anchor">
         <div class="cmp-head">Anchor Automations <span class="cmp-badge">Best Value</span></div>
-        <div class="cmp-price">$997</div>
-        <div class="cmp-price-note">per month · first month free</div>
-        <div class="cmp-rows">
-          <div class="cmp-row"><span class="ck">✓</span> Live in 48 hours</div>
-          <div class="cmp-row"><span class="ck">✓</span> Runs 24/7 automatically</div>
-          <div class="cmp-row"><span class="ck">✓</span> Zero management needed</div>
-          <div class="cmp-row"><span class="ck">✓</span> All 4 automations included</div>
-          <div class="cmp-row"><span class="ck">✓</span> Scales with your business</div>
-          <div class="cmp-row"><span class="ck">✓</span> First month completely free</div>
-        </div>
+        <div class="cmp-price">$997</div><div class="cmp-price-note">per month · first month free</div>
+        <div class="cmp-row"><span class="ck">✓</span> Live in 48 hours</div>
+        <div class="cmp-row"><span class="ck">✓</span> Runs 24/7 automatically</div>
+        <div class="cmp-row"><span class="ck">✓</span> Zero management needed</div>
+        <div class="cmp-row"><span class="ck">✓</span> All 4 automations included</div>
+        <div class="cmp-row"><span class="ck">✓</span> Scales with your business</div>
+        <div class="cmp-row"><span class="ck">✓</span> First month completely free</div>
       </div>
       <div class="cmp-col">
         <div class="cmp-head">DIY / Other Tools</div>
-        <div class="cmp-price">$200–800</div>
-        <div class="cmp-price-note">per month + your time</div>
-        <div class="cmp-rows">
-          <div class="cmp-row"><span class="cx">✗</span> Months to set up properly</div>
-          <div class="cmp-row"><span class="cx">✗</span> Requires technical skills</div>
-          <div class="cmp-row"><span class="cx">✗</span> Constant maintenance</div>
-          <div class="cmp-row"><span class="cx">✗</span> Disconnected tools</div>
-          <div class="cmp-row"><span class="cx">✗</span> You're on your own</div>
-          <div class="cmp-row"><span class="cx">✗</span> No support included</div>
-        </div>
+        <div class="cmp-price">$200–800</div><div class="cmp-price-note">per month + your time</div>
+        <div class="cmp-row"><span class="cx">✗</span> Months to set up properly</div>
+        <div class="cmp-row"><span class="cx">✗</span> Requires technical skills</div>
+        <div class="cmp-row"><span class="cx">✗</span> Constant maintenance</div>
+        <div class="cmp-row"><span class="cx">✗</span> Disconnected tools</div>
+        <div class="cmp-row"><span class="cx">✗</span> You're on your own</div>
+        <div class="cmp-row"><span class="cx">✗</span> No support included</div>
       </div>
     </div>
   </div>
 </section>
-
 <div class="sdiv"></div>
-
-<!-- FAQ -->
 <section class="faq-sec">
   <div class="wrap">
     <h2 class="sec-h r">Common <em>questions.</em></h2>
     <div class="faq-grid">
-      <div class="fq r">
-        <h4>Is there really no setup fee?</h4>
-        <p>None. Full setup and launch is included in your $997/mo rate. We handle everything from the onboarding call to go-live.</p>
-      </div>
-      <div class="fq r">
-        <h4>How does the free month work?</h4>
-        <p>We build and run all four systems completely free for your first 30 days. At the end of the month, if you've seen results, we send the invoice. No credit card needed upfront.</p>
-      </div>
-      <div class="fq r">
-        <h4>How fast does it go live?</h4>
-        <p>Most systems are live within 48 hours of your onboarding call. We move fast because every day without this running costs you real revenue.</p>
-      </div>
-      <div class="fq r">
-        <h4>Can I cancel anytime?</h4>
-        <p>Yes. No contracts, no lock-ins. Cancel with 30 days notice. We're confident the system will more than pay for itself — but we never trap you.</p>
-      </div>
-      <div class="fq r">
-        <h4>Do I need any tech skills?</h4>
-        <p>Zero. We build everything, configure everything, and train you on what to expect. You run your business — we run the system.</p>
-      </div>
-      <div class="fq r">
-        <h4>What businesses is this built for?</h4>
-        <p>Any service business that depends on leads, calls, or repeat bookings — HVAC, dental, cleaning, legal, fitness, home services, restaurants. If you get calls, you need this.</p>
-      </div>
+      <div class="fq r"><h4>Is there really no setup fee?</h4><p>None. Full setup and launch is included in your $997/mo rate. We handle everything from the onboarding call to go-live.</p></div>
+      <div class="fq r"><h4>How does the free month work?</h4><p>We build and run all four systems completely free for your first 30 days. At the end of the month, if you've seen results, we send the invoice. No credit card needed upfront.</p></div>
+      <div class="fq r"><h4>How fast does it go live?</h4><p>Most systems are live within 48 hours of your onboarding call. We move fast because every day without this running costs you real revenue.</p></div>
+      <div class="fq r"><h4>Can I cancel anytime?</h4><p>Yes. No contracts, no lock-ins. Cancel with 30 days notice. We're confident the system will more than pay for itself — but we never trap you.</p></div>
+      <div class="fq r"><h4>Do I need any tech skills?</h4><p>Zero. We build everything, configure everything, and train you on what to expect. You run your business — we run the system.</p></div>
+      <div class="fq r"><h4>What businesses is this built for?</h4><p>Any service business that depends on leads, calls, or repeat bookings — HVAC, dental, cleaning, legal, fitness, home services, restaurants. If you get calls, you need this.</p></div>
     </div>
   </div>
 </section>
-
 <div class="sdiv"></div>
-
-<!-- CTA -->
 <section class="cta-strip">
   <div class="wrap">
     <div class="cs-inner r">
@@ -466,7 +295,6 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
     </div>
   </div>
 </section>
-
 <footer>
   <div class="wrap">
     <div class="foot-top">
@@ -476,14 +304,13 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
       </div>
       <div class="foot-links">
         <div class="foot-col"><h5>Navigate</h5><a href="/">Home</a><a href="/services">Services</a><a href="/pricing">Pricing</a><a href="/contact">Contact</a></div>
-        <div class="foot-col"><h5>Get Started</h5><a href="https://calendly.com/anchorautomations/30min" target="_blank" rel="noopener">Book a Demo</a><a href="/pricing">View Pricing</a><a href="/cdn-cgi/l/email-protection#8ee6ebe2e2e1ceefe0ede6e1fceffbfae1e3effae7e1e0fda0efe7"><span class="__cf_email__" data-cfemail="89e1ece5e5e6c9e8e7eae1e6fbe8fcfde6e4e8fde0e6e7faa7e8e0">[email&#160;protected]</span></a><a href="tel:7722850834">(772) 285-0834</a></div>
+        <div class="foot-col"><h5>Get Started</h5><a href="https://calendly.com/anchorautomations/30min" target="_blank" rel="noopener">Claim Your Free Month</a><a href="/pricing">View Pricing</a><a href="mailto:hello@anchorautomations.ai">hello@anchorautomations.ai</a><a href="tel:7722850834">(772) 285-0834</a></div>
       </div>
     </div>
     <div class="foot-bottom"><p>© <span id="yr"></span> Anchor Automations · anchorautomations.ai</p><p>Palm City, FL · Serving businesses across the US</p></div>
   </div>
 </footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function(){
   var c=document.getElementById('cur');
   if(c&&window.matchMedia('(pointer:fine)').matches){var x=-300,y=-300;document.addEventListener('mousemove',function(e){x=e.clientX;y=e.clientY;},{passive:true});(function t(){c.style.left=x+'px';c.style.top=y+'px';requestAnimationFrame(t);})();document.querySelectorAll('a,button').forEach(function(el){el.addEventListener('mouseenter',function(){c.classList.add('big');});el.addEventListener('mouseleave',function(){c.classList.remove('big');});});}
@@ -491,4 +318,11 @@ footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1p
   var h=document.getElementById('ham'),m=document.getElementById('mob');
   if(h&&m){h.addEventListener('click',function(){var o=!m.classList.contains('open');m.classList.toggle('open',o);h.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';});}
   window.cM=function(){if(m)m.classList.remove('open');if(h)h.classList.remove('open');document.body.style.overflow='';};
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecti
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:0.06});
+  document.querySelectorAll('.r').forEach(function(el){io.observe(el);});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  setTimeout(function(){document.querySelectorAll('.r').forEach(function(el){el.classList.add('on');});},300);
+})();
+</script>
+</body>
+</html>
