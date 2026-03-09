@@ -4,320 +4,365 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pricing — Anchor Automations</title>
-<meta name="description" content="One plan. All four automations. $997/mo — and the first month is completely free.">
+<meta name="description" content="Custom AI automation systems starting at $997/mo. Priced based on what your business actually needs. Free audit first, always.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 68'><rect width='56' height='68' rx='6' fill='%23050d1a'/><circle cx='28' cy='8.5' r='5.5' fill='none' stroke='%234F8EFF' stroke-width='3'/><line x1='28' y1='14' x2='28' y2='59' stroke='%234F8EFF' stroke-width='3'/><line x1='8' y1='25' x2='48' y2='25' stroke='%234F8EFF' stroke-width='3'/><line x1='8' y1='25' x2='8' y2='31.5' stroke='%234F8EFF' stroke-width='3'/><line x1='48' y1='25' x2='48' y2='31.5' stroke='%234F8EFF' stroke-width='3'/><path d='M7.5 58.5 C7.5 40 28 38 28 58.5' fill='none' stroke='%234F8EFF' stroke-width='3'/><path d='M48.5 58.5 C48.5 40 28 38 28 58.5' fill='none' stroke='%234F8EFF' stroke-width='3'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<meta property="og:title" content="Pricing — Anchor Automations">
+<meta property="og:description" content="Custom AI automation systems starting at $997/mo. Priced based on what your business actually needs. Free audit first, always.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#050d1a;--bg2:#0a1628;--w:#ffffff;--blue:#4F8EFF;--cyan:#00D4FF;--dim:rgba(255,255,255,.38)}
+:root{
+  --bg:#050d1a;--bg2:#0a1628;--bg3:#0d1e35;
+  --w:#ffffff;--blue:#4F8EFF;--cyan:#00D4FF;
+  --dim:rgba(255,255,255,.38);--faint:rgba(255,255,255,.12);
+}
 html{scroll-behavior:smooth;overflow-x:hidden}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--w);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.02;pointer-events:none;z-index:9999;background-size:256px}
 
-body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.022;pointer-events:none;z-index:999;background-size:256px}
-@media(pointer:coarse){}
-nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:28px 56px;transition:all .4s cubic-bezier(.16,1,.3,1)}
-nav.stuck{padding:14px 56px;background:rgba(5,13,26,.85);backdrop-filter:blur(32px);border-bottom:1px solid rgba(255,255,255,.05);box-shadow:0 8px 40px rgba(0,0,0,.5)}
-.logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
-.lm{width:30px;height:38px;flex-shrink:0}
-.lm svg{width:100%;height:100%;display:block;filter:drop-shadow(0 0 8px rgba(79,142,255,.55))}
-.nav-r{display:flex;align-items:center;gap:36px}
-.nl{display:flex;align-items:center;gap:30px}
-.nl a{font-size:14px;font-weight:400;color:rgba(255,255,255,.38);text-decoration:none;letter-spacing:.02em;transition:color .2s;position:relative}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:24px 56px;transition:all .4s}
+nav.stuck{padding:14px 56px;background:rgba(5,13,26,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.05)}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;color:var(--blue);width:28px;height:35px;filter:drop-shadow(0 0 8px rgba(79,142,255,.5))}
+.logo svg{width:100%;height:100%}
+.nav-r{display:flex;align-items:center;gap:32px}
+.nl{display:flex;align-items:center;gap:28px}
+.nl a{font-size:13px;font-weight:400;color:rgba(255,255,255,.4);text-decoration:none;letter-spacing:.02em;transition:color .2s;position:relative}
 .nl a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--blue);transition:width .25s}
-.nl a:hover,.nl a.act{color:rgba(255,255,255,.8)}
+.nl a:hover,.nl a.act{color:rgba(255,255,255,.85)}
 .nl a:hover::after,.nl a.act::after{width:100%}
-.nb{font-size:11px!important;font-weight:600!important;letter-spacing:.1em!important;text-transform:uppercase;background:rgba(79,142,255,.08)!important;color:var(--blue)!important;border:1px solid rgba(79,142,255,.28)!important;padding:10px 22px;border-radius:4px;text-decoration:none;transition:all .22s!important;white-space:nowrap}
-.nb:hover{background:rgba(79,142,255,.18)!important;border-color:rgba(79,142,255,.55)!important;box-shadow:0 0 28px rgba(79,142,255,.18)!important}
-.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:301;flex-shrink:0}
+.nb{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:rgba(79,142,255,.1);color:var(--blue);border:1px solid rgba(79,142,255,.3);padding:10px 22px;border-radius:4px;text-decoration:none;transition:all .22s;white-space:nowrap}
+.nb:hover{background:rgba(79,142,255,.2);border-color:var(--blue);box-shadow:0 0 24px rgba(79,142,255,.2)}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:301}
 .ham span{display:block;width:22px;height:1.5px;background:var(--w);transition:transform .3s,opacity .3s}
 .ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .ham.open span:nth-child(2){opacity:0}
 .ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.mob{display:none;position:fixed;inset:0;z-index:290;background:rgba(5,13,26,.97);backdrop-filter:blur(40px);flex-direction:column;justify-content:center;padding:0 40px;gap:4px}
+.mob{display:none;position:fixed;inset:0;z-index:290;background:rgba(5,13,26,.97);backdrop-filter:blur(40px);flex-direction:column;justify-content:center;padding:0 40px;gap:6px}
 .mob.open{display:flex}
-.mob a{font-family:'Instrument Serif',serif;font-size:clamp(32px,8vw,54px);color:rgba(255,255,255,.7);text-decoration:none;line-height:1.2;opacity:0;transform:translateY(22px);animation:mu .38s cubic-bezier(.16,1,.3,1) forwards}
-.mob a:nth-child(2){animation-delay:.07s}.mob a:nth-child(3){animation-delay:.13s}.mob a:nth-child(4){animation-delay:.18s}.mob a:nth-child(5){animation-delay:.23s}
+.mob a{font-family:'Instrument Serif',serif;font-size:clamp(32px,8vw,52px);color:rgba(255,255,255,.6);text-decoration:none;line-height:1.2;opacity:0;transform:translateY(20px);animation:mu .35s cubic-bezier(.16,1,.3,1) forwards}
+.mob a:nth-child(2){animation-delay:.06s}.mob a:nth-child(3){animation-delay:.11s}.mob a:nth-child(4){animation-delay:.16s}.mob a:nth-child(5){animation-delay:.21s}
 .mob a:hover{color:var(--blue)}
-.mob .mcta{margin-top:32px!important;font-family:'DM Sans',sans-serif!important;font-size:11px!important;font-weight:600!important;letter-spacing:.12em!important;text-transform:uppercase!important;color:var(--blue)!important;border:1px solid rgba(79,142,255,.3)!important;padding:14px 28px!important;border-radius:4px!important;width:fit-content!important;display:inline-block!important;background:rgba(79,142,255,.07)!important}
+.mob-cta{margin-top:28px!important;font-family:'DM Sans',sans-serif!important;font-size:11px!important;font-weight:600!important;letter-spacing:.12em!important;text-transform:uppercase!important;color:var(--blue)!important;border:1px solid rgba(79,142,255,.3)!important;padding:14px 28px!important;border-radius:4px!important;display:inline-block!important;background:rgba(79,142,255,.07)!important;width:fit-content!important}
 @keyframes mu{to{opacity:1;transform:none}}
-.ph{padding:160px 56px 88px;position:relative;overflow:hidden;text-align:center}
-.ph-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(79,142,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,142,255,.03) 1px,transparent 1px);background-size:76px 76px;mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,black,transparent 100%)}
-.ph-orb{position:absolute;width:700px;height:700px;left:50%;top:-250px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(79,142,255,.08) 0%,transparent 70%);pointer-events:none}
-.ph-tag{font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:24px;position:relative;z-index:1}
-.ph-h1{font-family:'Instrument Serif',serif;font-size:clamp(40px,5.5vw,88px);line-height:1.08;letter-spacing:-.02em;color:var(--w);position:relative;z-index:1;margin-bottom:20px;-webkit-font-smoothing:antialiased;font-weight:400}
-.ph-h1 em{font-style:italic;color:var(--blue)}
-.ph-sub{font-size:19px;font-weight:300;color:var(--dim);max-width:540px;line-height:1.85;position:relative;z-index:1;margin:0 auto 40px}
-.ph-pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
-.ph-pill{font-size:12px;font-weight:400;color:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.09);padding:8px 18px;border-radius:100px;display:flex;align-items:center;gap:7px}
-.ph-pill span{color:var(--blue)}
-.wrap{max-width:1240px;margin:0 auto}
-.sdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.05) 20%,rgba(79,142,255,.1) 50%,rgba(255,255,255,.05) 80%,transparent)}
-.r{opacity:0;transform:translateY(28px);transition:opacity .72s cubic-bezier(.16,1,.3,1),transform .72s cubic-bezier(.16,1,.3,1)}
+
+/* SHARED */
+.sdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.12) 50%,transparent)}
+.wrap{max-width:1200px;margin:0 auto}
+.r{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
 .r.on{opacity:1;transform:none}
-.pkg-sec{padding:56px 56px 80px}
-.pkg-grid{display:grid;grid-template-columns:420px 1fr;border:1px solid rgba(79,142,255,.18);border-radius:6px;overflow:hidden;box-shadow:0 0 100px rgba(79,142,255,.07),0 32px 80px rgba(0,0,0,.4);position:relative}
-.pkg-grid::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue),var(--cyan),transparent);z-index:2}
-.pk-left{padding:52px 48px;background:linear-gradient(160deg,rgba(79,142,255,.1),rgba(79,142,255,.03));border-right:1px solid rgba(79,142,255,.1);display:flex;flex-direction:column}
-.pk-label{font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--blue);opacity:.8;display:block;margin-bottom:24px}
-.pk-price{font-family:'Instrument Serif',serif;font-size:80px;line-height:1;letter-spacing:-.04em;color:var(--blue);font-weight:400}
-.pk-price sup{font-size:28px;font-family:'DM Sans',sans-serif;font-weight:300;vertical-align:super;line-height:0}
-.pk-mo{font-size:14px;font-weight:300;color:rgba(255,255,255,.22);margin-bottom:28px;letter-spacing:.02em}
-.pk-free-box{background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.25);border-radius:4px;padding:18px 20px;margin-bottom:28px;display:flex;gap:12px;align-items:flex-start}
-.pk-free-icon{font-size:18px;flex-shrink:0;margin-top:2px}
-.pk-free-box strong{font-size:16px;font-weight:500;color:var(--cyan);display:block;margin-bottom:4px}
-.pk-free-box p{font-size:14px;font-weight:300;color:rgba(255,255,255,.38);line-height:1.65}
-.pk-desc{font-size:16px;font-weight:300;color:rgba(255,255,255,.42);line-height:1.8;margin-bottom:32px}
-.pk-btn{display:flex;align-items:center;justify-content:center;padding:18px 32px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:all .22s;background:var(--blue);color:var(--bg);box-shadow:0 0 32px rgba(79,142,255,.38),inset 0 1px 0 rgba(255,255,255,.2);margin-bottom:12px}
-.pk-btn:hover{background:var(--cyan);box-shadow:0 0 44px rgba(0,212,255,.45);transform:translateY(-1px)}
-.pk-sub-note{font-size:13px;font-weight:300;color:rgba(255,255,255,.18);text-align:center;margin-bottom:32px}
-.trust{display:flex;flex-wrap:wrap;gap:10px;padding-top:28px;border-top:1px solid rgba(255,255,255,.05)}
-.tr{font-size:13px;font-weight:300;color:rgba(255,255,255,.28);display:flex;align-items:center;gap:6px}
-.tr::before{content:'&#10003;';color:var(--blue);font-size:12px}
-.pk-right{padding:52px 48px;display:flex;flex-direction:column}
-.pk-right-label{font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.18);margin-bottom:28px;display:block}
-.pk-features{display:flex;flex-direction:column;margin-bottom:0}
-.pk-feature{display:flex;gap:20px;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.05)}
-.pk-feature:first-child{border-top:1px solid rgba(255,255,255,.05)}
-.pk-feat-num{font-family:'Instrument Serif',serif;font-size:22px;color:var(--blue);opacity:.28;flex-shrink:0;width:28px;font-weight:400;padding-top:2px}
-.pk-feat-title{font-size:16px;font-weight:500;color:rgba(255,255,255,.85);margin-bottom:6px}
-.pk-feat-desc{font-size:15px;font-weight:300;color:rgba(255,255,255,.36);line-height:1.72}
-.pk-also{padding:28px 0 0}
-.pk-also-label{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.16);margin-bottom:14px}
-.pk-also-items{display:flex;flex-wrap:wrap;gap:8px}
-.pk-also-items span{font-size:13px;font-weight:300;color:rgba(255,255,255,.3);border:1px solid rgba(255,255,255,.07);padding:7px 14px;border-radius:2px}
-.compare-sec{padding:80px 56px;background:var(--bg2);position:relative}
-.compare-sec::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.12),transparent)}
-.sec-label{font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:16px;display:block}
-.sec-h{font-family:'Instrument Serif',serif;font-size:clamp(28px,3vw,48px);line-height:1.12;letter-spacing:-.018em;color:var(--w);margin-bottom:48px;font-weight:400;-webkit-font-smoothing:antialiased}
-.sec-h em{font-style:italic;color:var(--blue)}
-.compare-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(255,255,255,.05)}
-.cmp-col{background:var(--bg2);padding:36px 32px}
-.cmp-col.anchor{background:linear-gradient(160deg,rgba(79,142,255,.08),rgba(79,142,255,.03));border-top:2px solid var(--blue)}
-.cmp-head{font-size:13px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.35);margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between}
-.cmp-col.anchor .cmp-head{color:var(--blue)}
-.cmp-badge{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--blue);color:var(--bg);padding:4px 10px;border-radius:2px}
-.cmp-price{font-family:'Instrument Serif',serif;font-size:36px;color:rgba(255,255,255,.2);font-weight:400;margin-bottom:4px}
-.cmp-col.anchor .cmp-price{color:var(--blue)}
-.cmp-price-note{font-size:13px;font-weight:300;color:rgba(255,255,255,.2);margin-bottom:28px}
-.cmp-col.anchor .cmp-price-note{color:rgba(79,142,255,.6)}
-.cmp-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:14px;font-weight:300;color:rgba(255,255,255,.35)}
-.cmp-col.anchor .cmp-row{color:rgba(255,255,255,.65)}
-.cmp-row .ck{color:var(--blue);font-size:13px;flex-shrink:0}
-.cmp-row .cx{color:rgba(255,255,255,.14);font-size:13px;flex-shrink:0}
-.faq-sec{padding:80px 56px}
-.faq-sec::before{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.1),transparent);margin-bottom:80px}
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.04)}
-.fq{background:var(--bg);padding:36px 32px}
-.fq h4{font-size:17px;font-weight:500;color:rgba(255,255,255,.82);margin-bottom:12px;line-height:1.4}
-.fq p{font-size:16px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.82}
-.cta-strip{padding:88px 56px;background:var(--bg2);position:relative;overflow:hidden}
-.cta-strip::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.2),transparent)}
-.cs-inner{display:grid;grid-template-columns:1fr auto;gap:72px;align-items:center}
-.cs-left h2{font-family:'Instrument Serif',serif;font-size:clamp(30px,3.4vw,54px);line-height:1.1;letter-spacing:-.018em;color:var(--w);margin-bottom:16px;font-weight:400;-webkit-font-smoothing:antialiased}
-.cs-left h2 em{font-style:italic;color:var(--blue)}
-.cs-left p{font-size:18px;font-weight:300;color:var(--dim);line-height:1.8;max-width:500px}
-.cs-right{display:flex;flex-direction:column;align-items:flex-end;gap:16px;flex-shrink:0}
-.bf{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:var(--bg);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:18px 38px;border-radius:4px;text-decoration:none;box-shadow:0 0 36px rgba(79,142,255,.42),inset 0 1px 0 rgba(255,255,255,.22);transition:all .25s cubic-bezier(.16,1,.3,1)}
-.bf:hover{background:var(--cyan);box-shadow:0 0 52px rgba(0,212,255,.52);transform:translateY(-2px)}
-.cs-note{font-size:12px;color:rgba(255,255,255,.15);letter-spacing:.05em}
-footer{background:var(--bg);padding:48px 56px 36px;position:relative}
-footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.18),transparent)}
-.foot-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.04)}
-.foot-brand{display:flex;align-items:center;gap:9px;text-decoration:none;margin-bottom:10px}
-.foot-brand svg{width:16px;height:20px;display:block}
-.foot-brand-name{font-family:'Instrument Serif',serif;font-size:15px;color:rgba(255,255,255,.55)}
-.foot-tagline{font-size:13px;font-weight:300;color:rgba(255,255,255,.18);max-width:220px;line-height:1.72}
-.foot-links{display:flex;gap:56px}
-.foot-col h5{font-size:9px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.18);margin-bottom:16px}
-.foot-col a{display:block;font-size:13px;font-weight:300;color:rgba(255,255,255,.3);text-decoration:none;margin-bottom:9px;transition:color .2s}
-.foot-col a:hover{color:rgba(255,255,255,.65)}
-.foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.foot-bottom p{font-size:11px;font-weight:300;color:rgba(255,255,255,.15);letter-spacing:.03em}
-@media(max-width:900px){.pkg-grid{grid-template-columns:1fr}.pk-left{border-right:none;border-bottom:1px solid rgba(79,142,255,.1)}.compare-grid{grid-template-columns:1fr}.cmp-col:not(.anchor){display:none}}
+.tag{font-size:9px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--blue);opacity:.75;display:block;margin-bottom:14px}
+.sh{font-family:'Instrument Serif',serif;font-size:clamp(32px,4vw,60px);line-height:1.05;letter-spacing:-.024em;color:var(--w);margin-bottom:18px;font-weight:400}
+.sh em{font-style:italic;color:var(--blue)}
+.sbod{font-size:16px;font-weight:300;color:var(--dim);line-height:1.82;max-width:560px}
+
+/* BUTTONS */
+.bf{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:var(--bg);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:16px 36px;border-radius:4px;text-decoration:none;box-shadow:0 0 36px rgba(79,142,255,.4),inset 0 1px 0 rgba(255,255,255,.2);transition:all .25s}
+.bf:hover{background:var(--cyan);box-shadow:0 0 52px rgba(0,212,255,.5);transform:translateY(-2px)}
+.bt{font-size:14px;font-weight:400;color:rgba(255,255,255,.3);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:2px;transition:color .2s,border-color .2s}
+.bt:hover{color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.25)}
+
+/* FOOTER */
+footer{background:var(--bg);padding:48px 56px 32px;position:relative}
+footer::before{content:'';position:absolute;top:0;left:56px;right:56px;height:1px;background:linear-gradient(90deg,transparent,rgba(79,142,255,.15),transparent)}
+.ft{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.04);gap:40px;flex-wrap:wrap}
+.fb{display:flex;align-items:center;gap:9px;text-decoration:none;margin-bottom:8px}
+.fb svg{width:15px;height:19px;color:rgba(79,142,255,.65)}
+.fb span{font-family:'Instrument Serif',serif;font-size:15px;color:rgba(255,255,255,.5)}
+.ftag{font-size:13px;font-weight:300;color:rgba(255,255,255,.18);max-width:200px;line-height:1.7}
+.flinks{display:flex;gap:48px;flex-wrap:wrap}
+.fc h5{font-size:9px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.18);margin-bottom:14px}
+.fc a{display:block;font-size:13px;font-weight:300;color:rgba(255,255,255,.3);text-decoration:none;margin-bottom:8px;transition:color .2s}
+.fc a:hover{color:rgba(255,255,255,.65)}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.fbot p{font-size:11px;font-weight:300;color:rgba(255,255,255,.14);letter-spacing:.03em}
+
+/* MOBILE */
 @media(max-width:840px){
-  nav{padding:18px 24px}nav.stuck{padding:12px 24px}
+  nav{padding:16px 20px}
+  nav.stuck{padding:12px 20px}
   .nl{display:none}.ham{display:flex}
-  .ph{padding:120px 24px 64px}.ph-sub{font-size:17px}.ph-pills{gap:8px}
-  .pkg-sec{padding:32px 24px 64px}.pk-left{padding:40px 28px}.pk-right{padding:40px 28px}.pk-price{font-size:64px}
-  .compare-sec{padding:56px 24px}.faq-sec{padding:56px 24px}
-  .faq-grid{grid-template-columns:1fr}.fq{padding:28px 24px}
-  .cta-strip{padding:60px 24px}.cs-inner{grid-template-columns:1fr;gap:32px}.cs-right{align-items:flex-start}.bf{width:100%;justify-content:center}
-  footer{padding:40px 24px 28px}.foot-top{flex-direction:column;gap:28px}.foot-links{gap:28px;flex-wrap:wrap}.foot-bottom{flex-direction:column;align-items:flex-start}
+  footer{padding:36px 20px 24px}
+  footer::before{left:20px;right:20px}
+  .ft{flex-direction:column;gap:24px}
+  .flinks{gap:24px}
+  .fbot{flex-direction:column;align-items:flex-start}
+  .bf{padding:15px 28px;font-size:11px}
+}
+
+
+.ph{padding:160px 56px 80px;position:relative;overflow:hidden;background:var(--bg);text-align:center}
+.ph-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(79,142,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(79,142,255,.03) 1px,transparent 1px);background-size:76px 76px;mask-image:radial-gradient(ellipse 60% 70% at 50% 0%,black,transparent 100%)}
+.ph-orb{position:absolute;width:600px;height:600px;left:50%;top:-250px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(79,142,255,.07) 0%,transparent 65%);pointer-events:none}
+.ph-tag{font-size:9px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);opacity:0;display:block;margin-bottom:18px;position:relative;z-index:1;animation:fi .7s .1s cubic-bezier(.16,1,.3,1) forwards}
+.ph-h1{font-family:'Instrument Serif',serif;font-size:clamp(36px,5vw,80px);line-height:.96;letter-spacing:-.032em;color:var(--w);position:relative;z-index:1;margin-bottom:20px;opacity:0;animation:fi .8s .2s cubic-bezier(.16,1,.3,1) forwards}
+.ph-h1 em{font-style:italic;color:var(--blue)}
+.ph-sub{font-size:16px;font-weight:300;color:var(--dim);max-width:500px;line-height:1.85;position:relative;z-index:1;margin:0 auto;opacity:0;animation:fi .8s .35s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes fi{to{opacity:1}}
+
+.res-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.04)}
+.ri{background:var(--bg2);padding:36px 28px;text-align:center}
+.ri-n{font-family:'Instrument Serif',serif;font-size:clamp(36px,4vw,56px);line-height:1;letter-spacing:-.04em;color:var(--blue);margin-bottom:8px}
+.ri-l{font-size:13px;font-weight:300;color:rgba(255,255,255,.35);line-height:1.55}
+
+.pkg-sec{padding:80px 56px;background:var(--bg)}
+.audit-box{border:1px solid rgba(0,212,255,.2);border-radius:6px;padding:36px 40px;background:rgba(0,212,255,.04);margin-bottom:48px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.ab-l strong{font-size:18px;font-weight:500;color:var(--cyan);display:block;margin-bottom:6px}
+.ab-l p{font-size:14px;font-weight:300;color:rgba(255,255,255,.38);line-height:1.7;max-width:440px}
+.pkg{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(79,142,255,.12);border:1px solid rgba(79,142,255,.18);border-radius:6px;overflow:hidden;box-shadow:0 0 60px rgba(79,142,255,.07),0 24px 48px rgba(0,0,0,.35);position:relative}
+.pkg::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue),var(--cyan),transparent);z-index:2}
+.pk-l{padding:48px 44px;background:linear-gradient(160deg,rgba(79,142,255,.09),rgba(79,142,255,.03));display:flex;flex-direction:column}
+.pk-lbl{font-size:9px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--blue);opacity:.8;display:block;margin-bottom:20px}
+.pk-price{font-family:'Instrument Serif',serif;font-size:72px;line-height:1;letter-spacing:-.04em;color:var(--blue)}
+.pk-price sup{font-size:22px;font-family:'DM Sans',sans-serif;font-weight:300;vertical-align:super;line-height:0;font-style:normal}
+.pk-price em{font-size:16px;font-family:'DM Sans',sans-serif;font-style:normal;font-weight:300;color:rgba(255,255,255,.3);letter-spacing:0}
+.pk-mo{font-size:13px;font-weight:300;color:rgba(255,255,255,.22);margin-bottom:24px;letter-spacing:.02em}
+.pk-desc{font-size:15px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.78;margin-bottom:28px}
+.pk-btn{display:flex;align-items:center;justify-content:center;padding:16px 28px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:4px;background:var(--blue);color:var(--bg);box-shadow:0 0 28px rgba(79,142,255,.35),inset 0 1px 0 rgba(255,255,255,.2);margin-bottom:10px;transition:all .22s}
+.pk-btn:hover{background:var(--cyan);box-shadow:0 0 40px rgba(0,212,255,.4);transform:translateY(-1px)}
+.pk-note{font-size:12px;font-weight:300;color:rgba(255,255,255,.16);letter-spacing:.04em;text-align:center}
+.pk-r{padding:48px 44px;background:rgba(8,18,34,.5);display:flex;flex-direction:column}
+.pk-r-lbl{font-size:9px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.18);margin-bottom:24px;display:block}
+.pk-feat{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.pk-feat:first-of-type{border-top:1px solid rgba(255,255,255,.05)}
+.pk-fn{font-family:'Instrument Serif',serif;font-size:20px;color:var(--blue);opacity:.25;flex-shrink:0;width:26px;padding-top:2px}
+.pk-ft{font-size:15px;font-weight:500;color:rgba(255,255,255,.82);margin-bottom:5px}
+.pk-fd{font-size:14px;font-weight:300;color:rgba(255,255,255,.34);line-height:1.7}
+
+.comp{padding:80px 56px;background:var(--bg2)}
+.comp-table{width:100%;border-collapse:collapse;margin-top:48px}
+.comp-table th{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:16px 20px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06)}
+.comp-table th:first-child{color:rgba(255,255,255,.3);width:38%}
+.comp-table th.hl-col{color:var(--blue)}
+.comp-table th:last-child{color:rgba(255,255,255,.3)}
+.comp-table td{padding:16px 20px;font-size:14px;font-weight:300;border-bottom:1px solid rgba(255,255,255,.04);vertical-align:top}
+.comp-table td:first-child{color:rgba(255,255,255,.45)}
+.comp-table .hl-col{color:rgba(255,255,255,.82);background:rgba(79,142,255,.04)}
+.comp-table td:last-child{color:rgba(255,255,255,.3)}
+.check{color:var(--blue)}.cross{color:rgba(255,80,80,.5)}
+
+.faq-sec{padding:80px 56px;background:var(--bg)}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.04);margin-top:48px}
+.fq{background:var(--bg);padding:32px 28px}
+.fq h4{font-size:16px;font-weight:500;color:rgba(255,255,255,.8);margin-bottom:10px}
+.fq p{font-size:14px;font-weight:300;color:rgba(255,255,255,.36);line-height:1.8}
+
+.cta-strip{padding:72px 56px;background:var(--bg2);border-top:1px solid rgba(255,255,255,.04)}
+.cta-strip .wrap{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.cta-strip h2{font-family:'Instrument Serif',serif;font-size:clamp(26px,3.5vw,48px);line-height:1.05;letter-spacing:-.022em;font-weight:400}
+.cta-strip h2 em{font-style:italic;color:var(--blue)}
+.cta-strip p{font-size:15px;font-weight:300;color:var(--dim);line-height:1.8;max-width:440px;margin-top:10px}
+.cta-r{display:flex;flex-direction:column;gap:10px;align-items:flex-end;flex-shrink:0}
+.cta-note{font-size:12px;font-weight:300;color:rgba(255,255,255,.18)}
+
+@media(max-width:840px){
+  .ph{padding:110px 20px 64px}
+  .res-bar{grid-template-columns:1fr 1fr}
+  .pkg-sec{padding:56px 20px}.audit-box{padding:24px 20px}.pkg{grid-template-columns:1fr}.pk-l{border-bottom:1px solid rgba(79,142,255,.1)}
+  .comp{padding:56px 20px}.comp-table{font-size:12px}.comp-table th,.comp-table td{padding:12px 12px}
+  .faq-sec{padding:56px 20px}.faq-grid{grid-template-columns:1fr}
+  .cta-strip{padding:56px 20px}.cta-strip .wrap{flex-direction:column;align-items:flex-start}.cta-r{align-items:flex-start}
 }
 </style>
 </head>
 <body>
-
-<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
-  <symbol id="A" viewBox="0 0 56 68">
-    <circle cx="28" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-    <line x1="28" y1="14" x2="28" y2="59" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-    <line x1="8" y1="25" x2="48" y2="25" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-    <line x1="8" y1="25" x2="8" y2="31.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-    <line x1="48" y1="25" x2="48" y2="31.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-    <path d="M7.5 58.5 C7.5 40 28 38 28 58.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-    <path d="M48.5 58.5 C48.5 40 28 38 28 58.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-  </symbol>
-</svg>
 <nav id="nav">
-  <a class="logo" href="/"><div class="lm"><svg viewBox="0 0 56 68" fill="none"><use href="#A" color="rgba(79,142,255,1)"/></svg></div></a>
+  <a class="logo" href="/"><svg viewBox="0 0 56 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="28" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <line x1="28" y1="14" x2="28" y2="59" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <line x1="8" y1="25" x2="48" y2="25" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <line x1="8" y1="25" x2="8" y2="31.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <line x1="48" y1="25" x2="48" y2="31.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M7.5 58.5 C7.5 40 28 38 28 58.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M48.5 58.5 C48.5 40 28 38 28 58.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+</svg></a>
   <div class="nav-r">
-    <div class="nl">
-      <a href="/">Home</a><a href="/services">Services</a><a href="/pricing" class="act">Pricing</a><a href="/contact">Contact</a>
-      <a href="/contact" class="nb" target="_blank" rel="noopener">Book a Demo</a>
-    </div>
+    <div class="nl"><a href="/">Home</a><a href="/services">Services</a><a href="/pricing" class="act">Pricing</a><a href="/contact">Contact</a></div>
+    <a href="/contact" class="nb">Book Now</a>
     <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="mob" id="mob">
-  <a href="/" onclick="cM()">Home</a><a href="/services" onclick="cM()">Services</a><a href="/pricing" onclick="cM()">Pricing</a><a href="/contact" onclick="cM()">Contact</a>
-  <a href="/contact" class="mcta" target="_blank" rel="noopener">Claim Your Free Month</a>
+  <a href="/" onclick="cM()">Home</a>
+  <a href="/services" onclick="cM()">Services</a>
+  <a href="/pricing" onclick="cM()">Pricing</a>
+  <a href="/contact" onclick="cM()">Contact</a>
+  <a href="/contact" class="mob-cta" onclick="cM()">Book Now</a>
 </div>
+
 <section class="ph">
-  <div class="ph-grid"></div><div class="ph-orb"></div>
-  <span class="ph-tag">Simple, Transparent Pricing</span>
-  <h1 class="ph-h1">One plan. Everything included.<br><em>First month on us.</em></h1>
-  <p class="ph-sub">No setup fees. No contracts. No surprises. A complete AI automation system running in the background — free for the first 30 days.</p>
-  <div class="ph-pills">
-    <div class="ph-pill"><span>&#10003;</span> No setup fee</div>
-    <div class="ph-pill"><span>&#10003;</span> No contracts &mdash; ever</div>
-    <div class="ph-pill"><span>&#10003;</span> Live in 48 hours</div>
-    <div class="ph-pill"><span>&#10003;</span> Done for you</div>
-    <div class="ph-pill"><span>&#10003;</span> First month free</div>
+  <div class="ph-grid"></div>
+  <div class="ph-orb"></div>
+  <div class="wrap">
+    <span class="ph-tag">Pricing</span>
+    <h1 class="ph-h1">Priced on what you <em>actually need.</em></h1>
+    <p class="ph-sub">We start with a free audit. We figure out what your business needs together, then give you a clear price before anything gets built. No surprises, ever.</p>
   </div>
 </section>
+
+<div class="sdiv"></div>
+
+<div class="res-bar">
+  <div class="ri r"><div class="ri-n">+12</div><div class="ri-l">leads recovered<br>per month avg.</div></div>
+  <div class="ri r"><div class="ri-n">&darr;65%</div><div class="ri-l">fewer no-shows<br>with our system</div></div>
+  <div class="ri r"><div class="ri-n">3.5&times;</div><div class="ri-l">more lead<br>conversions</div></div>
+  <div class="ri r"><div class="ri-n">4.8&#9733;</div><div class="ri-l">avg. Google rating<br>after 3 months</div></div>
+</div>
+
+<div class="sdiv"></div>
+
 <section class="pkg-sec">
   <div class="wrap">
-    <div class="pkg-grid r">
-      <div class="pk-left">
-        <span class="pk-label">Growth Plan &mdash; All Four Systems</span>
-        <span class="pk-price"><sup>$</sup>997</span>
-        <p class="pk-mo">per month &middot; cancel anytime</p>
-        <div class="pk-free-box">
-          <div class="pk-free-icon">&#10022;</div>
-          <div><strong>First month is on us</strong><p>We build it, run it for 30 days, and you see the results before paying a cent. No credit card required to start.</p></div>
-        </div>
-        <p class="pk-desc">One flat rate. All four automations custom-built for your business. No hourly rates, no add-ons, no surprise invoices.</p>
-        <a href="/contact" class="pk-btn" target="_blank" rel="noopener">Claim Your Free Month &#8594;</a>
-        <p class="pk-sub-note">No credit card required &middot; Cancel anytime</p>
-        <div class="trust">
-          <span class="tr">No setup fee</span><span class="tr">No contracts</span><span class="tr">Live in 48 hrs</span><span class="tr">Done for you</span><span class="tr">Cancel anytime</span>
-        </div>
+    <div class="audit-box r">
+      <div class="ab-l">
+        <strong>&#x2726; Every engagement starts with a free AI audit</strong>
+        <p>Before we talk price, we talk about your business. Book a free 30-minute call &mdash; we&rsquo;ll find exactly where you&rsquo;re losing revenue and tell you honestly what we&rsquo;d build to fix it.</p>
       </div>
-      <div class="pk-right">
-        <span class="pk-right-label">What&apos;s included in every plan</span>
-        <div class="pk-features">
-          <div class="pk-feature"><div class="pk-feat-num">01</div><div><div class="pk-feat-title">Missed Call Text-Back</div><div class="pk-feat-desc">Every missed call fires an instant automated text-back within seconds &mdash; so no lead walks away before you even know they called.</div></div></div>
-          <div class="pk-feature"><div class="pk-feat-num">02</div><div><div class="pk-feat-title">Review Generation</div><div class="pk-feat-desc">Automated Google review requests after every completed job. Build a 5-star reputation on autopilot &mdash; no awkward asking required.</div></div></div>
-          <div class="pk-feature"><div class="pk-feat-num">03</div><div><div class="pk-feat-title">Lead Follow-Up Sequences</div><div class="pk-feat-desc">Multi-step SMS and email sequences that follow up every new inquiry automatically. Stops the moment they respond.</div></div></div>
-          <div class="pk-feature"><div class="pk-feat-num">04</div><div><div class="pk-feat-title">Appointment Reminders</div><div class="pk-feat-desc">Confirmation at booking, reminder 24 hours out, reminder 1 hour out. No-shows drop by up to 65% immediately.</div></div></div>
-        </div>
-        <div class="pk-also">
-          <div class="pk-also-label">Also included</div>
-          <div class="pk-also-items">
-            <span>Full setup &amp; launch</span><span>Onboarding call</span><span>Client dashboard</span><span>SMS &amp; email support</span><span>Monthly check-in</span><span>Custom copy &amp; voice</span>
-          </div>
-        </div>
+      <a href="/contact" class="bf">Book Free Audit &rarr;</a>
+    </div>
+    <div class="pkg r">
+      <div class="pk-l">
+        <span class="pk-lbl">Custom AI Systems</span>
+        <div class="pk-price"><sup>from $</sup>997<em>/mo</em></div>
+        <p class="pk-mo">scales with complexity &middot; cancel anytime</p>
+        <p class="pk-desc">Simpler builds start at $997/mo. More complex, multi-system engagements are scoped after the audit and priced accordingly. You&rsquo;ll always know exactly what you&rsquo;re paying before we touch anything.</p>
+        <a href="/contact" class="pk-btn">Book Your Free Audit &rarr;</a>
+        <p class="pk-note">Free audit &middot; Custom scoped &middot; No contracts</p>
+      </div>
+      <div class="pk-r">
+        <span class="pk-r-lbl">What most clients get</span>
+        <div class="pk-feat"><div class="pk-fn">01</div><div><div class="pk-ft">Missed Call Text-Back</div><div class="pk-fd">Custom-built response system that fires the moment a call goes unanswered. Written in your voice, configured for your business.</div></div></div>
+        <div class="pk-feat"><div class="pk-fn">02</div><div><div class="pk-ft">Review Generation</div><div class="pk-fd">Automated review requests after every job or interaction. Builds your Google rating consistently on autopilot.</div></div></div>
+        <div class="pk-feat"><div class="pk-fn">03</div><div><div class="pk-ft">Lead Follow-Up Sequences</div><div class="pk-fd">Smart multi-step follow-up for every new inquiry. Stops when they respond. Nobody falls through the cracks.</div></div></div>
+        <div class="pk-feat"><div class="pk-fn">04</div><div><div class="pk-ft">Appointment Reminders</div><div class="pk-fd">Confirmation, day-before reminder, hour-before reminder. No-shows drop. Your schedule stays full.</div></div></div>
       </div>
     </div>
   </div>
 </section>
+
 <div class="sdiv"></div>
-<section class="compare-sec">
+
+<section class="comp">
   <div class="wrap">
-    <span class="sec-label r">Why not just hire someone?</span>
-    <h2 class="sec-h r">See how we stack up against <em>the alternatives.</em></h2>
-    <div class="compare-grid r">
-      <div class="cmp-col">
-        <div class="cmp-head">Hiring In-House</div>
-        <div class="cmp-price">$4,000+</div><div class="cmp-price-note">per month + benefits</div>
-        <div class="cmp-row"><span class="cx">&#10007;</span> Weeks to hire and train</div>
-        <div class="cmp-row"><span class="cx">&#10007;</span> Only works business hours</div>
-        <div class="cmp-row"><span class="cx">&#10007;</span> Sick days, turnover, HR</div>
-        <div class="cmp-row"><span class="cx">&#10007;</span> Manual follow-up only</div>
-        <div class="cmp-row"><span class="cx">&#10007;</span> Can&apos;t scale automatically</div>
-        <div class="cmp-row"><span class="cx">&#10007;</span> No free trial</div>
-      </div>
-      <div class="cmp-col anchor">
-        <div class="cmp-head">Anchor Automations <span class="cmp-badge">Best Value</span></div>
-        <div class="cmp-price">$997</div><div class="cmp-price-note">per month &middot; first month free</div>
-        <div class="cmp-row"><span class="ck">&#10003;</span> Live in 48 hours</div>
-        <div class="cmp-row"><span class="ck">&#10003;</span> Runs 24/7 automatically</div>
-        <div class="cmp-row"><span class="ck">&#10003;</span> Zero management needed</div>
-        <div class="cmp-row"><span class="ck">&#10003;</span> All 4 automations included</div>
-        <div class="cmp-row"><span class="ck">&#10003;</span> Scales with your business</div>
-        <div class="cmp-row"><span class="ck">&#10003;</span> First month completely free</div>
-      </div>
-      <div class="cmp-col">
-        <div class="cmp-head">DIY / Other Tools</div>
-        <div class="cmp-price">$200&ndash;800</div><div class="cmp-price-note">per month + your time</div>
-        <div class="cmp-row"><span class="cx">&#10007;</span> Months to set up properly</div>
-        <div class="cmp-row"><span class="cx">&#10007;</span> Requires technical skills</div>
-        <div class="cmp-row"><span class="cx">&#10007;</span> Constant maintenance</div>
-        <div class="cmp-row"><span class="cx">&#10007;</span> Disconnected tools</div>
-        <div class="cmp-row"><span class="cx">&#10007;</span> You&apos;re on your own</div>
-        <div class="cmp-row"><span class="cx">&#10007;</span> No support included</div>
-      </div>
-    </div>
+    <span class="tag r">Why Anchor</span>
+    <h2 class="sh r">How we compare to <em>the alternatives.</em></h2>
+    <table class="comp-table r">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="hl-col">Anchor Automations</th>
+          <th>Hiring In-House</th>
+          <th>DIY Tools</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Custom to your business</td><td class="hl-col check">&#10003; Built specifically for you</td><td>Depends on who you hire</td><td class="cross">&#10007; Generic templates</td></tr>
+        <tr><td>Setup &amp; management</td><td class="hl-col check">&#10003; We handle everything</td><td>You manage them</td><td class="cross">&#10007; You figure it out</td></tr>
+        <tr><td>Starting cost</td><td class="hl-col">from $997/mo</td><td>$4,000&ndash;$8,000/mo</td><td>$200&ndash;$500/mo + time</td></tr>
+        <tr><td>Time to results</td><td class="hl-col">Weeks, not months</td><td>Months to hire + train</td><td class="cross">Months to figure out</td></tr>
+        <tr><td>Contract</td><td class="hl-col check">&#10003; None &mdash; cancel anytime</td><td>Employment contract</td><td>Usually annual</td></tr>
+        <tr><td>Ongoing support</td><td class="hl-col check">&#10003; Always included</td><td>Turnover risk</td><td class="cross">&#10007; You&rsquo;re on your own</td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
+
 <div class="sdiv"></div>
+
 <section class="faq-sec">
   <div class="wrap">
-    <h2 class="sec-h r">Common <em>questions.</em></h2>
+    <span class="tag r">FAQ</span>
+    <h2 class="sh r">Common <em>questions.</em></h2>
     <div class="faq-grid">
-      <div class="fq r"><h4>Is there really no setup fee?</h4><p>None. Full setup and launch is included in your $997/mo rate. We handle everything from the onboarding call to go-live.</p></div>
-      <div class="fq r"><h4>How does the free month work?</h4><p>We build and run all four systems completely free for your first 30 days. At the end of the month, if you&apos;ve seen results, we send the invoice. No credit card needed upfront.</p></div>
-      <div class="fq r"><h4>How fast does it go live?</h4><p>Most systems are live within 48 hours of your onboarding call. We move fast because every day without this running costs you real revenue.</p></div>
-      <div class="fq r"><h4>Can I cancel anytime?</h4><p>Yes. No contracts, no lock-ins. Cancel with 30 days notice. We&apos;re confident the system will more than pay for itself &mdash; but we never trap you.</p></div>
-      <div class="fq r"><h4>Do I need any tech skills?</h4><p>Zero. We build everything, configure everything, and train you on what to expect. You run your business &mdash; we run the system.</p></div>
-      <div class="fq r"><h4>What businesses is this built for?</h4><p>Any service business that depends on leads, calls, or repeat bookings &mdash; HVAC, dental, cleaning, legal, fitness, home services. If you get calls, you need this.</p></div>
+      <div class="fq r"><h4>How does pricing actually work?</h4><p>We figure out the right price together on your free audit call. Simple builds start at $997/mo. Larger, more complex operations are scoped and priced accordingly &mdash; you&rsquo;ll always know the number before we start.</p></div>
+      <div class="fq r"><h4>Is there a setup fee?</h4><p>No. Setup is included. You pay your monthly rate and we handle everything from the audit through launch.</p></div>
+      <div class="fq r"><h4>Can I cancel anytime?</h4><p>Yes. No long-term contracts, ever. We&rsquo;re confident the system will be worth keeping &mdash; but we never lock you in.</p></div>
+      <div class="fq r"><h4>Do I need any technical knowledge?</h4><p>None at all. We handle everything &mdash; build, setup, testing, and ongoing management. You just run your business.</p></div>
+      <div class="fq r"><h4>What kinds of businesses do you work with?</h4><p>Any service business that relies on calls, bookings, or repeat customers &mdash; salons, dental, HVAC, med spas, home services, legal, fitness, and more.</p></div>
+      <div class="fq r"><h4>What happens on the free audit call?</h4><p>We have a real conversation about your business. We ask questions, find where you&rsquo;re losing revenue, and give you an honest recommendation &mdash; even if it&rsquo;s not us.</p></div>
     </div>
   </div>
 </section>
+
 <div class="sdiv"></div>
+
 <section class="cta-strip">
   <div class="wrap">
-    <div class="cs-inner r">
-      <div class="cs-left">
-        <h2>Nothing to lose.<br><em>Everything to gain.</em></h2>
-        <p>Book a free 30-minute call. We&apos;ll show you exactly how the system works for your business &mdash; then set it all up free for the first month.</p>
-      </div>
-      <div class="cs-right">
-        <a href="/contact" class="bf" target="_blank" rel="noopener">Claim Your Free Month &#8594;</a>
-        <span class="cs-note">No credit card &middot; No contracts &middot; Live in 48 hours</span>
-      </div>
+    <div>
+      <h2 class="r">See it before you <em>commit to anything.</em></h2>
+      <p class="r">Book a free 30-minute call. We&rsquo;ll take a real look at your business together and tell you honestly what we&rsquo;d build &mdash; and what it would cost.</p>
+    </div>
+    <div class="cta-r r">
+      <a href="/contact" class="bf">Book Free Audit &rarr;</a>
+      <span class="cta-note">Free &middot; 30 minutes &middot; No obligation</span>
     </div>
   </div>
 </section>
+
 <footer>
   <div class="wrap">
-    <div class="foot-top">
+    <div class="ft">
       <div>
-        <a class="foot-brand" href="/"><svg viewBox="0 0 56 68" fill="none"><use href="#A" color="rgba(79,142,255,.65)"/></svg><span class="foot-brand-name">Anchor Automations</span></a>
-        <p class="foot-tagline">AI automation systems for service businesses. Done for you, live in days.</p>
+        <a class="fb" href="/"><svg viewBox="0 0 56 68" fill="none"><svg viewBox="0 0 56 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="28" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <line x1="28" y1="14" x2="28" y2="59" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <line x1="8" y1="25" x2="48" y2="25" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <line x1="8" y1="25" x2="8" y2="31.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <line x1="48" y1="25" x2="48" y2="31.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M7.5 58.5 C7.5 40 28 38 28 58.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M48.5 58.5 C48.5 40 28 38 28 58.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+</svg></svg><span>Anchor Automations</span></a>
+        <p class="ftag">AI automation consulting for service businesses.</p>
       </div>
-      <div class="foot-links">
-        <div class="foot-col"><h5>Navigate</h5><a href="/">Home</a><a href="/services">Services</a><a href="/pricing">Pricing</a><a href="/contact">Contact</a></div>
-        <div class="foot-col"><h5>Get Started</h5><a href="/contact" target="_blank">Claim Your Free Month</a><a href="/pricing">View Pricing</a><a href="mailto:hello@anchorautomations.ai">hello@anchorautomations.ai</a><a href="tel:7722850834">(772) 285-0834</a></div>
+      <div class="flinks">
+        <div class="fc">
+          <h5>Navigate</h5>
+          <a href="/">Home</a>
+          <a href="/services">Services</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/contact">Contact</a>
+        </div>
+        <div class="fc">
+          <h5>Get In Touch</h5>
+          <a href="mailto:hello@anchorautomations.ai">hello@anchorautomations.ai</a>
+          <a href="tel:7722850834">(772) 285-0834</a>
+          <a href="/contact">Book a Free Audit</a>
+        </div>
       </div>
     </div>
-    <div class="foot-bottom"><p>&copy; <span id="yr"></span> Anchor Automations &middot; anchorautomations.ai</p><p>Palm City, FL &middot; Serving businesses across the US</p></div>
+    <div class="fbot">
+      <p>&copy; <span id="yr"></span> Anchor Automations &middot; anchorautomations.ai</p>
+      <p>Palm City, FL &middot; Serving businesses across the US</p>
+    </div>
   </div>
 </footer>
 <script>
 (function(){
-  var c=document.getElementById('cur');
-  if(c&&window.matchMedia('(pointer:fine)').matches){var x=-300,y=-300;document.addEventListener('mousemove',function(e){x=e.clientX;y=e.clientY;},{passive:true});(function t(){c.style.left=x+'px';c.style.top=y+'px';requestAnimationFrame(t);})();document.querySelectorAll('a,button').forEach(function(el){el.addEventListener('mouseenter',function(){c.classList.add('big');});el.addEventListener('mouseleave',function(){c.classList.remove('big');});});}
-  window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('stuck',window.scrollY>60);},{passive:true});
+  window.addEventListener('scroll',function(){
+    document.getElementById('nav').classList.toggle('stuck',window.scrollY>20);
+  },{passive:true});
   var h=document.getElementById('ham'),m=document.getElementById('mob');
-  if(h&&m){h.addEventListener('click',function(){var o=!m.classList.contains('open');m.classList.toggle('open',o);h.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';});}
-  window.cM=function(){if(m)m.classList.remove('open');if(h)h.classList.remove('open');document.body.style.overflow='';};
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:0.06});
+  if(h&&m){
+    h.addEventListener('click',function(){
+      var o=!m.classList.contains('open');
+      m.classList.toggle('open',o);h.classList.toggle('open',o);
+      document.body.style.overflow=o?'hidden':'';
+    });
+  }
+  window.cM=function(){
+    if(m)m.classList.remove('open');
+    if(h)h.classList.remove('open');
+    document.body.style.overflow='';
+  };
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});
+  },{threshold:0.06});
   document.querySelectorAll('.r').forEach(function(el){io.observe(el);});
   setTimeout(function(){document.querySelectorAll('.r').forEach(function(el){el.classList.add('on');});},400);
-  document.getElementById('yr').textContent=new Date().getFullYear();
+  var yr=document.getElementById('yr');
+  if(yr)yr.textContent=new Date().getFullYear();
 })();
 </script>
 </body>
