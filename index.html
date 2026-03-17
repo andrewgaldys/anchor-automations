@@ -105,18 +105,34 @@ footer{background:var(--bg4);padding:56px 0 0;border-top:1px solid var(--line);p
         <a href="/process" class="btn-ghost">How we work &rarr;</a>
       </div>
     </div>
-    <div class="hero-card reveal">
-      <div class="hc-label">What we handle</div>
-      <div class="hc-list">
-        <div class="hc-row"><span></span>Missed call recovery &amp; follow-up</div>
-        <div class="hc-row"><span></span>Google review growth</div>
-        <div class="hc-row"><span></span>Website design and build</div>
-        <div class="hc-row"><span></span>CRM and pipeline setup</div>
-        <div class="hc-row"><span></span>Facebook and Instagram ads</div>
-        <div class="hc-row"><span></span>AI chat and booking systems</div>
-        <div class="hc-row"><span></span>Custom automations</div>
+<div class="flow-wrap reveal">
+        <div class="flow-label"><span id="fldot"></span>Automation running right now</div>
+        <div class="flow" id="flow">
+          <div class="fn fn-trigger" id="fn0">
+            <div class="fn-icon"><svg width="15" height="15" viewBox="0 0 18 18" fill="none"><path d="M9 1.5a7.5 7.5 0 100 15 7.5 7.5 0 000-15z" stroke="currentColor" stroke-width="1.5"/><path d="M9 5v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <div class="fn-text"><span class="fn-top">Trigger</span><span class="fn-bot">Missed call received</span></div>
+            <div class="fn-pulse"></div>
+          </div>
+          <div class="flow-arrow" id="fa0"><svg width="10" height="13" viewBox="0 0 10 13" fill="none"><path d="M5 0v9M1 5l4 5 4-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="fn fn-action" id="fn1">
+            <div class="fn-icon fn-dim-icon" id="fi1"><svg width="15" height="15" viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 6l7 4.5L16 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <div class="fn-text"><span class="fn-top">60 seconds later</span><span class="fn-bot fn-dim-bot" id="fb1">Text sent to caller</span></div>
+            <div class="fn-check" id="fc1">&#10003;</div>
+          </div>
+          <div class="flow-arrow" id="fa1"><svg width="10" height="13" viewBox="0 0 10 13" fill="none"><path d="M5 0v9M1 5l4 5 4-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="fn fn-action" id="fn2">
+            <div class="fn-icon fn-dim-icon" id="fi2"><svg width="15" height="15" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="5.5" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M2 16c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <div class="fn-text"><span class="fn-top">Automatically</span><span class="fn-bot fn-dim-bot" id="fb2">Lead saved to CRM</span></div>
+            <div class="fn-check" id="fc2">&#10003;</div>
+          </div>
+          <div class="flow-arrow" id="fa2"><svg width="10" height="13" viewBox="0 0 10 13" fill="none"><path d="M5 0v9M1 5l4 5 4-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="fn fn-result" id="fn3">
+            <div class="fn-icon fn-cyan-icon" id="fi3"><svg width="15" height="15" viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="fn-text"><span class="fn-top">Result</span><span class="fn-bot" id="fb3" style="color:rgba(0,212,255,.35);transition:color .4s">Job booked. Zero effort.</span></div>
+          </div>
+        </div>
+        <div class="flow-note">All of this runs while you're on the job site.</div>
       </div>
-      <div class="hc-note">Scoped after a free audit. You only pay for what you actually need.</div>
     </div>
   </div>
 </section>
